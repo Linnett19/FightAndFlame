@@ -65,6 +65,11 @@ public class ModCreativeModTabs {
                         poutput.accept(ModBlocks.MOSSY_SCARY_STONE_BRICKS.get());
                         poutput.accept(ModBlocks.LAWN.get());
 
+                        poutput.accept(ModItems.CANDICORN.get());
+                        poutput.accept(ModItems.SLIME_LOLIPOP.get());
+                        poutput.accept(ModItems.SOUR_BONE.get());
+                        poutput.accept(ModItems.JELLY_BALLS.get());
+
 
                     })
                     .build());

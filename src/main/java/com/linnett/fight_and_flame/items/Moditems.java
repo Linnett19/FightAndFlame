@@ -75,7 +75,14 @@ public class ModItems {
 
 
 
-
+    public static final RegistryObject<Item> CANDICORN = ITEM.register("candicorn" ,
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SLIME_LOLIPOP = ITEM.register("slime_lolipop" ,
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SOUR_BONE  = ITEM.register("sour_bone" ,
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> JELLY_BALLS = ITEM.register("jelly_balls" ,
+            () -> new Item(new Item.Properties()));
 
 
 
