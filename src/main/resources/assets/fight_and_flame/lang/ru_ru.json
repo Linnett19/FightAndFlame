@@ -1,0 +1,36 @@
+{
+  "item.fight_and_flame.blank_blueprint": "Чертеж",
+  "item.fight_and_flame.blank_blueprint_torn": "Порванный чертеж",
+  "item.fight_and_flame.blank_blueprint_spear": "Чертеж копья",
+  "item.fight_and_flame.blank_blueprint_braid": "Чертеж косы",
+  "item.fight_and_flame.blank_blueprint_sickle": "Чертеж серпа",
+  "item.fight_and_flame.blank_blueprint_rapier": "Чертеж рапиры",
+  "item.fight_and_flame.blank_blueprint_twohanded_sword": "Чертеж двуручного меча",
+  "item.fight_and_flame.nephritis_ingot": "Нефритовый блок",
+  "item.fight_and_flame.nephritis_pieces": "Кусочек нефрита",
+  "item.fight_and_flame.awakened_netherite_ingot": "Пробужденный незеритовый слиток",
+  "item.fight_and_flame.awakened_netherite_pieces": "Кусочек пробужденного незерита",
+  "item.fight_and_flame.blood_stone_ingot": "Крамневый слиток",
+  "item.fight_and_flame.blood_stone_pieces": "Кусочек крамня",
+
+  "sounds.fight_and_flame.flute_whistle": "Свисток флейты",
+
+
+  "item.fight_and_flame.flute": "Флейта",
+  "item.fight_and_flame.note_1": "Скрепичный ключ",
+
+
+  "item.fight_and_flame.aphatit_crystal": "Кристалл аппатита",
+  "item.fight_and_flame.aphatit_crystal_splinter": "Осколок кристалла аппатита",
+
+
+  "block.fight_and_flame.nephritis_block": "Нефритовый блок",
+  "block.fight_and_flame.blood_stone_block": "Крамневый блок",
+  "block.fight_and_flame.aphatit_crystal_block": "Аппатитовый блок",
+  "block.fight_and_flame.awakened_netherite_block": "Пробужденный незеритовый блок",
+
+
+  "creativetab.fight_and_flame.fight_and_flame_ingredients": "Борьба и пламя:Ингредиенты",
+  "creativetab.fight_and_flame.fight_and_flame_weapons": "Борьба и пламя:Оружие"
+
+}

@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.linnett.fight_and_flame.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "fight_and_flame.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

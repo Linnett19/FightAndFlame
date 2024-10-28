@@ -1,0 +1,43 @@
+{
+  "block.fight_and_flame.armory_table": "Armor Table",
+  "item.fight_and_flame.blank_blueprint": "Blank Blueprint",
+  "item.fight_and_flame.blank_blueprint_torn": "Blank Blueprint Torn",
+  "item.fight_and_flame.blank_blueprint_spear": "Blank Blueprint Spear",
+  "item.fight_and_flame.blank_blueprint_braid": "Blank Blueprint Braid",
+  "item.fight_and_flame.blank_blueprint_sickle": "Blank Blueprint Sickle",
+  "item.fight_and_flame.blank_blueprint_rapier": "Blank Blueprint Rapier",
+  "item.fight_and_flame.blank_blueprint_twohanded_sword": "Blank Blueprint Two-handed Sword",
+
+  "item.fight_and_flame.nephritis_ingot": "Nephritis Ingot",
+  "item.fight_and_flame.nephritis_pieces": "Nephritis Nugget",
+  "item.fight_and_flame.raw_nephritis": "Raw Nephritis",
+  "block.fight_and_flame.nephritis_block": "Block of Nephritis",
+  "block.fight_and_flame.nephritis_ore": "Nephritis Ore",
+
+  "item.fight_and_flame.awakened_netherite_ingot": "Awakened Netherite Ingot",
+  "item.fight_and_flame.awakened_netherite_pieces": "Awakened Netherite Nugget",
+  "block.fight_and_flame.awakened_netherite_block": "Block of Awakened Netherite",
+
+
+  "item.fight_and_flame.blood_stone_ingot": "Blood-stone Ingot",
+  "item.fight_and_flame.blood_stone_pieces": "Blood-stone Nugget",
+  "block.fight_and_flame.blood_stone_block": "Block of Blood-stone",
+  "block.fight_and_flame.blood_stone_ore": "Blood-stone Ore",
+  "block.fight_and_flame.raw_blood_stone_block": "Raw Blood-stone Block",
+  "item.fight_and_flame.raw_blood_stone": "Raw Blood-stone ",
+
+
+  "item.fight_and_flame.flute": "Flute",
+  "item.fight_and_flame.note_1": "Treble Clef",
+  "sounds.fight_and_flame.flute_whistle": "Flute Whistle",
+
+  "item.fight_and_flame.aphatit_crystal": "Aphatit Crystal",
+  "block.fight_and_flame.aphatit_cluster": "Aphatit Cluster",
+  "item.fight_and_flame.aphatit_crystal_splinter": "Aphatit Crystal Splinter",
+  "block.fight_and_flame.aphatit_crystal_block": "Block of Aphatit Crystal",
+
+  "item.fight_and_flame.elemental_crystal": "Elemental Crystal",
+
+  "itemGroup.fight_and_flame_ingredients": "Fight And Flame: Ingredients",
+  "itemGroup.fight_and_flame_weapons": "Fight And Flame: Weapons"
+}
