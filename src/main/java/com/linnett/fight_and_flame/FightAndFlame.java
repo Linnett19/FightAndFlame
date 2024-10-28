@@ -3,7 +3,7 @@ package com.linnett.fight_and_flame;
 import com.linnett.fight_and_flame.block.ModBlocks;
 import com.linnett.fight_and_flame.entity.FightAndFlameEntityRegistry;
 import com.linnett.fight_and_flame.items.ModCreativeModTabs;
-import com.linnett.fight_and_flame.items.ModItems;
+import com.linnett.fight_and_flame.items.Moditems;
 import com.linnett.fight_and_flame.render.MusicTapeRender;
 import com.linnett.fight_and_flame.sounds.ModSounds;
 import com.mojang.logging.LogUtils;
@@ -36,7 +36,7 @@ public class FightAndFlame {
 
         ModCreativeModTabs.register(modEventBus);
 
-        ModItems.register(modEventBus);
+        Moditems.register(modEventBus);
 
         ModBlocks.register(modEventBus);
 

@@ -16,47 +16,47 @@ public class ModCreativeModTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, FightAndFlame.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> FIGHT_AND_FLAME_INGREDIENTS = CREATIVE_MODE_TABS.register("fight_and_flame_ingredients",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BLANK_BLUEPRINT.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Moditems.BLANK_BLUEPRINT.get()))
                     .title(Component.translatable("itemGroup.fight_and_flame_ingredients"))
                     .displayItems((pparameters, poutput) -> {
 
                         poutput.accept(ModBlocks.ARMORY_TABLE.get());
 
-                        poutput.accept(ModItems.BLANK_BLUEPRINT_TORN.get());
-                        poutput.accept(ModItems.BLANK_BLUEPRINT.get());
+                        poutput.accept(Moditems.BLANK_BLUEPRINT_TORN.get());
+                        poutput.accept(Moditems.BLANK_BLUEPRINT.get());
 
-                        poutput.accept(ModItems.BLANK_BLUEPRINT_TWOHANDED_SWORD.get());
-                        poutput.accept(ModItems.BLANK_BLUEPRINT_RAPIER.get());
-                        poutput.accept(ModItems.BLANK_BLUEPRINT_SICKLE.get());
-                        poutput.accept(ModItems.BLANK_BLUEPRINT_BRAID.get());
-                        poutput.accept(ModItems.BLANK_BLUEPRINT_SPEAR.get());
+                        poutput.accept(Moditems.BLANK_BLUEPRINT_TWOHANDED_SWORD.get());
+                        poutput.accept(Moditems.BLANK_BLUEPRINT_RAPIER.get());
+                        poutput.accept(Moditems.BLANK_BLUEPRINT_SICKLE.get());
+                        poutput.accept(Moditems.BLANK_BLUEPRINT_BRAID.get());
+                        poutput.accept(Moditems.BLANK_BLUEPRINT_SPEAR.get());
 
-                        poutput.accept(ModItems.NEPHRITIS_PIECES.get());
-                        poutput.accept(ModItems.NEPHRITIS_INGOT.get());
-                        poutput.accept(ModItems.RAW_NEPHRITIS.get());
+                        poutput.accept(Moditems.NEPHRITIS_PIECES.get());
+                        poutput.accept(Moditems.NEPHRITIS_INGOT.get());
+                        poutput.accept(Moditems.RAW_NEPHRITIS.get());
                         poutput.accept(ModBlocks.NEPHRITIS_ORE.get());
                         poutput.accept(ModBlocks.NEPHRITIS_BLOCK.get());
 
-                        poutput.accept(ModItems.APHATIT_CRYSTAL_SPLINTER.get());
-                        poutput.accept(ModItems.APHATIT_CRYSTAL.get());
+                        poutput.accept(Moditems.APHATIT_CRYSTAL_SPLINTER.get());
+                        poutput.accept(Moditems.APHATIT_CRYSTAL.get());
                         poutput.accept(ModBlocks.APHATIT_CLUSTER.get());
                         poutput.accept(ModBlocks.APHATIT_CRYSTAL_BLOCK.get());
 
 
-                        poutput.accept(ModItems.BLOOD_STONE_PIECES.get());
-                        poutput.accept(ModItems.BLOOD_STONE_INGOT.get());
-                        poutput.accept(ModItems.RAW_BLOOD_STONE.get());
+                        poutput.accept(Moditems.BLOOD_STONE_PIECES.get());
+                        poutput.accept(Moditems.BLOOD_STONE_INGOT.get());
+                        poutput.accept(Moditems.RAW_BLOOD_STONE.get());
                         poutput.accept(ModBlocks.RAW_BLOOD_STONE_BLOCK.get());
                         poutput.accept(ModBlocks.BLOOD_STONE_ORE.get());
                         poutput.accept(ModBlocks.BLOOD_STONE_BLOCK.get());
 
 
-                        poutput.accept(ModItems.AWAKENED_NETHERITE_PIECES.get());
-                        poutput.accept(ModItems.AWAKENED_NETHERITE_INGOT.get());
+                        poutput.accept(Moditems.AWAKENED_NETHERITE_PIECES.get());
+                        poutput.accept(Moditems.AWAKENED_NETHERITE_INGOT.get());
                         poutput.accept(ModBlocks.AWAKENED_NETHERITE_BLOCK.get());
 
-                        poutput.accept(ModItems.ELEMENTAL_CRYSTAL.get());
-                        poutput.accept(ModItems.NOTE.get());
+                        poutput.accept(Moditems.ELEMENTAL_CRYSTAL.get());
+                        poutput.accept(Moditems.NOTE.get());
 
 
 
@@ -65,21 +65,21 @@ public class ModCreativeModTabs {
                         poutput.accept(ModBlocks.MOSSY_SCARY_STONE_BRICKS.get());
                         poutput.accept(ModBlocks.LAWN.get());
 
-                        poutput.accept(ModItems.CANDICORN.get());
-                        poutput.accept(ModItems.SLIME_LOLIPOP.get());
-                        poutput.accept(ModItems.SOUR_BONE.get());
-                        poutput.accept(ModItems.JELLY_BALLS.get());
+                        poutput.accept(Moditems.CANDICORN.get());
+                        poutput.accept(Moditems.SLIME_LOLIPOP.get());
+                        poutput.accept(Moditems.SOUR_BONE.get());
+                        poutput.accept(Moditems.JELLY_BALLS.get());
 
 
                     })
                     .build());
 
     public static final RegistryObject<CreativeModeTab> FIGHT_AND_FLAME_WEAPONS = CREATIVE_MODE_TABS.register("fight_and_flame_weapons",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BLANK_BLUEPRINT.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Moditems.BLANK_BLUEPRINT.get()))
                     .title(Component.translatable("itemGroup.fight_and_flame_weapons"))
                     .displayItems((pparameters, poutput) -> {
 
-                        poutput.accept(ModItems.FLUTE.get());
+                        poutput.accept(Moditems.FLUTE.get());
                     })
                     .build());
 
