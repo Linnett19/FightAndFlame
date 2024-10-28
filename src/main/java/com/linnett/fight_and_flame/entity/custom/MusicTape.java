@@ -1,32 +1,93 @@
 package com.linnett.fight_and_flame.entity.custom;
 
+import com.linnett.fight_and_flame.entity.FightAndFlameEntityRegistry;
+import com.linnett.fight_and_flame.items.ModItems;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 
-
-public class MUSIC_TAPE extends ThrowableItemProjectile {
+public class MusicTape extends ThrowableItemProjectile {
     private Vec3[] trailPositions = new Vec3[64];
     private Float[] trailRots = new Float[64];
     private int trailPointer = -1;
     protected static final EntityDataAccessor<Integer> DATA_VISUAL_TYPE;
-    public MUSIC_TAPE(EntityType<? extends ThrowableItemProjectile> p_37442_, Level p_37443_) {
-        super(p_37442_, p_37443_);
 
+    // Задержка перезарядки в тиках
+    private static final int RELOAD_TICKS = 30; // 1.5 секунды = 30 тиков (1 тик = 1/20 секунды)
+    private int reloadCounter = 0;
+
+    public MusicTape(EntityType<? extends ThrowableItemProjectile> entityType, Level level) {
+        super(entityType, level);
+    }
+
+    public MusicTape(Level level) {
+        super(FightAndFlameEntityRegistry.MUSIC_TAPE.get(), level);
+    }
+
+    public MusicTape(Level level, LivingEntity livingEntity) {
+        super(FightAndFlameEntityRegistry.MUSIC_TAPE.get(), livingEntity, level);
     }
 
     @Override
     protected Item getDefaultItem() {
-        return Items.AMETHYST_SHARD;
+        return ModItems.NOTE.get();
     }
+
+    @Override
+    public void tick() {
+        super.tick();
+        if (reloadCounter > 0) {
+            reloadCounter--;
+        }
+        Vec3 trailAt = this.position().add(0, this.getBbHeight() / 2, 0);
+        if (trailPointer == -1) {
+            Vec3 backAt = trailAt;
+            for (int i = 0; i < trailPositions.length; i++) {
+                trailPositions[i] = backAt;
+                trailRots[i] = this.getXRot() / 360 * 3.14f;
+            }
+        }
+        if (++this.trailPointer == this.trailPositions.length) {
+            this.trailPointer = 0;
+        }
+        this.trailPositions[this.trailPointer] = trailAt;
+        this.trailRots[this.trailPointer] = this.getXRot() / 360 * 3.14f;
+    }
+
+    @Override
+    protected void onHit(HitResult hitResult) {
+        super.onHit(hitResult);
+        if (!this.level().isClientSide) {
+            this.level().broadcastEntityEvent(this, (byte) 3);
+            this.discard();
+        }
+    }
+
+    @Override
+    protected void onHitEntity(EntityHitResult entityHitResult) {
+        super.onHitEntity(entityHitResult);
+        Entity entity = entityHitResult.getEntity();
+
+        // Проверяем, не находится ли сущность на клиентской стороне
+        if (!this.level().isClientSide) {
+            // Наносим урон цели
+            float damage = 1.0F + this.random.nextFloat() * 2.0F;
+            entity.hurt(damageSources().thrown(this, this.getOwner()), damage);
+
+            // Удаляем снаряд после нанесения урона
+            this.discard();
+        }
+    }
+
     public Vec3 getTrailPosition(int pointer, float partialTick) {
         if (this.isRemoved()) {
             partialTick = 1.0F;
@@ -39,21 +100,9 @@ public class MUSIC_TAPE extends ThrowableItemProjectile {
     }
 
     public boolean hasTrail() {
-
         return trailPointer != -1;
     }
 
-    @Override
-    protected void onHitBlock(BlockHitResult p_37258_) {
-        super.onHitBlock(p_37258_);
-        if(tickCount>3 && level() instanceof ServerLevel serverLevel)
-        {
-            for(int i = 0; i < 10; i++) {
-            }
-            this.discard();
-        }
-
-    }
     public boolean isAttackable() {
         return false;
     }
@@ -63,7 +112,7 @@ public class MUSIC_TAPE extends ThrowableItemProjectile {
     }
 
     public int getVisualType() {
-        return (int)this.entityData.get(DATA_VISUAL_TYPE);
+        return this.entityData.get(DATA_VISUAL_TYPE);
     }
 
     @Override
@@ -72,25 +121,18 @@ public class MUSIC_TAPE extends ThrowableItemProjectile {
         this.entityData.define(DATA_VISUAL_TYPE, 0);
     }
 
-    @Override
-    public void tick() {
-        super.tick();
-
-        Vec3 trailAt = this.position().add(0, this.getBbHeight()/2, 0);
-        if (trailPointer == -1) {
-            Vec3 backAt = trailAt;
-            for (int i = 0; i < trailPositions.length; i++) {
-                trailPositions[i] = backAt;
-                trailRots[i] = this.getXRot()/360*3.14f;
-            }
-        }
-        if (++this.trailPointer == this.trailPositions.length) {
-            this.trailPointer = 0;
-        }
-        this.trailPositions[this.trailPointer] = trailAt;
-        this.trailRots[this.trailPointer] = this.getXRot()/360*3.14f;
-    }
     static {
-        DATA_VISUAL_TYPE = SynchedEntityData.defineId(MUSIC_TAPE.class, EntityDataSerializers.INT);
+        DATA_VISUAL_TYPE = SynchedEntityData.defineId(MusicTape.class, EntityDataSerializers.INT);
+    }
+
+
+    public boolean canShoot() {
+        return reloadCounter == 0;
+    }
+
+
+    public void startReload() {
+        reloadCounter = RELOAD_TICKS;
     }
 }
+

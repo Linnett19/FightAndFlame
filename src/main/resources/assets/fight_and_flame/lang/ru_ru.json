@@ -1,4 +1,5 @@
 {
+  "block.fight_and_flame.armory_table": "Оружейный стол",
   "item.fight_and_flame.blank_blueprint": "Чертеж",
   "item.fight_and_flame.blank_blueprint_torn": "Порванный чертеж",
   "item.fight_and_flame.blank_blueprint_spear": "Чертеж копья",
@@ -6,31 +7,42 @@
   "item.fight_and_flame.blank_blueprint_sickle": "Чертеж серпа",
   "item.fight_and_flame.blank_blueprint_rapier": "Чертеж рапиры",
   "item.fight_and_flame.blank_blueprint_twohanded_sword": "Чертеж двуручного меча",
-  "item.fight_and_flame.nephritis_ingot": "Нефритовый блок",
+
+
+  "item.fight_and_flame.nephritis_ingot": "Нефритовый слиток",
+  "item.fight_and_flame.raw_nephritis": "Рудный нефрит",
   "item.fight_and_flame.nephritis_pieces": "Кусочек нефрита",
+  "block.fight_and_flame.nephritis_block": "Нефритовый блок",
+  "block.fight_and_flame.nephritis_ore": "Нефритовая руда",
+
+
   "item.fight_and_flame.awakened_netherite_ingot": "Пробужденный незеритовый слиток",
   "item.fight_and_flame.awakened_netherite_pieces": "Кусочек пробужденного незерита",
+  "block.fight_and_flame.awakened_netherite_block": "Пробужденный незеритовый блок",
+
+
   "item.fight_and_flame.blood_stone_ingot": "Крамневый слиток",
   "item.fight_and_flame.blood_stone_pieces": "Кусочек крамня",
-
-  "sounds.fight_and_flame.flute_whistle": "Свисток флейты",
+  "block.fight_and_flame.blood_stone_block": "Крамневый блок",
+  "block.fight_and_flame.blood_stone_ore": "Крамневая руда",
+  "block.fight_and_flame.raw_blood_stone_block": "Рудный краменый блок",
+  "item.fight_and_flame.raw_blood_stone": "Рудный крамень ",
 
 
   "item.fight_and_flame.flute": "Флейта",
   "item.fight_and_flame.note_1": "Скрепичный ключ",
+  "sounds.fight_and_flame.flute_whistle": "Свист флейты",
 
 
   "item.fight_and_flame.aphatit_crystal": "Кристалл аппатита",
+  "block.fight_and_flame.aphatit_cluster": "Кластер апатита",
   "item.fight_and_flame.aphatit_crystal_splinter": "Осколок кристалла аппатита",
-
-
-  "block.fight_and_flame.nephritis_block": "Нефритовый блок",
-  "block.fight_and_flame.blood_stone_block": "Крамневый блок",
   "block.fight_and_flame.aphatit_crystal_block": "Аппатитовый блок",
-  "block.fight_and_flame.awakened_netherite_block": "Пробужденный незеритовый блок",
 
 
-  "creativetab.fight_and_flame.fight_and_flame_ingredients": "Борьба и пламя:Ингредиенты",
-  "creativetab.fight_and_flame.fight_and_flame_weapons": "Борьба и пламя:Оружие"
+  "item.fight_and_flame.elemental_crystal": "Элементальный кристалл",
 
+
+  "itemGroup.fight_and_flame_ingredients": "Бой и Пламя: Ингридиенты",
+  "itemGroup.fight_and_flame_weapons": "Бой и Пламя: Оружие"
 }

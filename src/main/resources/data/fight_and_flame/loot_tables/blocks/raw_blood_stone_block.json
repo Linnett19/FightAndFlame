@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "fight_and_flame:blood_stone_block"
+          "name": "fight_and_flame:raw_blood_stone_block"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "fight_and_flame:blocks/blood_stone_block"
+  "random_sequence": "fight_and_flame:blocks/raw_blood_stone_block"
 }

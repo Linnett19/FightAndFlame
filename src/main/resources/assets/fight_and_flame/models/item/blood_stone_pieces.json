@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "fight_and_flame:item/blank_blueprint"
+    "layer0": "fight_and_flame:item/blood_stone_pieces"
   }
 }
 

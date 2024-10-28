@@ -1,8 +1,5 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "fight_and_flame:item/aphatit_crystal"
-  }
+  "parent": "fight_and_flame:block/aphatit_cluster"
 }
 
 

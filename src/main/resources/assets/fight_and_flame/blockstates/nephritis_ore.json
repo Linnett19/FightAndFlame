@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "fight_and_flame:block/nephritis_block"
+      "model": "fight_and_flame:block/nephritis_ore"
     }
   }
 }

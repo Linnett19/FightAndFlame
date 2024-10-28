@@ -1,16 +1,13 @@
 {
   "values": [
-    "minecraft:diamond_block",
-    "minecraft:diamond_ore",
-    "minecraft:deepslate_diamond_ore",
-    "minecraft:emerald_ore",
-    "minecraft:deepslate_emerald_ore",
-    "minecraft:emerald_block",
-    "minecraft:gold_block",
-    "minecraft:raw_gold_block",
-    "minecraft:gold_ore",
-    "minecraft:deepslate_gold_ore",
-    "minecraft:redstone_ore",
-    "minecraft:deepslate_redstone_ore"
+    "fight_and_flame:nephritis_block",
+    "fight_and_flame:nephritis_ore",
+    "fight_and_flame:awakened_netherite_block",
+    "fight_and_flame:blood_stone_block",
+    "fight_and_flame:raw_blood_stone_block",
+    "fight_and_flame:blood_stone_ore",
+    "fight_and_flame:raw_blood_stone_block",
+    "fight_and_flame:aphatit_crystal_block",
+    "fight_and_flame:aphatit_cluster"
   ]
 }

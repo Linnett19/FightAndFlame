@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "fight_and_flame:block/scary_stone_bricks"
+      "model": "fight_and_flame:block/mossy_scary_stone_bricks"
     }
   }
 }

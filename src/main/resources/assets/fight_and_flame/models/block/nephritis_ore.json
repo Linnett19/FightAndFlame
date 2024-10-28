@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "fight_and_flame:block/nephritis_block"
+    "all": "fight_and_flame:block/nephritis_ore"
   }
 }

@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "block/cube",
   "textures": {
-    "all": "fight_and_flame:block/aphatit_crystal_block"
+    "down": "fight_and_flame:block/armory_table_down",
+    "up": "fight_and_flame:block/armory_table_top",
+    "north": "fight_and_flame:block/armory_table_side_altrn",
+    "south": "fight_and_flame:block/armory_table_side",
+    "west": "fight_and_flame:block/armory_table_side_altrn",
+    "east": "fight_and_flame:block/armory_table_side",
+    "particle": "fight_and_flame:block/armory_table_side"
   }
 }
