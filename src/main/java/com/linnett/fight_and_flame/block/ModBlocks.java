@@ -1,11 +1,13 @@
 package com.linnett.fight_and_flame.block;
 
 import com.linnett.fight_and_flame.FightAndFlame;
-import com.linnett.fight_and_flame.items.Moditems;
+import com.linnett.fight_and_flame.block.custom_block.CustomCauldron;
+import com.linnett.fight_and_flame.items.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -59,6 +61,16 @@ public class ModBlocks {
          public static final RegistryObject<Block> LAWN = registerBlock("lawn",
                  () -> new Block(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK)));
 
+         public static final RegistryObject<Block> CAULDRON = registerBlock("cauldron",
+                 () -> new CustomCauldron(BlockBehaviour.Properties.copy(Blocks.CAULDRON)));
+
+
+
+
+
+
+
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
@@ -69,7 +81,7 @@ public class ModBlocks {
          }
 
          private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-             return Moditems.ITEM.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+             return ModItems.ITEM.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
          }
 
          public static void register(IEventBus eventBus) {

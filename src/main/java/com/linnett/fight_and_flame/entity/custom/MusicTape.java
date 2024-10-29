@@ -1,7 +1,7 @@
 package com.linnett.fight_and_flame.entity.custom;
 
 import com.linnett.fight_and_flame.entity.FightAndFlameEntityRegistry;
-import com.linnett.fight_and_flame.items.Moditems;
+import com.linnett.fight_and_flame.items.ModItems;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -39,7 +39,7 @@ public class MusicTape extends ThrowableItemProjectile {
 
     @Override
     protected Item getDefaultItem() {
-        return Moditems.NOTE.get();
+        return ModItems.NOTE.get();
     }
 
     @Override
