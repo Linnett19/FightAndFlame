@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "fight_and_flame:block/scary_stone_bricks_slab"
+    },
+    "type=top": {
+      "model": "fight_and_flame:block/scary_stone_bricks_slab_top"
+    },
+    "type=double": {
+      "model": "fight_and_flame:block/scary_stone_bricks_slab_full"
+    }
+  }
+}
+

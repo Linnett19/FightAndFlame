@@ -61,7 +61,17 @@ public class ModCreativeModTabs {
 
 
                         poutput.accept(ModBlocks.SCARY_STONE.get());
+                        poutput.accept(ModBlocks.SCARY_STONE_STAIRS.get());
+                        poutput.accept(ModBlocks.SCARY_STONE_SLAB.get());
+
+
                         poutput.accept(ModBlocks.SCARY_STONE_BRICKS.get());
+                        poutput.accept(ModBlocks.SCARY_STONE_BRICKS_STAIRS.get());
+                        poutput.accept(ModBlocks.SCARY_STONE_BRICKS_SLAB.get());
+                        poutput.accept(ModBlocks.SCARY_STONE_BRICKS_WALL.get());
+
+
+
                         poutput.accept(ModBlocks.MOSSY_SCARY_STONE_BRICKS.get());
                         poutput.accept(ModBlocks.LAWN.get());
 
@@ -71,6 +81,15 @@ public class ModCreativeModTabs {
                         poutput.accept(Moditems.JELLY_BALLS.get());
 
                         poutput.accept(ModBlocks.CAULDRON.get());
+
+                        poutput.accept(ModBlocks.HORRIBLE_LOG.get());
+                        poutput.accept(ModBlocks.HORRIBLE_WOOD.get());
+                        poutput.accept(ModBlocks.STRIPPED_HORRIBLE_LOG.get());
+                        poutput.accept(ModBlocks.STRIPPED_HORRIBLE_WOOD.get());
+                        poutput.accept(ModBlocks.HORRIBLE_PLANKS.get());
+                        poutput.accept(ModBlocks.HORRIBLE_STAIRS.get());
+                        poutput.accept(ModBlocks.HORRIBLE_SLAB.get());
+
 
 
                     })

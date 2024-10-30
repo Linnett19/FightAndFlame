@@ -1,0 +1,9 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "fight_and_flame:block/horrible_planks",
+    "top": "fight_and_flame:block/horrible_planks",
+    "side": "fight_and_flame:block/horrible_planks"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "fight_and_flame:block/scary_stone_bricks",
+    "top": "fight_and_flame:block/scary_stone_bricks",
+    "side": "fight_and_flame:block/scary_stone_bricks"
+  },
+  "render_type": "solid"
+}

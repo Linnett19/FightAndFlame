@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "fight_and_flame:block/horrible_slab"
+    },
+    "type=top": {
+      "model": "fight_and_flame:block/horrible_slab_top"
+    },
+    "type=double": {
+      "model": "fight_and_flame:block/horrible_slab_full"
+    }
+  }
+}

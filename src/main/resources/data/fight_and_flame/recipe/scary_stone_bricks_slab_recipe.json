@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "fight_and_flame:scary_stone_bricks"
+    }
+  },
+  "result": {
+    "item": "fight_and_flame:scary_stone_bricks_stairs",
+    "count": 6
+  }
+}

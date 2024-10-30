@@ -2,12 +2,14 @@ package com.linnett.fight_and_flame.block;
 
 import com.linnett.fight_and_flame.FightAndFlame;
 import com.linnett.fight_and_flame.block.custom_block.CustomCauldron;
+import com.linnett.fight_and_flame.block.custom_block.StrippableLogBlock;
 import com.linnett.fight_and_flame.items.Moditems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -51,9 +53,23 @@ public class ModBlocks {
              public static final RegistryObject<Block> SCARY_STONE = registerBlock("scary_stone",
                  () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
+            public static final RegistryObject<Block> SCARY_STONE_STAIRS = registerBlock("scary_stone_stairs",
+                 () -> new StairBlock(SCARY_STONE.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+             public static final RegistryObject<Block> SCARY_STONE_SLAB = registerBlock("scary_stone_slab",
+                 () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
          public static final RegistryObject<Block> SCARY_STONE_BRICKS = registerBlock("scary_stone_bricks",
                  () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)));
 
+         public static final RegistryObject<Block> SCARY_STONE_BRICKS_STAIRS = registerBlock("scary_stone_bricks_stairs",
+            () -> new StairBlock(SCARY_STONE.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)));
+
+         public static final RegistryObject<Block> SCARY_STONE_BRICKS_SLAB = registerBlock("scary_stone_bricks_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)));
+
+         public static final RegistryObject<Block> SCARY_STONE_BRICKS_WALL = registerBlock("scary_stone_bricks_wall",
+                 () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
          public static final RegistryObject<Block> MOSSY_SCARY_STONE_BRICKS = registerBlock("mossy_scary_stone_bricks",
                  () -> new Block(BlockBehaviour.Properties.copy(Blocks.MOSSY_STONE_BRICKS)));
 
@@ -62,6 +78,19 @@ public class ModBlocks {
 
          public static final RegistryObject<Block> CAULDRON = registerBlock("cauldron",
                  () -> new CustomCauldron(BlockBehaviour.Properties.copy(Blocks.CAULDRON)));
+
+         public static final RegistryObject<Block> HORRIBLE_LOG = registerBlock("horrible_log", () -> new StrippableLogBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
+    public static final RegistryObject<Block> HORRIBLE_WOOD = registerBlock("horrible_wood", () -> new StrippableLogBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
+
+    public static final RegistryObject<Block> STRIPPED_HORRIBLE_WOOD = registerBlock("stripped_horrible_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
+         public static final RegistryObject<Block> STRIPPED_HORRIBLE_LOG = registerBlock("stripped_horrible_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
+
+    public static final RegistryObject<Block> HORRIBLE_PLANKS = registerBlock("horrible_planks", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F, 3.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
+
+    public static final RegistryObject<Block> HORRIBLE_STAIRS = registerBlock("horrible_stairs",
+            () -> new StairBlock(SCARY_STONE.get().defaultBlockState(),BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F, 3.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
+
+    public static final RegistryObject<Block> HORRIBLE_SLAB = registerBlock("horrible_slab", () -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F, 3.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
 
 
 

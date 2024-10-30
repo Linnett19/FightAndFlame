@@ -1,0 +1,9 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "fight_and_flame:block/scary_stone",
+    "top": "fight_and_flame:block/scary_stone",
+    "side": "fight_and_flame:block/scary_stone"
+  },
+  "render_type": "solid"
+}

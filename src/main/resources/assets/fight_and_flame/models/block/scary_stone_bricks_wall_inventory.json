@@ -1,0 +1,8 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "fight_and_flame:block/scary_stone_bricks",
+    "particle": "fight_and_flame:block/scary_stone_bricks"
+  },
+  "render_type": "solid"
+}
