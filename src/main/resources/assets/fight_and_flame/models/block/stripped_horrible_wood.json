@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column",
   "textures": {
-    "down": "fight_and_flame:stripped_horrible_log_side",
+    "down": "fight_and_flame:block/stripped_horrible_log_side",
     "up": "fight_and_flame:block/stripped_horrible_log_side",
     "north": "fight_and_flame:block/stripped_horrible_log_side",
     "south": "fight_and_flame:block/stripped_horrible_log_side",

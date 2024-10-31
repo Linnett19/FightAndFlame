@@ -83,7 +83,7 @@ public class Moditems {
     public static final RegistryObject<Item> ELEMENTAL_CRYSTAL = ITEM.register("elemental_crystal",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> CAULDRON = ITEM.register("cauldron",
+    public static final RegistryObject<Item> CAULDRON_ITEM = ITEM.register("cauldron_item",
             () -> new ItemNameBlockItem(ModBlocks.CAULDRON.get(), new Item.Properties().rarity(RARITY_RAINBOW)));
 
     public static final RegistryObject<Item> CANDICORN = ITEM.register("candicorn",
