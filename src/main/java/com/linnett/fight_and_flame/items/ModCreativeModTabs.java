@@ -82,7 +82,12 @@ public class ModCreativeModTabs {
 
                         poutput.accept(ModBlocks.CAULDRON.get());
 
+                        poutput.accept(ModBlocks.HORRIBLE_LEAVES.get());
                         poutput.accept(ModBlocks.HORRIBLE_LOG.get());
+                        poutput.accept(ModBlocks.HORRIBLE_BEHOLD_LOG.get());
+                        poutput.accept(ModBlocks.HORRIBLE_BEHOLD_WOOD.get());
+                        poutput.accept(ModBlocks.STRIPPED_HORRIBLE_BEHOLD_WOOD.get());
+                        poutput.accept(ModBlocks.STRIPPED_HORRIBLE_BEHOLD_LOG.get());
                         poutput.accept(ModBlocks.HORRIBLE_WOOD.get());
                         poutput.accept(ModBlocks.STRIPPED_HORRIBLE_LOG.get());
                         poutput.accept(ModBlocks.STRIPPED_HORRIBLE_WOOD.get());

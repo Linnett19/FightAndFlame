@@ -79,18 +79,19 @@ public class ModBlocks {
          public static final RegistryObject<Block> CAULDRON = registerBlock("cauldron",
                  () -> new CustomCauldron(BlockBehaviour.Properties.copy(Blocks.CAULDRON)));
 
-         public static final RegistryObject<Block> HORRIBLE_LOG = registerBlock("horrible_log", () -> new StrippableLogBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
+    public static final RegistryObject<Block> HORRIBLE_BEHOLD_LOG = registerBlock("horrible_behold_log", () -> new StrippableLogBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
+    public static final RegistryObject<Block> HORRIBLE_BEHOLD_WOOD = registerBlock("horrible_behold_wood", () -> new StrippableLogBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
+    public static final RegistryObject<Block> HORRIBLE_LOG = registerBlock("horrible_log", () -> new StrippableLogBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
     public static final RegistryObject<Block> HORRIBLE_WOOD = registerBlock("horrible_wood", () -> new StrippableLogBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
-
     public static final RegistryObject<Block> STRIPPED_HORRIBLE_WOOD = registerBlock("stripped_horrible_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
-         public static final RegistryObject<Block> STRIPPED_HORRIBLE_LOG = registerBlock("stripped_horrible_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
-
+    public static final RegistryObject<Block> STRIPPED_HORRIBLE_BEHOLD_WOOD = registerBlock("stripped_horrible_behold_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
+    public static final RegistryObject<Block> STRIPPED_HORRIBLE_LOG = registerBlock("stripped_horrible_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
+    public static final RegistryObject<Block> STRIPPED_HORRIBLE_BEHOLD_LOG = registerBlock("stripped_horrible_behold_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
     public static final RegistryObject<Block> HORRIBLE_PLANKS = registerBlock("horrible_planks", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F, 3.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
-
     public static final RegistryObject<Block> HORRIBLE_STAIRS = registerBlock("horrible_stairs",
             () -> new StairBlock(SCARY_STONE.get().defaultBlockState(),BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F, 3.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
-
     public static final RegistryObject<Block> HORRIBLE_SLAB = registerBlock("horrible_slab", () -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F, 3.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
+    public static final RegistryObject<Block> HORRIBLE_LEAVES = registerBlock("horrible_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isSuffocating((blockState, getter, pos) -> false)));
 
 
 

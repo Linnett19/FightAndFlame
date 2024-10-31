@@ -29,6 +29,16 @@ public class StrippableLogBlock extends RotatedPillarBlock {
                 return ModBlocks.STRIPPED_HORRIBLE_WOOD.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(RotatedPillarBlock.AXIS));
             }
         }
+        if (ToolActions.AXE_STRIP == toolAction) {
+            if(this == ModBlocks.HORRIBLE_BEHOLD_WOOD.get()){
+                return ModBlocks.STRIPPED_HORRIBLE_BEHOLD_WOOD.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(RotatedPillarBlock.AXIS));
+            }
+        }
+        if (ToolActions.AXE_STRIP == toolAction) {
+            if(this == ModBlocks.HORRIBLE_BEHOLD_LOG.get()){
+                return ModBlocks.STRIPPED_HORRIBLE_BEHOLD_LOG.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(RotatedPillarBlock.AXIS));
+            }
+        }
         return super.getToolModifiedState(state, context, toolAction, simulate);
     }
 }

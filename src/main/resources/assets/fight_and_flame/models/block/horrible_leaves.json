@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "fight_and_flame:block/horrible_leaves"
+  }
+}

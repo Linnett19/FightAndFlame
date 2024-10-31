@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "down": "fight_and_flame:block/horrible_behold_log_side",
+    "up": "fight_and_flame:block/horrible_behold_log_side",
+    "north": "fight_and_flame:block/horrible_behold_log_side",
+    "south": "fight_and_flame:block/horrible_behold_log_side",
+    "west": "fight_and_flame:block/horrible_behold_log_side",
+    "east": "fight_and_flame:block/horrible_behold_log_side",
+    "particle": "fight_and_flame:block/horrible_behold_log_side"
+  }
+}
+
+

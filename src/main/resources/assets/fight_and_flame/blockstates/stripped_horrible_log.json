@@ -1,8 +1,8 @@
 {
   "variants": {
     "axis=x": {
-      "model": "fight_and_flame:block/stripped_horrible_log_horizontal",
       "x": 90,
+      "model": "fight_and_flame:block/stripped_horrible_log_horizontal",
       "y": 90
     },
     "axis=y": {
@@ -14,3 +14,7 @@
     }
   }
 }
+
+
+
+

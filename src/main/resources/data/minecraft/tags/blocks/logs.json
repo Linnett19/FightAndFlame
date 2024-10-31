@@ -2,7 +2,11 @@
   "replace": false,
   "values": [
     "fight_and_flame:horrible_log",
-    "fight_and_flame:horrible_wood"
+    "fight_and_flame:horrible_wood",
+    "fight_and_flame:horrible_behold_wood",
+    "fight_and_flame:horrible_behold_log",
+    "fight_and_flame:stripped_horrible_behold_wood",
+    "fight_and_flame:stripped_horrible_behold_log"
 
   ]
 }

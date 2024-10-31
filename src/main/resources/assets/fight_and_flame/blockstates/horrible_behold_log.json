@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "fight_and_flame:block/horrible_behold_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "fight_and_flame:block/horrible_behold_log"
+    },
+    "axis=z": {
+      "model": "fight_and_flame:block/horrible_behold_log_horizontal",
+      "x": 90
+    }
+  }
+}
+
+
