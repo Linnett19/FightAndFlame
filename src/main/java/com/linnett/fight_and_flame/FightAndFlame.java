@@ -8,7 +8,6 @@ import com.linnett.fight_and_flame.sounds.ModSounds;
 import com.linnett.fight_and_flame.particles.particleRegistry;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
