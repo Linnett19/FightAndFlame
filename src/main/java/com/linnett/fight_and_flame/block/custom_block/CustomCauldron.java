@@ -22,13 +22,12 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.phys.BlockHitResult;
 
 public class CustomCauldron extends AbstractCauldronBlock {
 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-
     public static final IntegerProperty LEVEL = IntegerProperty.create("level", 0, 5);
 
     public CustomCauldron(BlockBehaviour.Properties properties) {
@@ -43,6 +42,7 @@ public class CustomCauldron extends AbstractCauldronBlock {
         return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
+    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING);
         builder.add(LEVEL);
@@ -55,28 +55,32 @@ public class CustomCauldron extends AbstractCauldronBlock {
         }
 
         ItemStack itemStack = player.getItemInHand(hand);
-        int particleCount = 3;
+        int particleCount = 1;
+
         if (isCustomItem(itemStack.getItem())) {
             itemStack.shrink(1);
+            level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BREWING_STAND_BREW, SoundSource.BLOCKS, 1.0F, 1.0F);
+
+            double centerX = pos.getX() + 0.5;
+            double centerY = pos.getY() + 1.5;
+            double centerZ = pos.getZ() + 0.5;
+            double speed = 0.1;
+            double spread = 0;
+
+            ServerLevel serverLevel = (ServerLevel) level;
+
             if (itemStack.getItem() == Moditems.CANDICORN.get()) {
-                level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                ((ServerLevel) level).sendParticles(particleRegistry.CANDY_SPLASH.get(), pos.getX() + .5,pos.getY() + 1.5, pos.getZ() + .5,particleCount,.3,.3,.3,.1);
+                serverLevel.sendParticles(particleRegistry.CANDY_SPLASH.get(), centerX, centerY, centerZ, particleCount, spread, spread, spread, speed);
             }
             if (itemStack.getItem() == Moditems.SLIME_LOLIPOP.get()) {
-                level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                ((ServerLevel) level).sendParticles(particleRegistry.SLIME_LOLIPOP_SPLASH.get(), pos.getX() + .5,pos.getY() + 1.5, pos.getZ() + .5,particleCount,.3,.3,.3,.1);
+                serverLevel.sendParticles(particleRegistry.SLIME_LOLIPOP_SPLASH.get(), centerX, centerY, centerZ, particleCount, spread, spread, spread, speed);
             }
             if (itemStack.getItem() == Moditems.SOUR_BONE.get()) {
-                level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                ((ServerLevel) level).sendParticles(particleRegistry.SOUL_BONE_SPLASH.get(), pos.getX() + .5,pos.getY() + 1.5, pos.getZ() + .5,particleCount,.3,.3,.3,.1);
+                serverLevel.sendParticles(particleRegistry.SOUL_BONE_SPLASH.get(), centerX, centerY, centerZ, particleCount, spread, spread, spread, speed);
             }
             if (itemStack.getItem() == Moditems.JELLY_BALLS.get()) {
-                level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                ((ServerLevel) level).sendParticles(particleRegistry.JELLY_BALLS_SPLASH.get(), pos.getX() + .5,pos.getY() + 1.5, pos.getZ() + .5,particleCount,.3,.3,.3,.1);
+                serverLevel.sendParticles(particleRegistry.JELLY_BALLS_SPLASH.get(), centerX, centerY, centerZ, particleCount, spread, spread, spread, speed);
             }
-
-
-
 
             return InteractionResult.SUCCESS;
         }
