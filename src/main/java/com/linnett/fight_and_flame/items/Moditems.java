@@ -2,8 +2,6 @@ package com.linnett.fight_and_flame.items;
 
 import com.linnett.fight_and_flame.FightAndFlame;
 import com.linnett.fight_and_flame.block.ModBlocks;
-import com.linnett.fight_and_flame.items.custom_items.Flute;
-import net.minecraft.ChatFormatting;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Rarity;
@@ -18,9 +16,7 @@ public class Moditems {
     public static final DeferredRegister<Item> ITEM =
             DeferredRegister.create(ForgeRegistries.ITEMS, FightAndFlame.MOD_ID);
 
-    public static final Rarity RARITY_SCARY = Rarity.create("fight_and_flame:green",
-            style -> style.withColor(Color.HSBtoRGB(0.33f, 1f, (float)(0.7 + 0.3 * Math.sin(System.currentTimeMillis() / 500.0)))));
-
+    public static final Rarity RARITY_SCARY = Rarity.create("fight_and_flame:green", style -> style.withColor(Color.HSBtoRGB(0.33f, 1f, (float)(0.7 + 0.3 * Math.sin(System.currentTimeMillis() / 500.0)))));
     public static final Rarity RARITY_CANDY = Rarity.create("fight_and_flame:candy", style -> style.withColor(0XFDDA86));
     public static final Rarity RARITY_RAINBOW = Rarity.create("fight_and_flame:rainbow", style -> style.withColor(Color.HSBtoRGB((System.currentTimeMillis() % 5000) / 5000F, 1f, 1F)));
 
@@ -74,12 +70,6 @@ public class Moditems {
 
     public static final RegistryObject<Item> APHATIT_CRYSTAL_SPLINTER = ITEM.register("aphatit_crystal_splinter",
             () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> FLUTE = ITEM.register("flute",
-            () -> new Flute(new Item.Properties()));
-
-    public static final RegistryObject<Item> NOTE = ITEM.register("note_1",
-            () -> new Flute(new Item.Properties()));
 
     public static final RegistryObject<Item> ELEMENTAL_CRYSTAL = ITEM.register("elemental_crystal",
             () -> new Item(new Item.Properties()));

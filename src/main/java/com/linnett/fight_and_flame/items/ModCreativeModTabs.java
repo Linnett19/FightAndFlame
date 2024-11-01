@@ -56,7 +56,6 @@ public class ModCreativeModTabs {
                         poutput.accept(ModBlocks.AWAKENED_NETHERITE_BLOCK.get());
 
                         poutput.accept(Moditems.ELEMENTAL_CRYSTAL.get());
-                        poutput.accept(Moditems.NOTE.get());
 
 
 
@@ -105,7 +104,7 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("itemGroup.fight_and_flame_weapons"))
                     .displayItems((pparameters, poutput) -> {
 
-                        poutput.accept(Moditems.FLUTE.get());
+
                     })
                     .build());
 
