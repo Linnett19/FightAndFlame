@@ -18,8 +18,9 @@ public class Moditems {
     public static final DeferredRegister<Item> ITEM =
             DeferredRegister.create(ForgeRegistries.ITEMS, FightAndFlame.MOD_ID);
 
-    public static final Rarity RARITY_BLOOD_MOON = Rarity.create("fight_and_flame:blood_moon", ChatFormatting.DARK_RED);
-    public static final Rarity RARITY_NEPHRITIS = Rarity.create("fight_and_flame:nephritis", ChatFormatting.DARK_GREEN);
+    public static final Rarity RARITY_SCARY = Rarity.create("fight_and_flame:green",
+            style -> style.withColor(Color.HSBtoRGB(0.33f, 1f, (float)(0.7 + 0.3 * Math.sin(System.currentTimeMillis() / 500.0)))));
+
     public static final Rarity RARITY_CANDY = Rarity.create("fight_and_flame:candy", style -> style.withColor(0XFDDA86));
     public static final Rarity RARITY_RAINBOW = Rarity.create("fight_and_flame:rainbow", style -> style.withColor(Color.HSBtoRGB((System.currentTimeMillis() % 5000) / 5000F, 1f, 1F)));
 
@@ -84,7 +85,7 @@ public class Moditems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> CAULDRON_ITEM = ITEM.register("cauldron_item",
-            () -> new ItemNameBlockItem(ModBlocks.CAULDRON.get(), new Item.Properties().rarity(RARITY_RAINBOW)));
+            () -> new ItemNameBlockItem(ModBlocks.CAULDRON.get(), new Item.Properties().rarity(RARITY_SCARY)));
 
     public static final RegistryObject<Item> CANDICORN = ITEM.register("candicorn",
             () -> new Item(new Item.Properties().rarity(RARITY_CANDY)));
