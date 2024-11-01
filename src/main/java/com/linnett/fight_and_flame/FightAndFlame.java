@@ -4,7 +4,6 @@ import com.linnett.fight_and_flame.block.ModBlocks;
 import com.linnett.fight_and_flame.entity.FightAndFlameEntityRegistry;
 import com.linnett.fight_and_flame.items.ModCreativeModTabs;
 import com.linnett.fight_and_flame.items.Moditems;
-import com.linnett.fight_and_flame.render.MusicTapeRender;
 import com.linnett.fight_and_flame.sounds.ModSounds;
 import com.linnett.fight_and_flame.particles.particleRegistry;
 import com.mojang.logging.LogUtils;
@@ -87,7 +86,6 @@ public class FightAndFlame {
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            EntityRenderers.register(FightAndFlameEntityRegistry.MUSIC_TAPE.get(), MusicTapeRender::new);
 
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
