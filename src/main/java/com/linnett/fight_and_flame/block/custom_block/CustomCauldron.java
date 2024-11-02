@@ -10,6 +10,9 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -27,14 +30,23 @@ import net.minecraft.world.phys.BlockHitResult;
 
 public class CustomCauldron extends AbstractCauldronBlock {
 
+    public static final int LevelMax = 5;
+    public static final int MaxCandy = 100;
+    private int candyNumber = 0;
+
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-    public static final IntegerProperty LEVEL = IntegerProperty.create("level", 0, 5);
+
+    public static final IntegerProperty CANDY_NUMBER = IntegerProperty.create("candy_number", 0, 100);
+    public static final IntegerProperty STAGE = IntegerProperty.create("stage", 0, LevelMax);
 
     public CustomCauldron(BlockBehaviour.Properties properties) {
         super(properties, CauldronInteraction.EMPTY);
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
-                .setValue(LEVEL, 0));
+                .setValue(STAGE, 0)
+                .setValue(CANDY_NUMBER, 0)
+        );
+
     }
 
     @Override
@@ -42,10 +54,10 @@ public class CustomCauldron extends AbstractCauldronBlock {
         return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
-    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING);
-        builder.add(LEVEL);
+        builder.add(STAGE);
+        builder.add(CANDY_NUMBER);
     }
 
     @Override
@@ -55,33 +67,32 @@ public class CustomCauldron extends AbstractCauldronBlock {
         }
 
         ItemStack itemStack = player.getItemInHand(hand);
-        int particleCount = 1;
+        int particleCount = 3;
+
 
         if (isCustomItem(itemStack.getItem())) {
             itemStack.shrink(1);
-            level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BREWING_STAND_BREW, SoundSource.BLOCKS, 1.0F, 1.0F);
-
-            double centerX = pos.getX() + 0.5;
-            double centerY = pos.getY() + 1.5;
-            double centerZ = pos.getZ() + 0.5;
-            double speed = 0.1;
-            double spread = 0;
-
-            ServerLevel serverLevel = (ServerLevel) level;
-
             if (itemStack.getItem() == Moditems.CANDICORN.get()) {
-                serverLevel.sendParticles(particleRegistry.CANDY_SPLASH.get(), centerX, centerY, centerZ, particleCount, spread, spread, spread, speed);
+                level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                ((ServerLevel) level).sendParticles(particleRegistry.CANDY_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, .3, .3, .3, .1);
+                updateCauldronLevel(level, pos, state);
             }
+
             if (itemStack.getItem() == Moditems.SLIME_LOLIPOP.get()) {
-                serverLevel.sendParticles(particleRegistry.SLIME_LOLIPOP_SPLASH.get(), centerX, centerY, centerZ, particleCount, spread, spread, spread, speed);
+                level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                ((ServerLevel) level).sendParticles(particleRegistry.SLIME_LOLIPOP_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, .3, .3, .3, .1);
+                updateCauldronLevel(level, pos, state);
             }
             if (itemStack.getItem() == Moditems.SOUR_BONE.get()) {
-                serverLevel.sendParticles(particleRegistry.SOUL_BONE_SPLASH.get(), centerX, centerY, centerZ, particleCount, spread, spread, spread, speed);
+                level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                ((ServerLevel) level).sendParticles(particleRegistry.SOUL_BONE_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, .3, .3, .3, .1);
+                updateCauldronLevel(level, pos, state);
             }
             if (itemStack.getItem() == Moditems.JELLY_BALLS.get()) {
-                serverLevel.sendParticles(particleRegistry.JELLY_BALLS_SPLASH.get(), centerX, centerY, centerZ, particleCount, spread, spread, spread, speed);
+                level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                ((ServerLevel) level).sendParticles(particleRegistry.JELLY_BALLS_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, .3, .3, .3, .1);
+                updateCauldronLevel(level, pos, state);
             }
-
             return InteractionResult.SUCCESS;
         }
         return InteractionResult.PASS;
@@ -95,5 +106,76 @@ public class CustomCauldron extends AbstractCauldronBlock {
     private boolean isCustomItem(Item item) {
         return item == Moditems.CANDICORN.get() || item == Moditems.SOUR_BONE.get() ||
                 item == Moditems.SLIME_LOLIPOP.get() || item == Moditems.JELLY_BALLS.get();
+    }
+
+    private static void breakCauldron(ServerLevel level, BlockPos pos) {
+        level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_CLUSTER_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
+        ((ServerLevel) level).sendParticles(particleRegistry.JELLY_BALLS_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, 5, .3, .3, .3, .1);
+        ((ServerLevel) level).sendParticles(particleRegistry.CANDY_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, 5, .3, .3, .3, .1);
+        ((ServerLevel) level).sendParticles(particleRegistry.SOUL_BONE_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, 5, .3, .3, .3, .1);
+        ((ServerLevel) level).sendParticles(particleRegistry.SLIME_LOLIPOP_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, 5, .3, .3, .3, .1);
+        level.destroyBlock(pos, false);
+    }
+
+
+    private void updateCauldronLevel(Level level, BlockPos pos, BlockState state) {
+        int candyNumber = state.getValue(CANDY_NUMBER);
+
+        candyNumber += 1;
+
+        if (candyNumber >= MaxCandy) {
+            ItemEntity itemEntity = new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Moditems.BLOOD_STONE_INGOT.get()));
+            level.addFreshEntity(itemEntity);
+            breakCauldron((ServerLevel) level, pos);
+            return;
+        }
+
+
+
+
+        if (candyNumber == 20 ) {
+            spawnMob(level, pos, 5, EntityType.SLIME);
+            state = state.setValue(STAGE, state.getValue(STAGE) + 1);
+        }
+
+        if (candyNumber == 40 ) {
+            spawnMob(level, pos, 5, EntityType.SLIME);
+            state = state.setValue(STAGE, state.getValue(STAGE) + 1);
+        }
+
+        if (candyNumber == 60 ) {
+            spawnMob(level, pos, 5, EntityType.SLIME);
+            state = state.setValue(STAGE, state.getValue(STAGE) + 1);
+        }
+
+        if (candyNumber == 80 ) {
+            spawnMob(level, pos, 5, EntityType.SLIME);
+            state = state.setValue(STAGE, state.getValue(STAGE) + 1);
+        }
+
+        if (candyNumber == 100 ) {
+            spawnMob(level, pos, 5, EntityType.SLIME);
+            state = state.setValue(STAGE, state.getValue(STAGE) + 1);
+        }
+
+        if (candyNumber <= 100) {
+            level.setBlock(pos, state.setValue(CANDY_NUMBER, candyNumber), 3);
+        }
+    }
+
+
+
+    private <T extends Mob> void spawnMob(Level level, BlockPos pos, int count, EntityType<T> type) {
+        double x = pos.getX() + (level.random.nextDouble() - 0.5);
+        double y = pos.getY() + 1;
+        double z = pos.getZ() + (level.random.nextDouble() - 0.5);
+
+        for (int i = 0; i < count; i++) {
+            T entity = type.create(level);
+            if (entity != null) {
+                entity.setPos(x, y, z);
+                level.addFreshEntity(entity);
+            }
+        }
     }
 }

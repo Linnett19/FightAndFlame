@@ -1,98 +1,114 @@
 {
   "variants": {
-    "facing=north,level=0": {
+    "facing=north,stage=0": {
       "model": "fight_and_flame:block/cauldron"
     },
-    "facing=east,level=0": {
+    "facing=east,stage=0": {
       "model": "fight_and_flame:block/cauldron",
       "y": 90
     },
-    "facing=south,level=0": {
+    "facing=south,stage=0": {
       "model": "fight_and_flame:block/cauldron",
       "y": 180
     },
-    "facing=west,level=0": {
+    "facing=west,stage=0": {
       "model": "fight_and_flame:block/cauldron",
       "y": 270
     },
-    "facing=north,level=1": {
+    "facing=north,stage=1": {
       "model": "fight_and_flame:block/cauldron1"
     },
-    "facing=east,level=1": {
+    "facing=east,stage=1": {
       "model": "fight_and_flame:block/cauldron1",
       "y": 90
     },
-    "facing=south,level=1": {
+    "facing=south,stage=1": {
       "model": "fight_and_flame:block/cauldron1",
       "y": 180
     },
-    "facing=west,level=1": {
+    "facing=west,stage=1": {
       "model": "fight_and_flame:block/cauldron1",
       "y": 270
     },
 
-    "facing=north,level=2": {
+    "facing=north,stage=2": {
       "model": "fight_and_flame:block/cauldron2"
     },
-    "facing=east,level=2": {
+    "facing=east,stage=2": {
       "model": "fight_and_flame:block/cauldron2",
       "y": 90
     },
-    "facing=south,level=2": {
+    "facing=south,stage=2": {
       "model": "fight_and_flame:block/cauldron2",
       "y": 180
     },
-    "facing=west,level=2": {
+    "facing=west,stage=2": {
       "model": "fight_and_flame:block/cauldron2",
       "y": 270
+    },
+
+    "facing=north,stage=3": {
+      "model": "fight_and_flame:block/cauldron3"
+    },
+    "facing=east,stage=3": {
+      "model": "fight_and_flame:block/cauldron3",
+      "y": 90
+    },
+    "facing=south,stage=3": {
+      "model": "fight_and_flame:block/cauldron3",
+      "y": 180
+    },
+    "facing=west,stage=3": {
+      "model": "fight_and_flame:block/cauldron3",
+      "y": 270
+    },
+
+    "facing=north,stage=4": {
+      "model": "fight_and_flame:block/cauldron4"
+    },
+    "facing=east,stage=4": {
+      "model": "fight_and_flame:block/cauldron4",
+      "y": 90
+    },
+    "facing=south,stage=4": {
+      "model": "fight_and_flame:block/cauldron4",
+      "y": 180
+    },
+    "facing=west,stage=4": {
+      "model": "fight_and_flame:block/cauldron4",
+      "y": 270
+    },
+
+    "facing=north,stage=5": {
+      "model": "fight_and_flame:block/cauldron5"
+    },
+    "facing=east,stage=5": {
+      "model": "fight_and_flame:block/cauldron5",
+      "y": 90
+    },
+    "facing=south,stage=5": {
+      "model": "fight_and_flame:block/cauldron5",
+      "y": 180
+    },
+    "facing=west,stage=5": {
+      "model": "fight_and_flame:block/cauldron5",
+      "y": 270
+    },
+
+    "facing=north,stage=6": {
+      "model": "fight_and_flame:block/cauldron5"
+    },
+    "facing=east,stage=6": {
+      "model": "fight_and_flame:block/cauldron5",
+      "y": 90
+    },
+    "facing=south,stage=6": {
+      "model": "fight_and_flame:block/cauldron5",
+      "y": 180
+    },
+    "facing=west,stage=6": {
+      "model": "fight_and_flame:block/cauldron5",
+      "y": 270
     }
-  },
-
-  "facing=north,level=3": {
-    "model": "fight_and_flame:block/cauldron3"
-  },
-  "facing=east,level=3": {
-    "model": "fight_and_flame:block/cauldron3",
-    "y": 90
-  },
-  "facing=south,level=3": {
-    "model": "fight_and_flame:block/cauldron3",
-    "y": 180
-  },
-  "facing=west,level=3": {
-    "model": "fight_and_flame:block/cauldron3",
-    "y": 270
-  },
-
-  "facing=north,level=4": {
-    "model": "fight_and_flame:block/cauldron4"
-  },
-  "facing=east,level=4": {
-    "model": "fight_and_flame:block/cauldron4",
-    "y": 90
-  },
-  "facing=south,level=4": {
-    "model": "fight_and_flame:block/cauldron4",
-    "y": 180
-  },
-  "facing=west,level=4": {
-    "model": "fight_and_flame:block/cauldron4",
-    "y": 270
-  },
-
-  "facing=north,level=5": {
-    "model": "fight_and_flame:block/cauldron5"
-  },
-  "facing=east,level=5": {
-    "model": "fight_and_flame:block/cauldron5",
-    "y": 90
-  },
-  "facing=south,level=5": {
-    "model": "fight_and_flame:block/cauldron5",
-    "y": 180
-  },
-  "facing=west,level=5": {
-    "model": "fight_and_flame:block/cauldron5",
-    "y": 270
   }
 }

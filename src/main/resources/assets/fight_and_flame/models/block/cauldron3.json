@@ -2,7 +2,7 @@
 	"render_type": "cutout",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "fight_and_flame:block/cauldron",
+		"0": "fight_and_flame:block/cauldronlevel",
 		"particle": "fight_and_flame:block/cauldron_particle"
 	},
 	"elements": [
