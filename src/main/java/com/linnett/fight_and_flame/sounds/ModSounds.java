@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModSounds {
     public static final  DeferredRegister<SoundEvent> SOUND_EVENT= DeferredRegister.create(Registries.SOUND_EVENT, FightAndFlame.MOD_ID);
 
-    public static final  RegistryObject<SoundEvent> FLUTE_SOUND = createSoundEvent("flute_whistle");
+
 
     private static RegistryObject<SoundEvent> createSoundEvent(final String soundName) {
         return SOUND_EVENT.register(soundName, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(FightAndFlame.MOD_ID, soundName)));

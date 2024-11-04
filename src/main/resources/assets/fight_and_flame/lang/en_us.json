@@ -44,6 +44,16 @@
   "item.fight_and_flame.jelly_balls": "Jelly Balls",
   "item.fight_and_flame.cauldron_item": "Witch's Cauldron",
 
-  "itemGroup.fight_and_flame_ingredients": "Fight And Flame: Ingredients",
+
+  "item.fight_and_flame.iron_braid": "Iron Braid",
+  "item.fight_and_flame.iron_rapier": "Iron Rapier",
+  "item.fight_and_flame.iron_sickle": "Iron Sickle",
+  "item.fight_and_flame.iron_spear": "Iron Spear",
+  "item.fight_and_flame.iron_twohanded_sword": "Iron Two-handed Sword",
+
+
+
+
+  "itemGroup.fight_and_flame_materials_and_blocks": "Fight And Flame: Blocks",
   "itemGroup.fight_and_flame_weapons": "Fight And Flame: Weapons"
 }

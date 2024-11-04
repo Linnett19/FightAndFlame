@@ -67,36 +67,39 @@ public class CustomCauldron extends AbstractCauldronBlock {
         }
 
         ItemStack itemStack = player.getItemInHand(hand);
-        int particleCount = 3;
-
+        int particleCount = 1;
+        double xOffset = 0.1;
+        double yOffset = 0.1;
+        double zOffset = 0.1;
 
         if (isCustomItem(itemStack.getItem())) {
             itemStack.shrink(1);
             if (itemStack.getItem() == Moditems.CANDICORN.get()) {
                 level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                ((ServerLevel) level).sendParticles(particleRegistry.CANDY_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, .3, .3, .3, .1);
+                ((ServerLevel) level).sendParticles(particleRegistry.CANDY_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, xOffset, yOffset, zOffset, .1);
                 updateCauldronLevel(level, pos, state);
             }
 
             if (itemStack.getItem() == Moditems.SLIME_LOLIPOP.get()) {
                 level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                ((ServerLevel) level).sendParticles(particleRegistry.SLIME_LOLIPOP_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, .3, .3, .3, .1);
+                ((ServerLevel) level).sendParticles(particleRegistry.SLIME_LOLIPOP_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, xOffset, yOffset, zOffset, .1);
                 updateCauldronLevel(level, pos, state);
             }
             if (itemStack.getItem() == Moditems.SOUR_BONE.get()) {
                 level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                ((ServerLevel) level).sendParticles(particleRegistry.SOUL_BONE_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, .3, .3, .3, .1);
+                ((ServerLevel) level).sendParticles(particleRegistry.SOUL_BONE_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, xOffset, yOffset, zOffset, .1);
                 updateCauldronLevel(level, pos, state);
             }
             if (itemStack.getItem() == Moditems.JELLY_BALLS.get()) {
                 level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                ((ServerLevel) level).sendParticles(particleRegistry.JELLY_BALLS_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, .3, .3, .3, .1);
+                ((ServerLevel) level).sendParticles(particleRegistry.JELLY_BALLS_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, xOffset, yOffset, zOffset, .1);
                 updateCauldronLevel(level, pos, state);
             }
             return InteractionResult.SUCCESS;
         }
         return InteractionResult.PASS;
     }
+
 
     @Override
     public boolean isFull(BlockState blockState) {
@@ -134,7 +137,7 @@ public class CustomCauldron extends AbstractCauldronBlock {
 
 
         if (candyNumber == 20 ) {
-            spawnMob(level, pos, 5, EntityType.SLIME);
+            spawnMob(level, pos, 4, EntityType.SLIME);
             state = state.setValue(STAGE, state.getValue(STAGE) + 1);
         }
 
@@ -149,12 +152,12 @@ public class CustomCauldron extends AbstractCauldronBlock {
         }
 
         if (candyNumber == 80 ) {
-            spawnMob(level, pos, 5, EntityType.SLIME);
+            spawnMob(level, pos, 6, EntityType.SLIME);
             state = state.setValue(STAGE, state.getValue(STAGE) + 1);
         }
 
         if (candyNumber == 100 ) {
-            spawnMob(level, pos, 5, EntityType.SLIME);
+            spawnMob(level, pos, 7, EntityType.SLIME);
             state = state.setValue(STAGE, state.getValue(STAGE) + 1);
         }
 

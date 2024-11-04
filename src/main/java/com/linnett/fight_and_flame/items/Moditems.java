@@ -2,9 +2,11 @@ package com.linnett.fight_and_flame.items;
 
 import com.linnett.fight_and_flame.FightAndFlame;
 import com.linnett.fight_and_flame.block.ModBlocks;
+import com.linnett.fight_and_flame.items.custom_items.SwordWeapon;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -16,8 +18,8 @@ public class Moditems {
     public static final DeferredRegister<Item> ITEM =
             DeferredRegister.create(ForgeRegistries.ITEMS, FightAndFlame.MOD_ID);
 
-    public static final Rarity RARITY_SCARY = Rarity.create("fight_and_flame:green", style -> style.withColor(Color.HSBtoRGB(0.33f, 1f, (float)(0.7 + 0.3 * Math.sin(System.currentTimeMillis() / 500.0)))));
-    public static final Rarity RARITY_CANDY = Rarity.create("fight_and_flame:candy", style -> style.withColor(0XFDDA86));
+    public static final Rarity RARITY_SCARY = Rarity.create("fight_and_flame:scary", style -> style.withColor(Color.HSBtoRGB(0.33f, 1f, (float) (0.7 + 0.3 * Math.sin(System.currentTimeMillis() / 500.0)))));
+    public static final Rarity RARITY_CANDY = Rarity.create("fight_and_flame:candy", style -> style.withColor(0Xd0f899));
     public static final Rarity RARITY_RAINBOW = Rarity.create("fight_and_flame:rainbow", style -> style.withColor(Color.HSBtoRGB((System.currentTimeMillis() % 5000) / 5000F, 1f, 1F)));
 
     public static final RegistryObject<Item> BLANK_BLUEPRINT = ITEM.register("blank_blueprint",
@@ -88,6 +90,81 @@ public class Moditems {
 
     public static final RegistryObject<Item> JELLY_BALLS = ITEM.register("jelly_balls",
             () -> new Item(new Item.Properties().rarity(RARITY_CANDY)));
+
+    //iron
+
+
+    public static final RegistryObject<Item> IRON_BRAID = ITEM.register("iron_braid", () ->
+            new SwordWeapon(Tiers.IRON, 4, -2.0F, new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> IRON_RAPIER = ITEM.register("iron_rapier", () ->
+            new SwordWeapon(Tiers.IRON, 2, -1.0F, new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> IRON_SICKLE = ITEM.register("iron_sickle", () ->
+            new SwordWeapon(Tiers.IRON, 3, -1.5F, new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> IRON_SPEAR = ITEM.register("iron_spear", () ->
+            new SwordWeapon(Tiers.IRON, 5, -2.5F, new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> IRON_TWOHANDED_SWORD = ITEM.register("iron_twohanded_sword", () ->
+            new SwordWeapon(Tiers.IRON, 7, -3.0F, new Item.Properties())
+    );
+
+
+    //golden
+
+    public static final RegistryObject<Item> GOLDEN_BRAID = ITEM.register("golden_braid", () ->
+            new SwordWeapon(Tiers.GOLD, 3, -1.5F, new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> GOLDEN_RAPIER = ITEM.register("golden_rapier", () ->
+            new SwordWeapon(Tiers.GOLD, 2, -0.5F, new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> GOLDEN_SICKLE = ITEM.register("golden_sickle", () ->
+            new SwordWeapon(Tiers.GOLD, 2, -1.0F, new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> GOLDEN_SPEAR = ITEM.register("golden_spear", () ->
+            new SwordWeapon(Tiers.GOLD, 4, -2.0F, new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> GOLDEN_TWOHANDED_SWORD = ITEM.register("golden_twohanded_sword", () ->
+            new SwordWeapon(Tiers.GOLD, 5, -2.5F, new Item.Properties())
+    );
+
+
+    //diamond
+
+    public static final RegistryObject<Item> DIAMOND_BRAID = ITEM.register("diamond_braid", () ->
+            new SwordWeapon(Tiers.DIAMOND, 4, -1.5F, new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> DIAMOND_RAPIER = ITEM.register("diamond_rapier", () ->
+            new SwordWeapon(Tiers.DIAMOND, 3, -0.5F, new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> DIAMOND_SICKLE = ITEM.register("diamond_sickle", () ->
+            new SwordWeapon(Tiers.DIAMOND, 3, -1.0F, new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> DIAMOND_SPEAR = ITEM.register("diamond_spear", () ->
+            new SwordWeapon(Tiers.DIAMOND, 5, -2.0F, new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> DIAMOND_TWOHANDED_SWORD = ITEM.register("diamond_twohanded_sword", () ->
+            new SwordWeapon(Tiers.DIAMOND, 6, -2.5F, new Item.Properties())
+    );
+
+
+
+
+
+
 
 
     public static void register(IEventBus eventBus) {
