@@ -1,7 +1,13 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "block/cube",
   "textures": {
-    "all": "fight_and_flame:block/mossy_scary_stone_bricks"
+    "down": "fight_and_flame:block/lawn",
+    "up": "fight_and_flame:block/lawn",
+    "north": "fight_and_flame:block/mossy_scary_stone_bricks",
+    "south": "fight_and_flame:block/mossy_scary_stone_bricks",
+    "west": "fight_and_flame:block/mossy_scary_stone_bricks",
+    "east": "fight_and_flame:block/mossy_scary_stone_bricks",
+    "particle": "fight_and_flame:block/mossy_scary_stone_bricks"
   }
 }
 

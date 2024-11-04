@@ -42,7 +42,6 @@ public class FightAndFlame {
         ModSounds.SOUND_EVENT.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 
-
         
         
         FightAndFlameEntityRegistry.DEF_REG.register(modEventBus);
