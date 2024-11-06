@@ -19,7 +19,7 @@ public class Moditems {
             DeferredRegister.create(ForgeRegistries.ITEMS, FightAndFlame.MOD_ID);
 
     public static final Rarity RARITY_SCARY = Rarity.create("fight_and_flame:scary", style -> style.withColor(Color.HSBtoRGB(0.33f, 1f, (float) (0.7 + 0.3 * Math.sin(System.currentTimeMillis() / 500.0)))));
-    public static final Rarity RARITY_CANDY = Rarity.create("fight_and_flame:candy", style -> style.withColor(0Xd0f899));
+    public static final Rarity RARITY_CANDY = Rarity.create("fight_and_flame:candy", style -> style.withColor(0Xff9800));
     public static final Rarity RARITY_RAINBOW = Rarity.create("fight_and_flame:rainbow", style -> style.withColor(Color.HSBtoRGB((System.currentTimeMillis() % 5000) / 5000F, 1f, 1F)));
 
     public static final RegistryObject<Item> BLANK_BLUEPRINT = ITEM.register("blank_blueprint",
@@ -161,7 +161,11 @@ public class Moditems {
     );
 
 
+    //Spooky
 
+    public static final RegistryObject<Item> BRAID_OF_FEARS = ITEM.register("braid_of_fears", () ->
+            new SwordWeapon(Tiers.IRON, 6, -2.5F, new Item.Properties().rarity(RARITY_CANDY))
+    );
 
 
 
