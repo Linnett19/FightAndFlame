@@ -3,7 +3,7 @@ package com.linnett.fight_and_flame.block;
 import com.linnett.fight_and_flame.FightAndFlame;
 import com.linnett.fight_and_flame.block.custom_block.*;
 import com.linnett.fight_and_flame.items.Moditems;
-import com.linnett.fight_and_flame.world.wood.ModWoodTypes;
+import com.linnett.fight_and_flame.worldgen.wood.ModWoodTypes;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;

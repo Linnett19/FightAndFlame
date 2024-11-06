@@ -1,4 +1,4 @@
-package com.linnett.fight_and_flame.world.wood;
+package com.linnett.fight_and_flame.worldgen.wood;
 
 import com.linnett.fight_and_flame.FightAndFlame;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
