@@ -7,10 +7,8 @@ import com.linnett.fight_and_flame.items.ModCreativeModTabs;
 import com.linnett.fight_and_flame.items.Moditems;
 import com.linnett.fight_and_flame.sounds.ModSounds;
 import com.linnett.fight_and_flame.particles.particleRegistry;
-import com.linnett.fight_and_flame.world.wood.ModWoodTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -27,7 +25,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
-
+// The value here should match an entry in the META-INF/mods.toml file
 @Mod(FightAndFlame.MOD_ID)
 public class FightAndFlame {
 
@@ -41,11 +39,10 @@ public class FightAndFlame {
         ModCreativeModTabs.register(modEventBus);
         Moditems.register(modEventBus);
         ModBlocks.register(modEventBus);
-        BlockEntities.BLOCK_ENTITIES.register(modEventBus);
         particleRegistry.register(modEventBus);
         ModSounds.SOUND_EVENT.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
-
+        BlockEntities.BLOCK_ENTITIES.register(modEventBus);
 
         
         
@@ -89,7 +86,9 @@ public class FightAndFlame {
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            Sheets.addWoodType(ModWoodTypes.HORRIBLE);
+
+            LOGGER.info("HELLO FROM CLIENT SETUP");
+            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
     }
 }

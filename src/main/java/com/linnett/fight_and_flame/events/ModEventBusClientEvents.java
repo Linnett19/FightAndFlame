@@ -10,7 +10,6 @@ import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 
 @Mod.EventBusSubscriber(modid = FightAndFlame.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-
 public class ModEventBusClientEvents {
     @SubscribeEvent
     public static void register(EntityRenderersEvent.RegisterRenderers event) {

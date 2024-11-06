@@ -3,10 +3,7 @@ package com.linnett.fight_and_flame.items;
 import com.linnett.fight_and_flame.FightAndFlame;
 import com.linnett.fight_and_flame.block.ModBlocks;
 import com.linnett.fight_and_flame.items.custom_items.SwordWeapon;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -48,6 +45,12 @@ public class Moditems {
 
     public static final RegistryObject<Item> NEPHRITIS_PIECES = ITEM.register("nephritis_pieces",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> HORRIBLE_SIGN = ITEM.register("horrible_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.HORRIBLE_SIGN.get(), ModBlocks.HORRIBLE_WALL_SIGN.get()));
+    public static final RegistryObject<Item> HORRIBLE_HANGING_SIGN = ITEM.register("horrible_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.HORRIBLE_HANGING_SIGN.get(), ModBlocks.HORRIBLE_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+
 
     public static final RegistryObject<Item> RAW_NEPHRITIS = ITEM.register("raw_nephritis",
             () -> new Item(new Item.Properties()));

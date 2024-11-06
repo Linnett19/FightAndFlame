@@ -1,8 +1,7 @@
 package com.linnett.fight_and_flame.block;
 
 import com.linnett.fight_and_flame.FightAndFlame;
-import com.linnett.fight_and_flame.block.custom_block.CustomCauldron;
-import com.linnett.fight_and_flame.block.custom_block.StrippableLogBlock;
+import com.linnett.fight_and_flame.block.custom_block.*;
 import com.linnett.fight_and_flame.items.Moditems;
 import com.linnett.fight_and_flame.world.wood.ModWoodTypes;
 import net.minecraft.world.item.BlockItem;
@@ -18,7 +17,6 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
-import static com.linnett.fight_and_flame.world.wood.ModWoodTypes.HORRIBLE;
 
 public class ModBlocks {
 
@@ -110,10 +108,14 @@ public class ModBlocks {
     public static final RegistryObject<Block> HORRIBLE_LEAVES = registerBlock("horrible_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isSuffocating((blockState, getter, pos) -> false)));
 
-    public static final RegistryObject<Block> HORRIBLE_SIGN = registerBlock("horrible_sign", () -> new StandingSignBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).noCollission().strength(1.0F).sound(SoundType.CHERRY_WOOD), HORRIBLE));
-    public static final RegistryObject<Block> HORRIBLE_WALL_SIGN = registerBlock("horrible_wall_sign", () -> new WallSignBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).noCollission().strength(1.0F).sound(SoundType.CHERRY_WOOD), HORRIBLE));
-    public static final RegistryObject<Block> HORRIBLE_HANGING_SIGN = registerBlock("horrible_hanging_sign", () -> new CeilingHangingSignBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0F), HORRIBLE));
-    public static final RegistryObject<Block> HORRIBLE_WALL_HANGING_SIGN = registerBlock("horrible_wall_hanging_sign", () -> new WallHangingSignBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0F).dropsLike(HORRIBLE_HANGING_SIGN.get()), HORRIBLE));
+    public static final RegistryObject<Block> HORRIBLE_SIGN = BLOCKS.register("horrible_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.HORRIBLE));
+    public static final RegistryObject<Block> HORRIBLE_WALL_SIGN = BLOCKS.register("horrible_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.HORRIBLE));
+    public static final RegistryObject<Block> HORRIBLE_HANGING_SIGN = BLOCKS.register("horrible_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.HORRIBLE));
+    public static final RegistryObject<Block> HORRIBLE_WALL_HANGING_SIGN = BLOCKS.register("horrible_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.HORRIBLE));
 
 
 

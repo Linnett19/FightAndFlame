@@ -28,6 +28,9 @@ public class ModCreativeModTabs {
                         poutput.accept(ModBlocks.NEPHRITIS_ORE.get());
                         poutput.accept(ModBlocks.NEPHRITIS_BLOCK.get());
 
+                        poutput.accept(Moditems.HORRIBLE_SIGN.get());
+                        poutput.accept(Moditems.HORRIBLE_HANGING_SIGN.get());
+
                         poutput.accept(Moditems.APHATIT_CRYSTAL_SPLINTER.get());
                         poutput.accept(Moditems.APHATIT_CRYSTAL.get());
                         poutput.accept(ModBlocks.APHATIT_CLUSTER.get());
