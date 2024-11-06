@@ -87,6 +87,7 @@ public class ModCreativeModTabs {
                         poutput.accept(ModBlocks.HORRIBLE_PLANKS.get());
                         poutput.accept(ModBlocks.HORRIBLE_STAIRS.get());
                         poutput.accept(ModBlocks.HORRIBLE_SLAB.get());
+                        poutput.accept(ModBlocks.HORRIBLE_DOOR  .get());
 
 
 

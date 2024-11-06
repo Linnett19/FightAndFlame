@@ -8,6 +8,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -116,6 +117,9 @@ public class ModBlocks {
             () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.HORRIBLE));
     public static final RegistryObject<Block> HORRIBLE_WALL_HANGING_SIGN = BLOCKS.register("horrible_wall_hanging_sign",
             () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.HORRIBLE));
+
+    public static final RegistryObject<Block> HORRIBLE_DOOR = registerBlock("horrible_door", () -> new DoorBlock(BlockBehaviour.Properties.copy(HORRIBLE_PLANKS.get()).strength(3.0F).sound(SoundType.CHERRY_WOOD).noOcclusion(), BlockSetType.CHERRY));
+    public static final RegistryObject<Block> HORRIBLE_TRAPDOOR = registerBlock("horrible_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(HORRIBLE_PLANKS.get()).strength(3.0F).sound(SoundType.CHERRY_WOOD).noOcclusion(), BlockSetType.CHERRY));
 
 
 
