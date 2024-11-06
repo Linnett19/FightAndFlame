@@ -129,6 +129,8 @@ public class ModCreativeModTabs {
                         poutput.accept(Moditems.DIAMOND_SPEAR.get());
                         poutput.accept(Moditems.DIAMOND_SICKLE.get());
 
+                        poutput.accept(Moditems.BRAID_OF_FEARS.get());
+
 
 
 
