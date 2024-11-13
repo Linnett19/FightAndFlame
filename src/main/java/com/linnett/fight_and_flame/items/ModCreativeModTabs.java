@@ -77,13 +77,14 @@ public class ModCreativeModTabs {
 
                         poutput.accept(ModBlocks.HORRIBLE_LEAVES.get());
                         poutput.accept(ModBlocks.HORRIBLE_LOG.get());
+                        poutput.accept(ModBlocks.HORRIBLE_WOOD.get());
                         poutput.accept(ModBlocks.HORRIBLE_BEHOLD_LOG.get());
                         poutput.accept(ModBlocks.HORRIBLE_BEHOLD_WOOD.get());
-                        poutput.accept(ModBlocks.STRIPPED_HORRIBLE_BEHOLD_WOOD.get());
                         poutput.accept(ModBlocks.STRIPPED_HORRIBLE_BEHOLD_LOG.get());
-                        poutput.accept(ModBlocks.HORRIBLE_WOOD.get());
+                        poutput.accept(ModBlocks.STRIPPED_HORRIBLE_BEHOLD_WOOD.get());
                         poutput.accept(ModBlocks.STRIPPED_HORRIBLE_LOG.get());
                         poutput.accept(ModBlocks.STRIPPED_HORRIBLE_WOOD.get());
+
                         poutput.accept(ModBlocks.HORRIBLE_PLANKS.get());
                         poutput.accept(ModBlocks.HORRIBLE_STAIRS.get());
                         poutput.accept(ModBlocks.HORRIBLE_SLAB.get());
@@ -131,7 +132,8 @@ public class ModCreativeModTabs {
                         poutput.accept(Moditems.DIAMOND_SICKLE.get());
 
                         poutput.accept(Moditems.BRAID_OF_FEARS.get());
-
+                        poutput.accept(Moditems.RAPIER_OF_FEARS.get());
+                        poutput.accept(Moditems.TWOHANDED_SWORD_OF_FEARS.get());
 
 
 

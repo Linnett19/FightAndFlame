@@ -170,6 +170,14 @@ public class Moditems {
             new SwordWeapon(Tiers.IRON, 6, -2.5F, new Item.Properties().rarity(RARITY_CANDY))
     );
 
+    public static final RegistryObject<Item> RAPIER_OF_FEARS = ITEM.register("rapier_of_fears", () ->
+            new SwordWeapon(Tiers.IRON, 3, -0.5F, new Item.Properties().rarity(RARITY_CANDY))
+    );
+
+    public static final RegistryObject<Item> TWOHANDED_SWORD_OF_FEARS = ITEM.register("twohanded_sword_of_fears", () ->
+            new SwordWeapon(Tiers.IRON, 6, -2.0F, new Item.Properties().rarity(RARITY_CANDY))
+    );
+
 
 
 
