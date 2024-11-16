@@ -2,6 +2,7 @@ package com.linnett.fight_and_flame.items;
 
 import com.linnett.fight_and_flame.FightAndFlame;
 import com.linnett.fight_and_flame.block.ModBlocks;
+import com.linnett.fight_and_flame.items.custom_items.FearsWeapon;
 import com.linnett.fight_and_flame.items.custom_items.SwordWeapon;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -167,15 +168,15 @@ public class Moditems {
     //Spooky
 
     public static final RegistryObject<Item> BRAID_OF_FEARS = ITEM.register("braid_of_fears", () ->
-            new SwordWeapon(Tiers.IRON, 6, -2.5F, new Item.Properties().rarity(RARITY_CANDY))
+            new FearsWeapon(Tiers.IRON, 6, -2.5F, new Item.Properties().rarity(RARITY_CANDY))
     );
 
     public static final RegistryObject<Item> RAPIER_OF_FEARS = ITEM.register("rapier_of_fears", () ->
-            new SwordWeapon(Tiers.IRON, 3, -0.5F, new Item.Properties().rarity(RARITY_CANDY))
+            new FearsWeapon(Tiers.IRON, 3, -0.5F, new Item.Properties().rarity(RARITY_CANDY))
     );
 
     public static final RegistryObject<Item> TWOHANDED_SWORD_OF_FEARS = ITEM.register("twohanded_sword_of_fears", () ->
-            new SwordWeapon(Tiers.IRON, 6, -2.0F, new Item.Properties().rarity(RARITY_CANDY))
+            new FearsWeapon(Tiers.IRON, 6, -2.0F, new Item.Properties().rarity(RARITY_CANDY))
     );
 
 
