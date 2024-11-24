@@ -25,30 +25,6 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, FightAndFlame.MOD_ID);
 
-    public static final RegistryObject<Block> NEPHRITIS_BLOCK = registerBlock("nephritis_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-
-    public static final RegistryObject<Block> NEPHRITIS_ORE = registerBlock("nephritis_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
-
-
-    public static final RegistryObject<Block> AWAKENED_NETHERITE_BLOCK = registerBlock("awakened_netherite_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK)));
-
-    public static final RegistryObject<Block> BLOOD_STONE_BLOCK = registerBlock("blood_stone_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-
-    public static final RegistryObject<Block> RAW_BLOOD_STONE_BLOCK = registerBlock("raw_blood_stone_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK)));
-
-    public static final RegistryObject<Block> BLOOD_STONE_ORE = registerBlock("blood_stone_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
-
-    public static final RegistryObject<Block> APHATIT_CRYSTAL_BLOCK = registerBlock("aphatit_crystal_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)));
-
-    public static final RegistryObject<Block> APHATIT_CLUSTER = registerBlock("aphatit_cluster",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)));
 
 
     public static final RegistryObject<Block> ARMORY_TABLE = registerBlock("armory_table",

@@ -127,7 +127,7 @@ public class CustomCauldron extends AbstractCauldronBlock {
         candyNumber += 1;
 
         if (candyNumber >= MaxCandy) {
-            ItemEntity itemEntity = new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Moditems.BLOOD_STONE_INGOT.get()));
+            ItemEntity itemEntity = new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Moditems.BRAID_OF_FEARS.get()));
             level.addFreshEntity(itemEntity);
             breakCauldron((ServerLevel) level, pos);
             return;

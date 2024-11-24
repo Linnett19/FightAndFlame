@@ -1,5 +1,8 @@
 {
-  "parent": "fight_and_flame:block/horrible_door"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "fight_and_flame:item/horrible_door"
+  }
 }
 
 

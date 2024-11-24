@@ -18,7 +18,7 @@ public class FearsWeapon extends SwordItem {
 
         if (attacker instanceof Player player) {
             if (player.getFoodData().getFoodLevel() < 20) {
-                player.getFoodData().eat(2, 0.3F); // Восстанавливает 2 единицы голода.
+                player.getFoodData().eat(2, 0.3F);
             } else if (player.getHealth() < player.getMaxHealth()) {
                 player.heal(1.0F);
             } else {

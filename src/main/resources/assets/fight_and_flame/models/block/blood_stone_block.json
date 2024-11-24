@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "fight_and_flame:block/blood_stone_block"
-  }
-}

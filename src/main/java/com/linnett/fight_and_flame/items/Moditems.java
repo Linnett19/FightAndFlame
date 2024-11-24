@@ -41,44 +41,10 @@ public class Moditems {
     public static final RegistryObject<Item> BLANK_BLUEPRINT_SPEAR = ITEM.register("blank_blueprint_spear",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> NEPHRITIS_INGOT = ITEM.register("nephritis_ingot",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> NEPHRITIS_PIECES = ITEM.register("nephritis_pieces",
-            () -> new Item(new Item.Properties()));
-
     public static final RegistryObject<Item> HORRIBLE_SIGN = ITEM.register("horrible_sign",
             () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.HORRIBLE_SIGN.get(), ModBlocks.HORRIBLE_WALL_SIGN.get()));
     public static final RegistryObject<Item> HORRIBLE_HANGING_SIGN = ITEM.register("horrible_hanging_sign",
             () -> new HangingSignItem(ModBlocks.HORRIBLE_HANGING_SIGN.get(), ModBlocks.HORRIBLE_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
-
-
-    public static final RegistryObject<Item> RAW_NEPHRITIS = ITEM.register("raw_nephritis",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> AWAKENED_NETHERITE_INGOT = ITEM.register("awakened_netherite_ingot",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> AWAKENED_NETHERITE_PIECES = ITEM.register("awakened_netherite_pieces",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> BLOOD_STONE_INGOT = ITEM.register("blood_stone_ingot",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> RAW_BLOOD_STONE = ITEM.register("raw_blood_stone",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> BLOOD_STONE_PIECES = ITEM.register("blood_stone_pieces",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> APHATIT_CRYSTAL = ITEM.register("aphatit_crystal",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> APHATIT_CRYSTAL_SPLINTER = ITEM.register("aphatit_crystal_splinter",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> ELEMENTAL_CRYSTAL = ITEM.register("elemental_crystal",
-            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> CAULDRON_ITEM = ITEM.register("cauldron_item",
             () -> new ItemNameBlockItem(ModBlocks.CAULDRON.get(), new Item.Properties().rarity(RARITY_SCARY)));
@@ -95,8 +61,10 @@ public class Moditems {
     public static final RegistryObject<Item> JELLY_BALLS = ITEM.register("jelly_balls",
             () -> new Item(new Item.Properties().rarity(RARITY_CANDY)));
 
-    //iron
 
+
+
+    //iron
 
     public static final RegistryObject<Item> IRON_BRAID = ITEM.register("iron_braid", () ->
             new SwordWeapon(Tiers.IRON, 4, -2.0F, new Item.Properties())

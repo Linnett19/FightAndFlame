@@ -15,41 +15,47 @@ public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, FightAndFlame.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> FIGHT_AND_FLAME_MATERIALS_AND_BLOCKS = CREATIVE_MODE_TABS.register("fight_and_flame_ingredients_materials_and_blocks",
+    public static final RegistryObject<CreativeModeTab> FIGHT_AND_FLAME = CREATIVE_MODE_TABS.register("fight_and_flame",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(Moditems.BLANK_BLUEPRINT.get()))
                     .title(Component.translatable("itemGroup.fight_and_flame_materials_and_blocks"))
                     .displayItems((pparameters, poutput) -> {
 
 
+                        poutput.accept(ModBlocks.ARMORY_TABLE.get());
 
-                        poutput.accept(Moditems.NEPHRITIS_PIECES.get());
-                        poutput.accept(Moditems.NEPHRITIS_INGOT.get());
-                        poutput.accept(Moditems.RAW_NEPHRITIS.get());
-                        poutput.accept(ModBlocks.NEPHRITIS_ORE.get());
-                        poutput.accept(ModBlocks.NEPHRITIS_BLOCK.get());
+                        poutput.accept(Moditems.BLANK_BLUEPRINT_TORN.get());
+                        poutput.accept(Moditems.BLANK_BLUEPRINT.get());
 
-                        poutput.accept(Moditems.HORRIBLE_SIGN.get());
-                        poutput.accept(Moditems.HORRIBLE_HANGING_SIGN.get());
+                        poutput.accept(Moditems.BLANK_BLUEPRINT_TWOHANDED_SWORD.get());
+                        poutput.accept(Moditems.BLANK_BLUEPRINT_RAPIER.get());
+                        poutput.accept(Moditems.BLANK_BLUEPRINT_SICKLE.get());
+                        poutput.accept(Moditems.BLANK_BLUEPRINT_BRAID.get());
+                        poutput.accept(Moditems.BLANK_BLUEPRINT_SPEAR.get());
 
-                        poutput.accept(Moditems.APHATIT_CRYSTAL_SPLINTER.get());
-                        poutput.accept(Moditems.APHATIT_CRYSTAL.get());
-                        poutput.accept(ModBlocks.APHATIT_CLUSTER.get());
-                        poutput.accept(ModBlocks.APHATIT_CRYSTAL_BLOCK.get());
+                        poutput.accept(Moditems.IRON_TWOHANDED_SWORD.get());
+                        poutput.accept(Moditems.IRON_BRAID.get());
+                        poutput.accept(Moditems.IRON_RAPIER.get());
+                        poutput.accept(Moditems.IRON_SPEAR.get());
+                        poutput.accept(Moditems.IRON_SICKLE.get());
+
+                        poutput.accept(Moditems.GOLDEN_TWOHANDED_SWORD.get());
+                        poutput.accept(Moditems.GOLDEN_BRAID.get());
+                        poutput.accept(Moditems.GOLDEN_RAPIER.get());
+                        poutput.accept(Moditems.GOLDEN_SPEAR.get());
+                        poutput.accept(Moditems.GOLDEN_SICKLE.get());
+
+                        poutput.accept(Moditems.DIAMOND_TWOHANDED_SWORD.get());
+                        poutput.accept(Moditems.DIAMOND_BRAID.get());
+                        poutput.accept(Moditems.DIAMOND_RAPIER.get());
+                        poutput.accept(Moditems.DIAMOND_SPEAR.get());
+                        poutput.accept(Moditems.DIAMOND_SICKLE.get());
+
+                        poutput.accept(Moditems.BRAID_OF_FEARS.get());
+                        poutput.accept(Moditems.RAPIER_OF_FEARS.get());
+                        poutput.accept(Moditems.TWOHANDED_SWORD_OF_FEARS.get());
 
 
-                        poutput.accept(Moditems.BLOOD_STONE_PIECES.get());
-                        poutput.accept(Moditems.BLOOD_STONE_INGOT.get());
-                        poutput.accept(Moditems.RAW_BLOOD_STONE.get());
-                        poutput.accept(ModBlocks.RAW_BLOOD_STONE_BLOCK.get());
-                        poutput.accept(ModBlocks.BLOOD_STONE_ORE.get());
-                        poutput.accept(ModBlocks.BLOOD_STONE_BLOCK.get());
 
-
-                        poutput.accept(Moditems.AWAKENED_NETHERITE_PIECES.get());
-                        poutput.accept(Moditems.AWAKENED_NETHERITE_INGOT.get());
-                        poutput.accept(ModBlocks.AWAKENED_NETHERITE_BLOCK.get());
-
-                        poutput.accept(Moditems.ELEMENTAL_CRYSTAL.get());
 
 
 
@@ -84,65 +90,24 @@ public class ModCreativeModTabs {
                         poutput.accept(ModBlocks.STRIPPED_HORRIBLE_BEHOLD_WOOD.get());
                         poutput.accept(ModBlocks.STRIPPED_HORRIBLE_LOG.get());
                         poutput.accept(ModBlocks.STRIPPED_HORRIBLE_WOOD.get());
-
                         poutput.accept(ModBlocks.HORRIBLE_PLANKS.get());
                         poutput.accept(ModBlocks.HORRIBLE_STAIRS.get());
                         poutput.accept(ModBlocks.HORRIBLE_SLAB.get());
                         poutput.accept(ModBlocks.HORRIBLE_DOOR  .get());
+                        poutput.accept(Moditems.HORRIBLE_SIGN.get());
+                        poutput.accept(Moditems.HORRIBLE_HANGING_SIGN.get());
 
 
 
-                    })
-                    .build());
-
-    public static final RegistryObject<CreativeModeTab> FIGHT_AND_FLAME_WEAPONS = CREATIVE_MODE_TABS.register("fight_and_flame_weapons",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Moditems.BLANK_BLUEPRINT.get()))
-                    .title(Component.translatable("itemGroup.fight_and_flame_weapons"))
-                    .displayItems((pparameters, poutput) -> {
-
-                        poutput.accept(ModBlocks.ARMORY_TABLE.get());
-
-                        poutput.accept(Moditems.BLANK_BLUEPRINT_TORN.get());
-                        poutput.accept(Moditems.BLANK_BLUEPRINT.get());
-
-                        poutput.accept(Moditems.BLANK_BLUEPRINT_TWOHANDED_SWORD.get());
-                        poutput.accept(Moditems.BLANK_BLUEPRINT_RAPIER.get());
-                        poutput.accept(Moditems.BLANK_BLUEPRINT_SICKLE.get());
-                        poutput.accept(Moditems.BLANK_BLUEPRINT_BRAID.get());
-                        poutput.accept(Moditems.BLANK_BLUEPRINT_SPEAR.get());
 
 
 
-                        poutput.accept(Moditems.IRON_TWOHANDED_SWORD.get());
-                        poutput.accept(Moditems.IRON_BRAID.get());
-                        poutput.accept(Moditems.IRON_RAPIER.get());
-                        poutput.accept(Moditems.IRON_SPEAR.get());
-                        poutput.accept(Moditems.IRON_SICKLE.get());
 
-                        poutput.accept(Moditems.GOLDEN_TWOHANDED_SWORD.get());
-                        poutput.accept(Moditems.GOLDEN_BRAID.get());
-                        poutput.accept(Moditems.GOLDEN_RAPIER.get());
-                        poutput.accept(Moditems.GOLDEN_SPEAR.get());
-                        poutput.accept(Moditems.GOLDEN_SICKLE.get());
-
-                        poutput.accept(Moditems.DIAMOND_TWOHANDED_SWORD.get());
-                        poutput.accept(Moditems.DIAMOND_BRAID.get());
-                        poutput.accept(Moditems.DIAMOND_RAPIER.get());
-                        poutput.accept(Moditems.DIAMOND_SPEAR.get());
-                        poutput.accept(Moditems.DIAMOND_SICKLE.get());
-
-                        poutput.accept(Moditems.BRAID_OF_FEARS.get());
-                        poutput.accept(Moditems.RAPIER_OF_FEARS.get());
-                        poutput.accept(Moditems.TWOHANDED_SWORD_OF_FEARS.get());
 
 
 
                     })
                     .build());
-
-
-
-
 
 
     public static void register(IEventBus eventBus) {
