@@ -15,7 +15,7 @@ public class ModItemProperties {
     public static void registerItemProperties(FMLClientSetupEvent event) {
 
         ItemProperties.register(ModItems.IRON_BROADSWORD.get(),
-                new ResourceLocation("custom_model_data"),
+                new ResourceLocation("iron_broadsword"),
                 (stack, level, entity, seed) -> {
 
                     return stack.hasTag() && stack.getTag().contains("CustomModelData")
