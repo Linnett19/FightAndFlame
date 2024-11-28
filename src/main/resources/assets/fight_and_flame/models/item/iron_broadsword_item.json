@@ -1,0 +1,13 @@
+{
+	"textures": {
+		"layer0": "fight_and_flame:item/weapons/iron_broadsword_item"
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"custom_model_data": 1
+			},
+			"model": "fight_and_flame:item/iron_broadsword"
+		}
+	]
+}

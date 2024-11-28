@@ -4,7 +4,7 @@ import com.linnett.fight_and_flame.block.ModBlocks;
 import com.linnett.fight_and_flame.block.entity.BlockEntities;
 import com.linnett.fight_and_flame.entity.FightAndFlameEntityRegistry;
 import com.linnett.fight_and_flame.items.ModCreativeModTabs;
-import com.linnett.fight_and_flame.items.Moditems;
+import com.linnett.fight_and_flame.items.ModItems;
 import com.linnett.fight_and_flame.sounds.ModSounds;
 import com.linnett.fight_and_flame.particles.particleRegistry;
 import com.linnett.fight_and_flame.worldgen.wood.ModWoodTypes;
@@ -39,7 +39,7 @@ public class FightAndFlame {
         
         
         ModCreativeModTabs.register(modEventBus);
-        Moditems.register(modEventBus);
+        ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         particleRegistry.register(modEventBus);
         ModSounds.SOUND_EVENT.register(modEventBus);

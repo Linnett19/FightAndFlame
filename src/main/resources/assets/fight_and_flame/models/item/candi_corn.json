@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "fight_and_flame:item/nephritis_pieces"
+    "layer0": "fight_and_flame:item/candi_corn"
   }
 }
 
