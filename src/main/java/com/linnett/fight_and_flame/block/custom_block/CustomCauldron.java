@@ -1,6 +1,6 @@
 package com.linnett.fight_and_flame.block.custom_block;
 
-import com.linnett.fight_and_flame.items.ModItems;
+import com.linnett.fight_and_flame.items.ModItem;
 import com.linnett.fight_and_flame.particles.particleRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -74,23 +74,23 @@ public class CustomCauldron extends AbstractCauldronBlock {
 
         if (isCustomItem(itemStack.getItem())) {
             itemStack.shrink(1);
-            if (itemStack.getItem() == ModItems.CANDI_CORN.get()) {
+            if (itemStack.getItem() == ModItem.CANDI_CORN.get()) {
                 level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
                 ((ServerLevel) level).sendParticles(particleRegistry.CANDY_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, xOffset, yOffset, zOffset, .1);
                 updateCauldronLevel(level, pos, state);
             }
 
-            if (itemStack.getItem() == ModItems.SLIME_LOLIPOP.get()) {
+            if (itemStack.getItem() == ModItem.SLIME_LOLIPOP.get()) {
                 level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
                 ((ServerLevel) level).sendParticles(particleRegistry.SLIME_LOLIPOP_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, xOffset, yOffset, zOffset, .1);
                 updateCauldronLevel(level, pos, state);
             }
-            if (itemStack.getItem() == ModItems.SOUR_BONE.get()) {
+            if (itemStack.getItem() == ModItem.SOUR_BONE.get()) {
                 level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
                 ((ServerLevel) level).sendParticles(particleRegistry.SOUL_BONE_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, xOffset, yOffset, zOffset, .1);
                 updateCauldronLevel(level, pos, state);
             }
-            if (itemStack.getItem() == ModItems.JELLY_BALLS.get()) {
+            if (itemStack.getItem() == ModItem.JELLY_BALLS.get()) {
                 level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
                 ((ServerLevel) level).sendParticles(particleRegistry.JELLY_BALLS_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, xOffset, yOffset, zOffset, .1);
                 updateCauldronLevel(level, pos, state);
@@ -107,8 +107,8 @@ public class CustomCauldron extends AbstractCauldronBlock {
     }
 
     private boolean isCustomItem(Item item) {
-        return item == ModItems.CANDI_CORN.get() || item == ModItems.SOUR_BONE.get() ||
-                item == ModItems.SLIME_LOLIPOP.get() || item == ModItems.JELLY_BALLS.get();
+        return item == ModItem.CANDI_CORN.get() || item == ModItem.SOUR_BONE.get() ||
+                item == ModItem.SLIME_LOLIPOP.get() || item == ModItem.JELLY_BALLS.get();
     }
 
     private static void breakCauldron(ServerLevel level, BlockPos pos) {
@@ -127,7 +127,7 @@ public class CustomCauldron extends AbstractCauldronBlock {
         candyNumber += 1;
 
         if (candyNumber >= MaxCandy) {
-            ItemEntity itemEntity = new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ModItems.BLANK_BLUEPRINT.get()));
+            ItemEntity itemEntity = new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ModItem.BLANK_BLUEPRINT.get()));
             level.addFreshEntity(itemEntity);
             breakCauldron((ServerLevel) level, pos);
             return;

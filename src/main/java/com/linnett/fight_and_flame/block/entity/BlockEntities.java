@@ -1,7 +1,6 @@
 package com.linnett.fight_and_flame.block.entity;
 
 import com.linnett.fight_and_flame.FightAndFlame;
-import com.linnett.fight_and_flame.block.ModBlocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;

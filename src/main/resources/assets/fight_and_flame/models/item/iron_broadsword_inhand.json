@@ -1,6 +1,7 @@
 {
 	"textures": {
-		"1": "fight_and_flame:item/weapons/iron_broadsword"
+		"1": "fight_and_flame:item/weapons/iron_broadsword",
+		"gui_light": "front"
 	},
 	"elements": [
 		{

@@ -2,7 +2,7 @@ package com.linnett.fight_and_flame.block;
 
 import com.linnett.fight_and_flame.FightAndFlame;
 import com.linnett.fight_and_flame.block.custom_block.*;
-import com.linnett.fight_and_flame.items.ModItems;
+import com.linnett.fight_and_flame.items.ModItem;
 import com.linnett.fight_and_flame.worldgen.wood.ModWoodTypes;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -24,6 +24,28 @@ public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, FightAndFlame.MOD_ID);
+
+
+
+
+
+    public static final RegistryObject<Block> VOLCANO_STONE = registerBlock("volcano_stone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> MAGMORA = registerBlock("magmora",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> ERUPTION_CORE = registerBlock("eruption_core",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+
+
+    public static final RegistryObject<Block> STELLARIT_OBELISK = registerBlock("stellarit_obelisk",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+
+
+
 
 
 
@@ -122,7 +144,7 @@ public class ModBlocks {
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        return ModItems.ITEM.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        return ModItem.ITEM.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {
