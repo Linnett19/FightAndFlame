@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "north": "fight_and_flame:block/eruption_core",
+    "south": "fight_and_flame:block/eruption_core",
+    "east":  "fight_and_flame:block/eruption_core",
+    "west":  "fight_and_flame:block/eruption_core",
+    "up":   "fight_and_flame:block/eruption_core_top",
+    "down": "fight_and_flame:block/volcanostone"
+  }
+}
