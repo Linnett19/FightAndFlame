@@ -3,7 +3,7 @@ package com.linnett.fight_and_flame;
 import com.linnett.fight_and_flame.block.ModBlocks;
 import com.linnett.fight_and_flame.block.entity.BlockEntities;
 import com.linnett.fight_and_flame.entity.FightAndFlameEntityRegistry;
-import com.linnett.fight_and_flame.items.ModCreativeModTabs;
+import com.linnett.fight_and_flame.items.ModCreativeTabs;
 import com.linnett.fight_and_flame.items.ModItem;
 import com.linnett.fight_and_flame.sounds.ModSounds;
 import com.linnett.fight_and_flame.particles.particleRegistry;
@@ -38,7 +38,7 @@ public class FightAndFlame {
 
         
         
-        ModCreativeModTabs.register(modEventBus);
+        ModCreativeTabs.register(modEventBus);
         ModItem.register(modEventBus);
         ModBlocks.register(modEventBus);
         particleRegistry.register(modEventBus);

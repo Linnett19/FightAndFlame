@@ -1,6 +1,7 @@
 package com.linnett.fight_and_flame.items;
 
 import com.linnett.fight_and_flame.FightAndFlame;
+import com.linnett.fight_and_flame.block.ModBlocks;
 import com.linnett.fight_and_flame.items.custom_items.SwordWeapon;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -213,7 +214,6 @@ public class ModItem {
 
     public static final RegistryObject<Item> CAULDRON_ITEM = ITEM.register("cauldron_item",
             () -> new ItemNameBlockItem(ModBlocks.CAULDRON.get(), new Item.Properties().rarity(RARITY_SCARY)));
-
 
 
 

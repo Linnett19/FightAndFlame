@@ -40,10 +40,8 @@ public class ModBlocks {
 
 
 
-    public static final RegistryObject<Block> STELLARIT_OBELISK = registerBlock("stellarit_obelisk",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
-
-
+    public static final RegistryObject<Block> STELLARITE_OBELISK = registerBlock("stellarite_obelisk",
+            () -> new StellariteObelisk(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
 
 

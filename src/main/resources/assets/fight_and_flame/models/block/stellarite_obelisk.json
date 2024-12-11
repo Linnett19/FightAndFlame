@@ -1,9 +1,9 @@
 {
-	"credit": "Made with Blockbench",
+	"render_type": "cutout",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "fight_and_flame:block/stellarit_obelisk",
-		"particle": "fight_and_flame:block/stellarit_obelisk"
+		"0": "fight_and_flame:block/stellarite_obelisk",
+		"particle": "fight_and_flame:block/stellarite_obelisk_particle"
 	},
 	"elements": [
 		{

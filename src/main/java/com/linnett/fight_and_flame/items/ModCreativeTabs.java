@@ -10,7 +10,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModCreativeModTabs {
+public class ModCreativeTabs {
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, FightAndFlame.MOD_ID);
@@ -57,7 +57,7 @@ public class ModCreativeModTabs {
                         poutput.accept(ModItem.NETHERITE_RAPIER.get());
                         poutput.accept(ModItem.NETHERITE_SICKLE.get());
 
-                        poutput.accept(ModBlocks.STELLARIT_OBELISK.get());
+                        poutput.accept(ModBlocks.STELLARITE_OBELISK.get());
 
                         poutput.accept(ModBlocks.VOLCANO_STONE.get());
                         poutput.accept(ModBlocks.MAGMORA.get());
@@ -103,11 +103,7 @@ public class ModCreativeModTabs {
                         poutput.accept(ModItem.HORRIBLE_HANGING_SIGN.get());
 
 
-
-
-
-
-
+                        
 
 
 
