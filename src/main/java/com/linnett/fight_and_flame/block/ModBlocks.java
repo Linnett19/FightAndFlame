@@ -2,7 +2,9 @@ package com.linnett.fight_and_flame.block;
 
 import com.linnett.fight_and_flame.FightAndFlame;
 import com.linnett.fight_and_flame.block.custom_block.*;
-import com.linnett.fight_and_flame.items.ModItem;
+import com.linnett.fight_and_flame.block.custom_block.FireBlock;
+import com.linnett.fight_and_flame.fluid.ModFluids;
+import com.linnett.fight_and_flame.items.ModItems;
 import com.linnett.fight_and_flame.worldgen.wood.ModWoodTypes;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -10,6 +12,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -32,19 +35,24 @@ public class ModBlocks {
     public static final RegistryObject<Block> VOLCANO_STONE = registerBlock("volcano_stone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
-    public static final RegistryObject<Block> MAGMORA = registerBlock("magmora",
+    public static final RegistryObject<Block> VOLCANO_STONE_STAIRS = registerBlock("volcano_stone_stairs",
+            () -> new StairBlock(VOLCANO_STONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> VOLCANO_STONE_SLAB = registerBlock("volcano_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> VOLCANO_MAGMA = registerBlock("volcano_magma",
+            () -> new FireBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+
+    public static final RegistryObject<Block> VOLCANO_CORE = registerBlock("volcano_core",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
-    public static final RegistryObject<Block> ERUPTION_CORE = registerBlock("eruption_core",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
 
 
     public static final RegistryObject<Block> STELLARITE_OBELISK = registerBlock("stellarite_obelisk",
             () -> new StellariteObelisk(BlockBehaviour.Properties.copy(Blocks.STONE)));
-
-
-
 
 
     public static final RegistryObject<Block> SCARY_STONE = registerBlock("scary_stone",
@@ -142,7 +150,7 @@ public class ModBlocks {
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        return ModItem.ITEM.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        return ModItems.ITEM.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {

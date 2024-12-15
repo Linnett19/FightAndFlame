@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "down": "fight_and_flame:block/volcano_stone",
+    "up": "fight_and_flame:block/volcano_core_top",
+    "north": "fight_and_flame:block/volcano_core_side",
+    "south": "fight_and_flame:block/volcano_core_side",
+    "west": "fight_and_flame:block/volcano_core_side",
+    "east": "fight_and_flame:block/volcano_core_side",
+    "particle": "fight_and_flame:block/volcano_core_side"
+  }
+}

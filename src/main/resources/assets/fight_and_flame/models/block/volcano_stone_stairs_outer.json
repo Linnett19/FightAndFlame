@@ -1,0 +1,9 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "fight_and_flame:block/volcano_stone",
+    "top": "fight_and_flame:block/volcano_stone",
+    "side": "fight_and_flame:block/volcano_stone"
+  },
+  "render_type": "solid"
+}

@@ -8,11 +8,13 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModSounds {
-    public static final  DeferredRegister<SoundEvent> SOUND_EVENT= DeferredRegister.create(Registries.SOUND_EVENT, FightAndFlame.MOD_ID);
+    public static final DeferredRegister<SoundEvent> SOUND_EVENT = DeferredRegister.create(Registries.SOUND_EVENT, FightAndFlame.MOD_ID);
 
 
+    public static final RegistryObject<SoundEvent> MAGMORA_FIRE = createSoundEvent("magmora_fire");
 
     private static RegistryObject<SoundEvent> createSoundEvent(final String soundName) {
         return SOUND_EVENT.register(soundName, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(FightAndFlame.MOD_ID, soundName)));
     }
 }
+

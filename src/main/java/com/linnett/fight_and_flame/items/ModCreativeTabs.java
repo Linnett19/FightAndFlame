@@ -16,52 +16,57 @@ public class ModCreativeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, FightAndFlame.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> FIGHT_AND_FLAME = CREATIVE_MODE_TABS.register("fight_and_flame",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItem.BLANK_BLUEPRINT.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BLANK_BLUEPRINT.get()))
                     .title(Component.translatable("itemGroup.fight_and_flame_materials_and_blocks"))
                     .displayItems((pparameters, poutput) -> {
 
 
-                        poutput.accept(ModItem.PYROCLASTITE.get());
-                        poutput.accept(ModItem.HARMONITE.get());
-                        poutput.accept(ModItem.FLORAMBER.get());
-                        poutput.accept(ModItem.VOLTINITE.get());
-                        poutput.accept(ModItem.AEROGEL.get());
-                        poutput.accept(ModItem.SANGUINITE.get());
-                        poutput.accept(ModItem.ABYSSNESS.get());
-                        poutput.accept(ModItem.STELLARITE.get());
-                        poutput.accept(ModItem.OMNIGEM.get());
+                        poutput.accept(ModItems.PYROCLASTITE.get());
+                        poutput.accept(ModItems.HARMONITE.get());
+                        poutput.accept(ModItems.FLORAMBER.get());
+                        poutput.accept(ModItems.VOLTINITE.get());
+                        poutput.accept(ModItems.AEROGEL.get());
+                        poutput.accept(ModItems.SANGUINITE.get());
+                        poutput.accept(ModItems.ABYSSNESS.get());
+                        poutput.accept(ModItems.STELLARITE.get());
+                        poutput.accept(ModItems.OMNIGEM.get());
 
-                        poutput.accept(ModItem.BLANK_BLUEPRINT.get());
+                        poutput.accept(ModItems.BLANK_BLUEPRINT.get());
 
-                        poutput.accept(ModItem.IRON_BROADSWORD.get());
-                        poutput.accept(ModItem.IRON_SPEAR.get());
-                        poutput.accept(ModItem.IRON_SCYTHE.get());
-                        poutput.accept(ModItem.IRON_RAPIER.get());
-                        poutput.accept(ModItem.IRON_SICKLE.get());
+                        poutput.accept(ModItems.IRON_BROADSWORD.get());
+                        poutput.accept(ModItems.IRON_SPEAR.get());
+                        poutput.accept(ModItems.IRON_SCYTHE.get());
+                        poutput.accept(ModItems.IRON_RAPIER.get());
+                        poutput.accept(ModItems.IRON_SICKLE.get());
 
-                        poutput.accept(ModItem.GOLDEN_BROADSWORD.get());
-                        poutput.accept(ModItem.GOLDEN_SPEAR.get());
-                        poutput.accept(ModItem.GOLDEN_SCYTHE.get());
-                        poutput.accept(ModItem.GOLDEN_RAPIER.get());
-                        poutput.accept(ModItem.GOLDEN_SICKLE.get());
+                        poutput.accept(ModItems.GOLDEN_BROADSWORD.get());
+                        poutput.accept(ModItems.GOLDEN_SPEAR.get());
+                        poutput.accept(ModItems.GOLDEN_SCYTHE.get());
+                        poutput.accept(ModItems.GOLDEN_RAPIER.get());
+                        poutput.accept(ModItems.GOLDEN_SICKLE.get());
 
-                        poutput.accept(ModItem.DIAMOND_BROADSWORD.get());
-                        poutput.accept(ModItem.DIAMOND_SPEAR.get());
-                        poutput.accept(ModItem.DIAMOND_SCYTHE.get());
-                        poutput.accept(ModItem.DIAMOND_RAPIER.get());
-                        poutput.accept(ModItem.DIAMOND_SICKLE.get());
+                        poutput.accept(ModItems.DIAMOND_BROADSWORD.get());
+                        poutput.accept(ModItems.DIAMOND_SPEAR.get());
+                        poutput.accept(ModItems.DIAMOND_SCYTHE.get());
+                        poutput.accept(ModItems.DIAMOND_RAPIER.get());
+                        poutput.accept(ModItems.DIAMOND_SICKLE.get());
 
-                        poutput.accept(ModItem.NETHERITE_BROADSWORD.get());
-                        poutput.accept(ModItem.NETHERITE_SPEAR.get());
-                        poutput.accept(ModItem.NETHERITE_SCYTHE.get());
-                        poutput.accept(ModItem.NETHERITE_RAPIER.get());
-                        poutput.accept(ModItem.NETHERITE_SICKLE.get());
+                        poutput.accept(ModItems.NETHERITE_BROADSWORD.get());
+                        poutput.accept(ModItems.NETHERITE_SPEAR.get());
+                        poutput.accept(ModItems.NETHERITE_SCYTHE.get());
+                        poutput.accept(ModItems.NETHERITE_RAPIER.get());
+                        poutput.accept(ModItems.NETHERITE_SICKLE.get());
 
                         poutput.accept(ModBlocks.STELLARITE_OBELISK.get());
 
+
                         poutput.accept(ModBlocks.VOLCANO_STONE.get());
-                        poutput.accept(ModBlocks.MAGMORA.get());
-                        poutput.accept(ModBlocks.ERUPTION_CORE.get());
+                        poutput.accept(ModBlocks.VOLCANO_STONE_STAIRS.get());
+                        poutput.accept(ModBlocks.VOLCANO_STONE_SLAB.get());
+                        poutput.accept(ModBlocks.VOLCANO_MAGMA.get());
+                        poutput.accept(ModBlocks.VOLCANO_CORE.get());
+
+
 
 
                         poutput.accept(ModBlocks.SCARY_STONE.get());
@@ -79,10 +84,10 @@ public class ModCreativeTabs {
                         poutput.accept(ModBlocks.MOSSY_SCARY_STONE_BRICKS.get());
                         poutput.accept(ModBlocks.LAWN.get());
 
-                        poutput.accept(ModItem.CANDI_CORN.get());
-                        poutput.accept(ModItem.SLIME_LOLIPOP.get());
-                        poutput.accept(ModItem.SOUR_BONE.get());
-                        poutput.accept(ModItem.JELLY_BALLS.get());
+                        poutput.accept(ModItems.CANDI_CORN.get());
+                        poutput.accept(ModItems.SLIME_LOLIPOP.get());
+                        poutput.accept(ModItems.SOUR_BONE.get());
+                        poutput.accept(ModItems.JELLY_BALLS.get());
 
                         poutput.accept(ModBlocks.CAULDRON.get());
 
@@ -99,8 +104,8 @@ public class ModCreativeTabs {
                         poutput.accept(ModBlocks.HORRIBLE_STAIRS.get());
                         poutput.accept(ModBlocks.HORRIBLE_SLAB.get());
                         poutput.accept(ModBlocks.HORRIBLE_DOOR  .get());
-                        poutput.accept(ModItem.HORRIBLE_SIGN.get());
-                        poutput.accept(ModItem.HORRIBLE_HANGING_SIGN.get());
+                        poutput.accept(ModItems.HORRIBLE_SIGN.get());
+                        poutput.accept(ModItems.HORRIBLE_HANGING_SIGN.get());
 
 
                         

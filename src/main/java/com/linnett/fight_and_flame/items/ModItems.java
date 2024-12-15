@@ -2,6 +2,7 @@ package com.linnett.fight_and_flame.items;
 
 import com.linnett.fight_and_flame.FightAndFlame;
 import com.linnett.fight_and_flame.block.ModBlocks;
+import com.linnett.fight_and_flame.fluid.ModFluids;
 import com.linnett.fight_and_flame.items.custom_items.SwordWeapon;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -11,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.awt.*;
 
-public class ModItem {
+public class ModItems {
     public static final DeferredRegister<Item> ITEM =
             DeferredRegister.create(ForgeRegistries.ITEMS, FightAndFlame.MOD_ID);
 
@@ -87,8 +88,6 @@ public class ModItem {
                 float saturation = progress;
                 return style.withColor(Color.HSBtoRGB(hue, saturation, 1f));
             });
-
-
 
 
 

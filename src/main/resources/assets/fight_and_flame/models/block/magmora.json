@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "forge:block/fluids/flowing",
   "textures": {
-    "all": "fight_and_flame:block/magmora"
+    "flow": "fight_and_flame:fluid/magmora_flow",
+    "still": "fight_and_flame:fluid/magmora_still"
   }
 }

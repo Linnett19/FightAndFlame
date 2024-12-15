@@ -9,7 +9,13 @@
   "item.fight_and_flame.omnigem": "Omnigem",
   "item.fight_and_flame.stellarite": "Stellarite",
 
-  "item.fight_and_flame.iron_broadsword": "Iron Broadsword",
+
+  "block.fight_and_flame.magmora": "Magmora",
+  "item.fight_and_flame.magmora_bucket": "Bucket of Magmora",
+
+
+
+"item.fight_and_flame.iron_broadsword": "Iron Broadsword",
   "item.fight_and_flame.iron_spear": "Iron Spear",
   "item.fight_and_flame.iron_scythe": "Iron Scythe",
   "item.fight_and_flame.iron_rapier": "Iron Rapier",

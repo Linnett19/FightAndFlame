@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "fight_and_flame:block/volcano_stone_slab"
+    },
+    "type=top": {
+      "model": "fight_and_flame:block/volcano_stone_slab_top"
+    },
+    "type=double": {
+      "model": "fight_and_flame:block/volcano_stone_slab_full"
+    }
+  }
+}
