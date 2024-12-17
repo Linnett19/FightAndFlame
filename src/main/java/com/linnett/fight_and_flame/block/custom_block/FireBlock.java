@@ -17,19 +17,12 @@ import net.minecraft.core.particles.ParticleTypes;
 
 public class FireBlock extends Block {
 
-    private static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 16, 16);
-
     public FireBlock(Properties properties) {
         super(properties
                 .strength(0.4f)
                 .lightLevel(state -> 4)
                 .requiresCorrectToolForDrops()
         );
-    }
-
-    @Override
-    public VoxelShape getShape(BlockState state, net.minecraft.world.level.BlockGetter getter, BlockPos pos, CollisionContext context) {
-        return SHAPE;
     }
 
     @Override

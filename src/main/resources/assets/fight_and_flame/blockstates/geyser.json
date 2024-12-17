@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "erupting=false": {
+      "model": "fight_and_flame:block/geyser"
+    },
+    "erupting=true": {
+      "model": "fight_and_flame:block/geyser_erupting"
+    }
+  }
+}
+

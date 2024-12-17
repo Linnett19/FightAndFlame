@@ -11,7 +11,7 @@ public class FireSparkParticle extends TextureSheetParticle {
     FireSparkParticle(ClientLevel level, double x, double y, double z) {
         super(level, x, y, z);
         this.quadSize = 1f + random.nextFloat() * 0.5f;
-        this.setSize(1f, 1.5f);
+        this.setSize(1f, 0.5f);
         this.lifetime = 130;
         this.hasPhysics = false;
 

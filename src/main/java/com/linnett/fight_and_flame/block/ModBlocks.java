@@ -18,7 +18,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.awt.*;
 import java.util.function.Supplier;
 
 
@@ -53,6 +52,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> VOLCANIC_CACTUS = registerBlock("volcanic_cactus",
             () -> new VolcanicCactus(BlockBehaviour.Properties.copy(Blocks.CACTUS)));
+
+    public static final RegistryObject<Block> GEYSER = registerBlock("geyser",
+            () -> new Geyser(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+
 
 
 
