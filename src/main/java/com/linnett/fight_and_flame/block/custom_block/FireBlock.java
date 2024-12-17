@@ -21,8 +21,8 @@ public class FireBlock extends Block {
 
     public FireBlock(Properties properties) {
         super(properties
-                .strength(3.0f)
-                .lightLevel(state -> 15)
+                .strength(0.4f)
+                .lightLevel(state -> 4)
                 .requiresCorrectToolForDrops()
         );
     }
@@ -55,20 +55,36 @@ public class FireBlock extends Block {
             double x = pos.getX() + random.nextDouble();
             double y = pos.getY() + random.nextDouble();
             double z = pos.getZ() + random.nextDouble();
-            level.addParticle(ParticleTypes.LAVA, x, y, z, 0.0, 0.05, 0.0); // Вызов новой частицы
+            level.addParticle(ModParticlesRegistry.FIRE_SPARK.get(), x, y, z, 0.0, 0.05, 0.0); // Вызов новой частицы
         }
+        if (random.nextInt(5) == 0) {
+            double x = pos.getX() + 0.5 + (random.nextDouble() - 0.5);
+            double y = pos.getY() + 0.5 + (random.nextDouble() - 0.5);
+            double z = pos.getZ() + 0.5 + (random.nextDouble() - 0.5);
+            level.addParticle(ParticleTypes.LAVA, x, y, z, 0.0, 0.05, 0.0);
+        }
+
+
 
         for (Direction direction : Direction.values()) {
             BlockPos neighborPos = pos.relative(direction);
-            if (level.getBlockState(neighborPos).is(Blocks.WATER)) {
+            BlockState neighborState = level.getBlockState(neighborPos);
+
+            if (neighborState.is(Blocks.WATER) ||
+                    neighborState.is(Blocks.BLUE_ICE) ||
+                    neighborState.is(Blocks.PACKED_ICE) ||
+                    neighborState.is(Blocks.ICE) ||
+                    neighborState.is(Blocks.SNOW) ||
+                    neighborState.is(Blocks.SNOW_BLOCK) ||
+                    neighborState.is(Blocks.POWDER_SNOW)) {
+
                 for (int i = 0; i < 8; i++) {
                     double x = neighborPos.getX() + 0.5 + (random.nextDouble() - 0.5);
                     double y = neighborPos.getY() + 0.5 + (random.nextDouble() * 0.5);
                     double z = neighborPos.getZ() + 0.5 + (random.nextDouble() - 0.5);
-                    level.addParticle(ModParticlesRegistry.CLOUD_SPLASH.get(), x, y, z, 0.0, 0.1, 0.0); // Используем новую частицу
+                    level.addParticle(ModParticlesRegistry.CLOUD_SPLASH.get(), x, y, z, 0.0, 0.1, 0.0);
                 }
             }
         }
     }
 }
-

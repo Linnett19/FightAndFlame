@@ -15,6 +15,10 @@ public class ModParticlesRegistry {
     public static final RegistryObject<SimpleParticleType> SOUL_BONE_SPLASH = PARTICLE_TYPES.register("sour_bone_splash", () -> new SimpleParticleType(true));
     public static final RegistryObject<SimpleParticleType> JELLY_BALLS_SPLASH = PARTICLE_TYPES.register("jelly_balls_splash", () -> new SimpleParticleType(true));
     public static final RegistryObject<SimpleParticleType> CLOUD_SPLASH = PARTICLE_TYPES.register("cloud_splash", () -> new SimpleParticleType(true));
+    public static final RegistryObject<SimpleParticleType> FIRE_SPARK  = PARTICLE_TYPES.register("fire_spark", () -> new SimpleParticleType(true));
+
+
+
 
     public static void register(IEventBus eventBus){
         PARTICLE_TYPES.register(eventBus);

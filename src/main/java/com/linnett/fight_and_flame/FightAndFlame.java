@@ -3,7 +3,6 @@ package com.linnett.fight_and_flame;
 import com.linnett.fight_and_flame.block.ModBlocks;
 import com.linnett.fight_and_flame.block.entity.BlockEntities;
 import com.linnett.fight_and_flame.entity.FightAndFlameEntityRegistry;
-import com.linnett.fight_and_flame.fluid.ModFluids;
 import com.linnett.fight_and_flame.items.ModCreativeTabs;
 import com.linnett.fight_and_flame.items.ModItems;
 import com.linnett.fight_and_flame.sounds.ModSounds;
@@ -46,9 +45,6 @@ public class FightAndFlame {
         ModSounds.SOUND_EVENT.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         BlockEntities.BLOCK_ENTITIES.register(modEventBus);
-
-        ModFluids.init(modEventBus);
-        ModFluids.initFluidInteractions();
 
         FightAndFlameEntityRegistry.DEF_REG.register(modEventBus);
 

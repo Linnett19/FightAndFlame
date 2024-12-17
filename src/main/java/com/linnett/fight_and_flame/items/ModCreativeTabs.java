@@ -65,7 +65,7 @@ public class ModCreativeTabs {
                         poutput.accept(ModBlocks.VOLCANO_STONE_SLAB.get());
                         poutput.accept(ModBlocks.VOLCANO_MAGMA.get());
                         poutput.accept(ModBlocks.VOLCANO_CORE.get());
-
+                        poutput.accept(ModBlocks.VOLCANIC_CACTUS.get());
 
 
 

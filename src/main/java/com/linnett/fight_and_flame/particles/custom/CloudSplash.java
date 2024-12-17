@@ -43,8 +43,8 @@ public class CloudSplash extends TextureSheetParticle {
 
 
         if (random.nextInt(10) == 0) {
-            this.xd += random.nextDouble() * 0.01 - 0.005;  // Немного колебаний по X
-            this.zd += random.nextDouble() * 0.01 - 0.005;  // Немного колебаний по Z
+            this.xd += random.nextDouble() * 0.01 - 0.005;
+            this.zd += random.nextDouble() * 0.01 - 0.005;
         }
     }
 
@@ -54,7 +54,6 @@ public class CloudSplash extends TextureSheetParticle {
         super.tick();
 
 
-        // Плавное уменьшение прозрачности
         this.alpha = 0.6f - ((float) this.age / (float) this.lifetime) * 0.6f;
 
         this.setSpriteFromAge(this.sprites);
@@ -72,13 +71,12 @@ public class CloudSplash extends TextureSheetParticle {
         public Particle createParticle(SimpleParticleType particleType, ClientLevel level,
                                        double x, double y, double z,
                                        double dx, double dy, double dz) {
-            // Создаем частицы, которые будут двигаться вверх и увеличиваться
-            return new CloudSplash(level, x, y, z, this.sprites, dx, 0.1, dz);  // Устанавливаем скорость по Y равной 0.1 для движения вверх
+            return new CloudSplash(level, x, y, z, this.sprites, dx, 0.1, dz);
         }
     }
 
     @Override
     public ParticleRenderType getRenderType() {
-        return ParticleRenderType.PARTICLE_SHEET_TRANSLUCENT;  // Отображаем частицу с полупрозрачным спрайтом
+        return ParticleRenderType.PARTICLE_SHEET_TRANSLUCENT;
     }
 }

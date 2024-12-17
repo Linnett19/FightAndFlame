@@ -10,8 +10,12 @@
   "item.fight_and_flame.stellarite": "Stellarite",
 
 
-  "block.fight_and_flame.magmora": "Magmora",
-  "item.fight_and_flame.magmora_bucket": "Bucket of Magmora",
+  "block.fight_and_flame.volcano_stone": "Volcano Stone",
+  "block.fight_and_flame.volcano_stone_stairs": "Volcano Stone Stairs",
+  "block.fight_and_flame.volcano_stone_slab": "Volcano Stone Slab",
+  "block.fight_and_flame.volcano_magma": "Volcano Magma",
+  "block.fight_and_flame.volcano_core": "Volcano Core",
+  "block.fight_and_flame.volcanic_cactus": "Volcanic Cactus",
 
 
 

@@ -2,7 +2,6 @@ package com.linnett.fight_and_flame.items;
 
 import com.linnett.fight_and_flame.FightAndFlame;
 import com.linnett.fight_and_flame.block.ModBlocks;
-import com.linnett.fight_and_flame.fluid.ModFluids;
 import com.linnett.fight_and_flame.items.custom_items.SwordWeapon;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -94,9 +93,6 @@ public class ModItems {
 
 
 
-
-
-
     public static final RegistryObject<Item> BLANK_BLUEPRINT = ITEM.register("blank_blueprint",
             () -> new Item(new Item.Properties()));
 
@@ -126,8 +122,6 @@ public class ModItems {
 
     public static final RegistryObject<Item> STELLARITE = ITEM.register("stellarite",
             () -> new Item(new Item.Properties().rarity(RARITY_STAR)));
-
-
 
 
 
@@ -213,9 +207,6 @@ public class ModItems {
 
     public static final RegistryObject<Item> CAULDRON_ITEM = ITEM.register("cauldron_item",
             () -> new ItemNameBlockItem(ModBlocks.CAULDRON.get(), new Item.Properties().rarity(RARITY_SCARY)));
-
-
-
 
     public static final RegistryObject<Item> CANDI_CORN = ITEM.register("candi_corn",
             () -> new Item(new Item.Properties()));
