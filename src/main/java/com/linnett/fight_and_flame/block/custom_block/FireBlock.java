@@ -11,8 +11,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.core.particles.ParticleTypes;
 
 public class FireBlock extends Block {
@@ -20,7 +18,7 @@ public class FireBlock extends Block {
     public FireBlock(Properties properties) {
         super(properties
                 .strength(0.4f)
-                .lightLevel(state -> 4)
+                .lightLevel(state -> 6)
                 .requiresCorrectToolForDrops()
         );
     }
@@ -44,21 +42,20 @@ public class FireBlock extends Block {
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
         super.animateTick(state, level, pos, random);
 
-        if (random.nextInt(5) == 0) {
-            double x = pos.getX() + random.nextDouble();
-            double y = pos.getY() + random.nextDouble();
-            double z = pos.getZ() + random.nextDouble();
-            level.addParticle(ModParticlesRegistry.FIRE_SPARK.get(), x, y, z, 0.0, 0.05, 0.0); // Вызов новой частицы
-        }
-        if (random.nextInt(5) == 0) {
+
+        if (random.nextInt(3) == 0) {
             double x = pos.getX() + 0.5 + (random.nextDouble() - 0.5);
             double y = pos.getY() + 0.5 + (random.nextDouble() - 0.5);
             double z = pos.getZ() + 0.5 + (random.nextDouble() - 0.5);
-            level.addParticle(ParticleTypes.LAVA, x, y, z, 0.0, 0.05, 0.0);
+            level.addParticle(ModParticlesRegistry.FIRE_SPARK.get(), x, y, z, 0.0, 0.05, 0.0);
         }
+        if (random.nextInt(6) == 0) {
+            double x = pos.getX() + 0.5 + (random.nextDouble() - 0.5);
+            double y = pos.getY() + 0.5 + (random.nextDouble() * 0.5);
+            double z = pos.getZ() + 0.5 + (random.nextDouble() - 0.5);
 
-
-
+            level.addParticle(ParticleTypes.LAVA, x, y, z, 0.0, 0.0, 0.0);
+        }
         for (Direction direction : Direction.values()) {
             BlockPos neighborPos = pos.relative(direction);
             BlockState neighborState = level.getBlockState(neighborPos);
