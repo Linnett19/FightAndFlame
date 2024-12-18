@@ -1,7 +1,6 @@
 package com.linnett.fight_and_flame.entity;
 
 import com.linnett.fight_and_flame.FightAndFlame;
-import com.linnett.fight_and_flame.entity.custom.LavaShardEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,7 +16,6 @@ public class FightAndFlameEntityRegistry {
             = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, FightAndFlame.MOD_ID);
 
 
- public static final RegistryObject<EntityType<LavaShardEntity>> LAVA_SHARD = DEF_REG.register("lava_shard", () -> (EntityType) EntityType.Builder.of(LavaShardEntity::new, MobCategory.MISC).sized(0.2F, 0.2F).clientTrackingRange(8).build("lava_shard"));
 
 
 
