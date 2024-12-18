@@ -2,9 +2,7 @@ package com.linnett.fight_and_flame.events;
 
 
 import com.linnett.fight_and_flame.FightAndFlame;
-import com.linnett.fight_and_flame.particles.custom.CloudSplash;
-import com.linnett.fight_and_flame.particles.custom.FireSparkParticle;
-import com.linnett.fight_and_flame.particles.custom.SplashParticleTemplate;
+import com.linnett.fight_and_flame.particles.custom.*;
 import com.linnett.fight_and_flame.particles.ModParticlesRegistry;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,7 +18,7 @@ public class ModEventBus {
         event.registerSpriteSet(ModParticlesRegistry.JELLY_BALLS_SPLASH.get(), SplashParticleTemplate.Provider::new);
         event.registerSpriteSet(ModParticlesRegistry.CLOUD_SPLASH.get(), CloudSplash.Provider::new);
         event.registerSpriteSet(ModParticlesRegistry.FIRE_SPARK.get(), FireSparkParticle.Provider::new);
-
-
+        event.registerSpriteSet(ModParticlesRegistry.SAND_PARTICLES.get(), SandParticles.Provider::new);
+        event.registerSpriteSet(ModParticlesRegistry.LAVA_PARTICLES.get(), LavaParticle.Provider::new);
     }
 }

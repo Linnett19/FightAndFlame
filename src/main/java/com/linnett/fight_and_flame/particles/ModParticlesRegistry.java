@@ -1,12 +1,16 @@
 package com.linnett.fight_and_flame.particles;
 
 import com.linnett.fight_and_flame.FightAndFlame;
+import com.mojang.serialization.Codec;
+import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Function;
 
 public class ModParticlesRegistry {
     public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, FightAndFlame.MOD_ID);
@@ -16,7 +20,14 @@ public class ModParticlesRegistry {
     public static final RegistryObject<SimpleParticleType> JELLY_BALLS_SPLASH = PARTICLE_TYPES.register("jelly_balls_splash", () -> new SimpleParticleType(true));
     public static final RegistryObject<SimpleParticleType> CLOUD_SPLASH = PARTICLE_TYPES.register("cloud_splash", () -> new SimpleParticleType(true));
     public static final RegistryObject<SimpleParticleType> FIRE_SPARK  = PARTICLE_TYPES.register("fire_spark", () -> new SimpleParticleType(true));
-
+    public static final RegistryObject<SimpleParticleType> LAVA_PARTICLES = PARTICLE_TYPES.register("lava_particles", () -> new SimpleParticleType(true));
+    public static final RegistryObject<ParticleType<BlockParticleOption>> SAND_PARTICLES = PARTICLE_TYPES.register("sand_particles", () -> new ParticleType<BlockParticleOption>(true, BlockParticleOption.DESERIALIZER) {
+        @Override
+        public Codec<BlockParticleOption> codec() {
+            Function<ParticleType<BlockParticleOption>, Codec<BlockParticleOption>> codec = BlockParticleOption::codec;
+            return (Codec)codec.apply(this);
+        }
+    });
 
 
 

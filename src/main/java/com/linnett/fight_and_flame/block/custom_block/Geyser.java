@@ -7,6 +7,7 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
@@ -22,6 +23,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -46,8 +48,10 @@ public class Geyser extends Block {
     @Override
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
         if (!level.isClientSide && entity instanceof LivingEntity livingEntity) {
-            livingEntity.hurt(livingEntity.damageSources().cactus(), 3.0f);
-            entity.setSecondsOnFire(3);
+            if (state.getValue(ERUPTING)) {
+                livingEntity.hurt(livingEntity.damageSources().cactus(), 3.0f);
+                entity.setSecondsOnFire(3);
+            }
         }
     }
 
@@ -62,16 +66,37 @@ public class Geyser extends Block {
     }
 
     @Override
-    public void animateTick(BlockState state, Level level, BlockPos pos, java.util.Random random) {
+    public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
+        super.animateTick(state, level, pos, random);
         if (state.getValue(ERUPTING)) {
-            for (int i = 0; i < 5; i++) {
+            // Генерация частиц лавы
+            for (int i = 0; i < 10; i++) {
                 double x = pos.getX() + 0.5 + (random.nextDouble() - 0.5) * 0.2;
                 double y = pos.getY() + 1.0 + random.nextDouble() * 0.5;
                 double z = pos.getZ() + 0.5 + (random.nextDouble() - 0.5) * 0.2;
                 level.addParticle(ParticleTypes.LAVA, x, y, z, 0, 0.1, 0);
             }
+
+            if (!level.isClientSide) {
+                double radius = 3.0;
+
+                AABB area = new AABB(
+                        pos.getX() - radius, pos.getY() - radius, pos.getZ() - radius,
+                        pos.getX() + radius, pos.getY() + radius, pos.getZ() + radius
+                );
+                level.getEntitiesOfClass(LivingEntity.class, area, entity -> true).stream().filter(entity -> entity instanceof LivingEntity).forEach(livingEntity -> livingEntity.setSecondsOnFire(5));
+            }
         }
     }
+
+
+
+
+
+
+
+
+
 
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
@@ -103,7 +128,7 @@ public class Geyser extends Block {
 
                 if (!player.isCreative()) {
                     if (itemStack.is(Items.WATER_BUCKET)) {
-                        player.setItemInHand(hand, new ItemStack(Items.BUCKET)); // Заменяем на пустое ведро
+                        player.setItemInHand(hand, new ItemStack(Items.BUCKET));
                     } else {
                         itemStack.shrink(1);
                     }
@@ -124,12 +149,3 @@ public class Geyser extends Block {
         return false;
     }
 }
-
-
-
-
-
-
-
-
-
