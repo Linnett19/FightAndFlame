@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "fight_and_flame:block/volcano_stone_bricks"
+  }
+}
