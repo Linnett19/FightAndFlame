@@ -61,6 +61,7 @@ public class ModCreativeTabs {
 
 
                         poutput.accept(ModBlocks.VOLCANO_STONE.get());
+                        poutput.accept(ModBlocks.VOLCANIC_STONES.get());
                         poutput.accept(ModBlocks.VOLCANO_STONE_BRICKS.get());
                         poutput.accept(ModBlocks.POLISHED_VOLCANO_STONE.get());
                         poutput.accept(ModBlocks.VOLCANO_STONE_STAIRS.get());
@@ -71,6 +72,8 @@ public class ModCreativeTabs {
                         poutput.accept(ModBlocks.POLISHED_VOLCANO_MAGMA.get());
                         poutput.accept(ModBlocks.VOLCANO_CORE.get());
                         poutput.accept(ModBlocks.VOLCANIC_CACTUS.get());
+                        poutput.accept(ModBlocks.ASH.get());
+                        poutput.accept(ModBlocks.ASH_DUNE.get());
 
 
 

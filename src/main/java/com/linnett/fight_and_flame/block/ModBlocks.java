@@ -35,6 +35,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> VOLCANO_STONE = registerBlock("volcano_stone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
+    public static final RegistryObject<Block> VOLCANIC_STONES = registerBlock("volcanic_stones",
+            () -> new VolcanicStonesBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
     public static final RegistryObject<Block> POLISHED_VOLCANO_STONE = registerBlock("polished_volcano_stone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
@@ -55,6 +58,12 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> VOLCANO_MAGMA_BRICKS = registerBlock("volcano_magma_bricks",
             () -> new FireBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> ASH = registerBlock("ash",
+            () -> new AshBlock(BlockBehaviour.Properties.copy(Blocks.SAND)));
+
+    public static final RegistryObject<Block> ASH_DUNE = registerBlock("ash_dune",
+            () -> new AshBlock(BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
 
 
 

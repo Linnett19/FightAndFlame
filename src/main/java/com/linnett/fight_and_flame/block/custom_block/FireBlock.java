@@ -18,7 +18,7 @@ public class FireBlock extends Block {
     public FireBlock(Properties properties) {
         super(properties
                 .strength(0.4f)
-                .lightLevel(state -> 6)
+                .lightLevel(state -> 7)
                 .requiresCorrectToolForDrops()
         );
     }
@@ -26,10 +26,8 @@ public class FireBlock extends Block {
     @Override
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
         super.stepOn(level, pos, state, entity);
-        if (!level.isClientSide) {
-            if (entity instanceof LivingEntity livingEntity) {
-                entity.setSecondsOnFire(6);
-            }
+        if (!level.isClientSide && entity instanceof LivingEntity) {
+            entity.setSecondsOnFire(6);
         }
     }
 
@@ -42,20 +40,20 @@ public class FireBlock extends Block {
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
         super.animateTick(state, level, pos, random);
 
-
         if (random.nextInt(3) == 0) {
             double x = pos.getX() + 0.5 + (random.nextDouble() - 0.5);
             double y = pos.getY() + 0.5 + (random.nextDouble() - 0.5);
             double z = pos.getZ() + 0.5 + (random.nextDouble() - 0.5);
             level.addParticle(ModParticlesRegistry.FIRE_SPARK.get(), x, y, z, 0.0, 0.05, 0.0);
         }
+
         if (random.nextInt(6) == 0) {
             double x = pos.getX() + 0.5 + (random.nextDouble() - 0.5);
             double y = pos.getY() + 0.5 + (random.nextDouble() * 0.5);
             double z = pos.getZ() + 0.5 + (random.nextDouble() - 0.5);
-
             level.addParticle(ParticleTypes.LAVA, x, y, z, 0.0, 0.0, 0.0);
         }
+
         for (Direction direction : Direction.values()) {
             BlockPos neighborPos = pos.relative(direction);
             BlockState neighborState = level.getBlockState(neighborPos);
@@ -78,3 +76,4 @@ public class FireBlock extends Block {
         }
     }
 }
+

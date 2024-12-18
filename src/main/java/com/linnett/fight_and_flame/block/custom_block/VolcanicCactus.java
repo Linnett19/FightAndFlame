@@ -24,7 +24,7 @@ public class VolcanicCactus extends CactusBlock {
     public VolcanicCactus(Properties properties) {
         super(properties
                 .strength(0.4f)
-                .lightLevel(state -> 3)
+                .lightLevel(state -> 7)
                 .requiresCorrectToolForDrops()
         );
     }
@@ -41,6 +41,15 @@ public class VolcanicCactus extends CactusBlock {
             entity.setSecondsOnFire(3);
         }
     }
+
+    @Override
+    public void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
+        if (!level.isClientSide && entity instanceof LivingEntity livingEntity) {
+            livingEntity.hurt(livingEntity.damageSources().cactus(), 3.0f);
+            entity.setSecondsOnFire(3);
+        }
+    }
+
 
 
     @Override

@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "fight_and_flame:block/volcanic_stones",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "fight_and_flame:block/volcanic_stones",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "fight_and_flame:block/volcanic_stones",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "fight_and_flame:block/volcanic_stones",
+      "y": 270
+    }
+  }
+}
+

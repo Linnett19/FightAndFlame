@@ -36,7 +36,7 @@ public class Geyser extends Block {
     private static final VoxelShape SHAPE = Block.box(5, 0, 5, 11, 16, 11);
 
     public Geyser(BlockBehaviour.Properties properties) {
-        super(properties);
+        super(properties.lightLevel(state -> state.getValue(ERUPTING) ? 10 : 0)); // Свет 7 при ERUPTING
         this.registerDefaultState(this.stateDefinition.any().setValue(ERUPTING, false).setValue(IGNITED, false));
     }
 
@@ -89,15 +89,6 @@ public class Geyser extends Block {
         }
     }
 
-
-
-
-
-
-
-
-
-
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (!(level instanceof ServerLevel serverLevel)) {
@@ -149,3 +140,4 @@ public class Geyser extends Block {
         return false;
     }
 }
+
