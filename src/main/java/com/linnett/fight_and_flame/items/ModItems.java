@@ -124,17 +124,6 @@ public class ModItems {
     public static final RegistryObject<Item> STELLARITE = ITEM.register("stellarite",
             () -> new Item(new Item.Properties().rarity(RARITY_STAR)));
 
-
-
-
-
-    public static final RegistryObject<Item> ASH_BUCKET = ITEM.register("ash_bucket",
-            () -> new Item(new Item.Properties().stacksTo(1)));
-
-
-
-
-
     public static final RegistryObject<Item> IRON_BROADSWORD = ITEM.register("iron_broadsword",
             () -> new Broadsword( Tiers.IRON, 6,-3.5F, new Item.Properties()));
 
