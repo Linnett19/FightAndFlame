@@ -27,11 +27,6 @@ public class ModBlocks {
 
 
 
-
-
-
-
-
     public static final RegistryObject<Block> VOLCANO_STONE = registerBlock("volcano_stone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 

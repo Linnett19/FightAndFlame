@@ -60,13 +60,14 @@ public class ModCreativeTabs {
                         poutput.accept(ModBlocks.STELLARITE_OBELISK.get());
 
 
-                        poutput.accept(ModBlocks.VOLCANO_STONE.get());
+
                         poutput.accept(ModBlocks.VOLCANIC_STONES.get());
-                        poutput.accept(ModBlocks.VOLCANO_STONE_BRICKS.get());
-                        poutput.accept(ModBlocks.POLISHED_VOLCANO_STONE.get());
+                        poutput.accept(ModBlocks.GEYSER.get());
+                        poutput.accept(ModBlocks.VOLCANO_STONE.get());
                         poutput.accept(ModBlocks.VOLCANO_STONE_STAIRS.get());
                         poutput.accept(ModBlocks.VOLCANO_STONE_SLAB.get());
-                        poutput.accept(ModBlocks.GEYSER.get());
+                        poutput.accept(ModBlocks.VOLCANO_STONE_BRICKS.get());
+                        poutput.accept(ModBlocks.POLISHED_VOLCANO_STONE.get());
                         poutput.accept(ModBlocks.VOLCANO_MAGMA.get());
                         poutput.accept(ModBlocks.VOLCANO_MAGMA_BRICKS.get());
                         poutput.accept(ModBlocks.POLISHED_VOLCANO_MAGMA.get());
@@ -74,8 +75,6 @@ public class ModCreativeTabs {
                         poutput.accept(ModBlocks.VOLCANIC_CACTUS.get());
                         poutput.accept(ModBlocks.ASH.get());
                         poutput.accept(ModBlocks.ASH_DUNE.get());
-                        poutput.accept(ModItems.ASH_BUCKET.get());
-
 
                         poutput.accept(ModBlocks.SCARY_STONE.get());
                         poutput.accept(ModBlocks.SCARY_STONE_STAIRS.get());
