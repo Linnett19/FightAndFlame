@@ -18,7 +18,6 @@ public class FightAndFlameEntityRegistry {
 
 
 
-
     public static void registerEntities(IEventBus eventBus) {
         DEF_REG.register(eventBus);
     }

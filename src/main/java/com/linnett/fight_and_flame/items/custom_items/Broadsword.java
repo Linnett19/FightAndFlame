@@ -51,8 +51,6 @@ public class Broadsword extends SwordWeapon {
         return true;
     }
 
-
-
     @Override
     public boolean isEnchantable(ItemStack stack) {
         return true;
@@ -66,12 +64,6 @@ public class Broadsword extends SwordWeapon {
                 || enchantment == Enchantments.MENDING
                 || enchantment == Enchantments.UNBREAKING;
     }
-
-
-
-
-
-
 }
 
 
