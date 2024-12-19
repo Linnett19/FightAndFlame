@@ -18,6 +18,7 @@ public class ModEventBus {
         event.registerSpriteSet(ModParticlesRegistry.JELLY_BALLS_SPLASH.get(), SplashParticleTemplate.Provider::new);
         event.registerSpriteSet(ModParticlesRegistry.CLOUD_SPLASH.get(), CloudSplash.Provider::new);
         event.registerSpriteSet(ModParticlesRegistry.FIRE_SPARK.get(), FireSparkParticle.Provider::new);
+        event.registerSpriteSet(ModParticlesRegistry.ASH_FLAKE.get(), AshFlake.Provider::new);
         event.registerSpriteSet(ModParticlesRegistry.SAND_PARTICLES.get(), SandParticles.Provider::new);
     }
 }

@@ -7,7 +7,6 @@ import com.linnett.fight_and_flame.items.ModItems;
 import com.linnett.fight_and_flame.worldgen.wood.ModWoodTypes;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -17,6 +16,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
 
 import java.util.function.Supplier;
 
@@ -63,7 +63,7 @@ public class ModBlocks {
             () -> new AshBlock(BlockBehaviour.Properties.copy(Blocks.SAND)));
 
     public static final RegistryObject<Block> ASH_DUNE = registerBlock("ash_dune",
-            () -> new AshBlock(BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
 
 
 

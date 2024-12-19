@@ -2,6 +2,7 @@ package com.linnett.fight_and_flame.items;
 
 import com.linnett.fight_and_flame.FightAndFlame;
 import com.linnett.fight_and_flame.block.ModBlocks;
+import com.linnett.fight_and_flame.items.custom_items.Broadsword;
 import com.linnett.fight_and_flame.items.custom_items.SwordWeapon;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -127,8 +128,15 @@ public class ModItems {
 
 
 
+    public static final RegistryObject<Item> ASH_BUCKET = ITEM.register("ash_bucket",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+
+
+
+
+
     public static final RegistryObject<Item> IRON_BROADSWORD = ITEM.register("iron_broadsword",
-            () -> new SwordWeapon( Tiers.IRON, 6,-3.5F, new Item.Properties()));
+            () -> new Broadsword( Tiers.IRON, 6,-3.5F, new Item.Properties()));
 
     public static final RegistryObject<Item> IRON_SPEAR = ITEM.register("iron_spear",
             () -> new SwordWeapon( Tiers.IRON, 4,-2F, new Item.Properties()));
@@ -146,7 +154,7 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> GOLDEN_BROADSWORD = ITEM.register("golden_broadsword",
-            () -> new SwordWeapon( Tiers.IRON, 6,-3.5F, new Item.Properties()));
+            () -> new Broadsword( Tiers.IRON, 6,-3.5F, new Item.Properties()));
 
     public static final RegistryObject<Item> GOLDEN_SPEAR = ITEM.register("golden_spear",
             () -> new SwordWeapon( Tiers.IRON, 4,-2F, new Item.Properties()));
@@ -164,7 +172,7 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> DIAMOND_BROADSWORD = ITEM.register("diamond_broadsword",
-            () -> new SwordWeapon( Tiers.IRON, 6,-3.5F, new Item.Properties()));
+            () -> new Broadsword( Tiers.IRON, 6,-3.5F, new Item.Properties()));
 
     public static final RegistryObject<Item> DIAMOND_SPEAR = ITEM.register("diamond_spear",
             () -> new SwordWeapon( Tiers.IRON, 4,-2F, new Item.Properties()));
@@ -182,7 +190,7 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> NETHERITE_BROADSWORD = ITEM.register("netherite_broadsword",
-            () -> new SwordWeapon( Tiers.IRON, 6,-3.5F, new Item.Properties()));
+            () -> new Broadsword( Tiers.IRON, 6,-3.5F, new Item.Properties()));
 
     public static final RegistryObject<Item> NETHERITE_SPEAR = ITEM.register("netherite_spear",
             () -> new SwordWeapon( Tiers.IRON, 4,-2F, new Item.Properties()));

@@ -11,15 +11,25 @@
 
 
   "block.fight_and_flame.volcano_stone": "Volcano Stone",
+  "block.fight_and_flame.volcanic_stones": "Volcanic Stones",
+  "block.fight_and_flame.polished_volcano_stone": "Polished Volcano Stone",
+  "block.fight_and_flame.volcano_stone_bricks": "Volcano Stone Bricks",
   "block.fight_and_flame.volcano_stone_stairs": "Volcano Stone Stairs",
   "block.fight_and_flame.volcano_stone_slab": "Volcano Stone Slab",
   "block.fight_and_flame.volcano_magma": "Volcano Magma",
+  "block.fight_and_flame.polished_volcano_magma": "Polished Volcano Magma",
+  "block.fight_and_flame.volcano_magma_bricks": "Volcano Magma Bricks",
   "block.fight_and_flame.volcano_core": "Volcano Core",
   "block.fight_and_flame.volcanic_cactus": "Volcanic Cactus",
   "block.fight_and_flame.geyser": "Geyser",
+  "block.fight_and_flame.ash": "Ash",
+  "block.fight_and_flame.ash_dune": "Ash Dune",
+
+  "item.fight_and_flame.ash_bucket": "Ash Bucket",
 
 
-"item.fight_and_flame.iron_broadsword": "Iron Broadsword",
+
+  "item.fight_and_flame.iron_broadsword": "Iron Broadsword",
   "item.fight_and_flame.iron_spear": "Iron Spear",
   "item.fight_and_flame.iron_scythe": "Iron Scythe",
   "item.fight_and_flame.iron_rapier": "Iron Rapier",

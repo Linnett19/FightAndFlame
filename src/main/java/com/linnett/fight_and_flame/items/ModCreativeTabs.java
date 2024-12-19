@@ -74,7 +74,7 @@ public class ModCreativeTabs {
                         poutput.accept(ModBlocks.VOLCANIC_CACTUS.get());
                         poutput.accept(ModBlocks.ASH.get());
                         poutput.accept(ModBlocks.ASH_DUNE.get());
-
+                        poutput.accept(ModItems.ASH_BUCKET.get());
 
 
                         poutput.accept(ModBlocks.SCARY_STONE.get());

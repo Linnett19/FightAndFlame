@@ -3,6 +3,8 @@ package com.linnett.fight_and_flame;
 import com.linnett.fight_and_flame.block.ModBlocks;
 import com.linnett.fight_and_flame.block.entity.BlockEntities;
 import com.linnett.fight_and_flame.entity.FightAndFlameEntityRegistry;
+import com.linnett.fight_and_flame.events.ClientEvents;
+import com.linnett.fight_and_flame.events.ModEvents;
 import com.linnett.fight_and_flame.items.ModCreativeTabs;
 import com.linnett.fight_and_flame.items.ModItems;
 import com.linnett.fight_and_flame.sounds.ModSounds;
@@ -51,8 +53,10 @@ public class FightAndFlame {
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(new ClientEvents());
 
         modEventBus.addListener(this::addCreative);
+        ModEvents.register();
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
