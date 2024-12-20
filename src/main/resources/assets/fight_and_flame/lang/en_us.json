@@ -25,9 +25,10 @@
   "block.fight_and_flame.ash": "Ash",
   "block.fight_and_flame.ash_dune": "Ash Dune",
 
-  "item.fight_and_flame.ash_bucket": "Ash Bucket",
-
-
+  "item.fight_and_flame.force_moktel.effect.empty": "Moctel Sanitation",
+  "item.fight_and_flame.jump_moktel.effect.empty": "Moctel Bunny Hop",
+  "item.fight_and_flame.speed_moktel.effect.empty": "Moctel Cheetah Speed",
+  "item.fight_and_flame.burst_moktel.effect.empty": "Moctel Nuclear",
 
   "item.fight_and_flame.iron_broadsword": "Iron Broadsword",
   "item.fight_and_flame.iron_spear": "Iron Spear",
@@ -94,6 +95,8 @@
   "block.fight_and_flame.horrible_wall_hanging_sign": "Horrible Wall Hanging Sign",
 
   "block.fight_and_flame.horrible_door": "Horrible Door",
-  "itemGroup.fight_and_flame_materials_and_blocks": "Fight and Flame"
+  "itemGroup.fight_and_flame_stuff": "Fight and Flame: Stuff",
+  "itemGroup.fight_and_flame_weapons": "Fight and Flame: Weapons",
+  "effect.minecraft.explosion": "Boom"
 }
 

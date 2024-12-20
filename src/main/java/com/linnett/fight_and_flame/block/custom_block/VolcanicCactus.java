@@ -1,6 +1,6 @@
 package com.linnett.fight_and_flame.block.custom_block;
 
-import com.linnett.fight_and_flame.block.ModBlocks;
+import com.linnett.fight_and_flame.block.FaFBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -57,9 +57,9 @@ public class VolcanicCactus extends CactusBlock {
         BlockState belowState = level.getBlockState(pos.below());
         boolean isValidGround = belowState.is(Blocks.SAND)
                 || belowState.is(Blocks.RED_SAND)
-                || belowState.is(ModBlocks.VOLCANO_STONE.get())
-                || belowState.is(ModBlocks.VOLCANO_MAGMA.get())
-                || belowState.is(ModBlocks.VOLCANIC_CACTUS.get())
+                || belowState.is(FaFBlocks.VOLCANO_STONE.get())
+                || belowState.is(FaFBlocks.VOLCANO_MAGMA.get())
+                || belowState.is(FaFBlocks.VOLCANIC_CACTUS.get())
                 || belowState.is(this);
 
         boolean isAirNorth = level.getBlockState(pos.north()).isAir();

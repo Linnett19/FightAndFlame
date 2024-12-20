@@ -1,6 +1,6 @@
 package com.linnett.fight_and_flame.block.custom_block;
 
-import com.linnett.fight_and_flame.particles.ModParticlesRegistry;
+import com.linnett.fight_and_flame.particles.FaFParticlesRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvent;
@@ -52,7 +52,7 @@ public class AshBlock extends FallingBlock {
                 boolean isMoving = entity.xOld != entity.getX() || entity.zOld != entity.getZ();
                 if (isMoving && random.nextBoolean()) {
                     level.addParticle(
-                            ModParticlesRegistry.ASH_FLAKE.get(),
+                            FaFParticlesRegistry.ASH_FLAKE.get(),
                             entity.getX(),
                             pos.getY() + 1,
                             entity.getZ(),

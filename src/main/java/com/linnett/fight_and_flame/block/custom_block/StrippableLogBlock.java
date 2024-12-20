@@ -1,6 +1,6 @@
 package com.linnett.fight_and_flame.block.custom_block;
 
-import com.linnett.fight_and_flame.block.ModBlocks;
+import com.linnett.fight_and_flame.block.FaFBlocks;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.RotatedPillarBlock;
@@ -20,23 +20,23 @@ public class StrippableLogBlock extends RotatedPillarBlock {
             return null;
 
         if (ToolActions.AXE_STRIP == toolAction) {
-            if(this == ModBlocks.HORRIBLE_LOG.get()){
-                return ModBlocks.STRIPPED_HORRIBLE_LOG.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(RotatedPillarBlock.AXIS));
+            if(this == FaFBlocks.HORRIBLE_LOG.get()){
+                return FaFBlocks.STRIPPED_HORRIBLE_LOG.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(RotatedPillarBlock.AXIS));
             }
         }
         if (ToolActions.AXE_STRIP == toolAction) {
-            if(this == ModBlocks.HORRIBLE_WOOD.get()){
-                return ModBlocks.STRIPPED_HORRIBLE_WOOD.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(RotatedPillarBlock.AXIS));
+            if(this == FaFBlocks.HORRIBLE_WOOD.get()){
+                return FaFBlocks.STRIPPED_HORRIBLE_WOOD.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(RotatedPillarBlock.AXIS));
             }
         }
         if (ToolActions.AXE_STRIP == toolAction) {
-            if(this == ModBlocks.HORRIBLE_BEHOLD_WOOD.get()){
-                return ModBlocks.STRIPPED_HORRIBLE_BEHOLD_WOOD.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(RotatedPillarBlock.AXIS));
+            if(this == FaFBlocks.HORRIBLE_BEHOLD_WOOD.get()){
+                return FaFBlocks.STRIPPED_HORRIBLE_BEHOLD_WOOD.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(RotatedPillarBlock.AXIS));
             }
         }
         if (ToolActions.AXE_STRIP == toolAction) {
-            if(this == ModBlocks.HORRIBLE_BEHOLD_LOG.get()){
-                return ModBlocks.STRIPPED_HORRIBLE_BEHOLD_LOG.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(RotatedPillarBlock.AXIS));
+            if(this == FaFBlocks.HORRIBLE_BEHOLD_LOG.get()){
+                return FaFBlocks.STRIPPED_HORRIBLE_BEHOLD_LOG.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(RotatedPillarBlock.AXIS));
             }
         }
         return super.getToolModifiedState(state, context, toolAction, simulate);

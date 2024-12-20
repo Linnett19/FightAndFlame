@@ -1,7 +1,7 @@
 package com.linnett.fight_and_flame.block.custom_block;
 
-import com.linnett.fight_and_flame.particles.ModParticlesRegistry;
-import com.linnett.fight_and_flame.items.ModItems;
+import com.linnett.fight_and_flame.particles.FaFParticlesRegistry;
+import com.linnett.fight_and_flame.items.FaFItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -69,7 +69,6 @@ public class Geyser extends Block {
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
         super.animateTick(state, level, pos, random);
         if (state.getValue(ERUPTING)) {
-            // Генерация частиц лавы
             for (int i = 0; i < 10; i++) {
                 double x = pos.getX() + 0.5 + (random.nextDouble() - 0.5) * 0.2;
                 double y = pos.getY() + 1.0 + random.nextDouble() * 0.5;
@@ -97,7 +96,7 @@ public class Geyser extends Block {
 
         ItemStack itemStack = player.getItemInHand(hand);
 
-        if (itemStack.is(ModItems.PYROCLASTITE.get())) {
+        if (itemStack.is(FaFItems.PYROCLASTITE.get())) {
             if (!state.getValue(IGNITED)) {
                 level.setBlockAndUpdate(pos, state.setValue(ERUPTING, true).setValue(IGNITED, true));
 
@@ -105,7 +104,7 @@ public class Geyser extends Block {
                     itemStack.shrink(1);
                 }
 
-                level.playSound(null, pos, SoundEvents.FIRE_AMBIENT, SoundSource.BLOCKS, 1.0F, 1.0F);
+                level.playSound(null, pos, SoundEvents.FIRECHARGE_USE, SoundSource.BLOCKS, 1.0F, 1.0F);
                 serverLevel.sendParticles(ParticleTypes.LAVA, pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ() + 0.5, 10, 0.1, 0.1, 0.1, 0.1);
 
                 return InteractionResult.SUCCESS;
@@ -114,7 +113,7 @@ public class Geyser extends Block {
         }
 
         if (state.getValue(IGNITED)) {
-            if (itemStack.is(ModItems.HARMONITE.get()) || itemStack.is(Items.WATER_BUCKET)) {
+            if (itemStack.is(FaFItems.HARMONITE.get()) || itemStack.is(Items.WATER_BUCKET)) {
                 level.setBlockAndUpdate(pos, state.setValue(ERUPTING, false).setValue(IGNITED, false));
 
                 if (!player.isCreative()) {
@@ -125,7 +124,7 @@ public class Geyser extends Block {
                     }
                 }
 
-                serverLevel.sendParticles(ModParticlesRegistry.CLOUD_SPLASH.get(), pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ() + 0.5, 10, 0.1, 0.1, 0.1, 0.1);
+                serverLevel.sendParticles(FaFParticlesRegistry.CLOUD_SPLASH.get(), pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ() + 0.5, 10, 0.1, 0.1, 0.1, 0.1);
                 level.playSound(null, pos, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 1.0F, 1.0F);
 
                 return InteractionResult.SUCCESS;

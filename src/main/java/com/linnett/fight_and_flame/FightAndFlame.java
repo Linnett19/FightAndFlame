@@ -1,15 +1,15 @@
 package com.linnett.fight_and_flame;
 
-import com.linnett.fight_and_flame.block.ModBlocks;
+import com.linnett.fight_and_flame.block.FaFBlocks;
 import com.linnett.fight_and_flame.block.entity.BlockEntities;
-import com.linnett.fight_and_flame.entity.FightAndFlameEntityRegistry;
-import com.linnett.fight_and_flame.events.ClientEvents;
-import com.linnett.fight_and_flame.events.ModEvents;
-import com.linnett.fight_and_flame.items.ModCreativeTabs;
-import com.linnett.fight_and_flame.items.ModItems;
-import com.linnett.fight_and_flame.sounds.ModSounds;
-import com.linnett.fight_and_flame.particles.ModParticlesRegistry;
-import com.linnett.fight_and_flame.worldgen.wood.ModWoodTypes;
+import com.linnett.fight_and_flame.entity.FaFEntityRegistry;
+import com.linnett.fight_and_flame.events.FaFClientEvents;
+import com.linnett.fight_and_flame.events.FaFEvents;
+import com.linnett.fight_and_flame.items.FaFCreativeTabs;
+import com.linnett.fight_and_flame.items.FaFItems;
+import com.linnett.fight_and_flame.particles.FaFParticlesRegistry;
+import com.linnett.fight_and_flame.sounds.FaFSounds;
+import com.linnett.fight_and_flame.worldgen.wood.FaFWoodTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.Sheets;
@@ -40,23 +40,23 @@ public class FightAndFlame {
 
         
         
-        ModCreativeTabs.register(modEventBus);
-        ModItems.register(modEventBus);
-        ModBlocks.register(modEventBus);
-        ModParticlesRegistry.register(modEventBus);
-        ModSounds.SOUND_EVENT.register(modEventBus);
+        FaFCreativeTabs.register(modEventBus);
+        FaFItems.register(modEventBus);
+        FaFBlocks.register(modEventBus);
+        FaFParticlesRegistry.register(modEventBus);
+        FaFSounds.SOUND_EVENT.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         BlockEntities.BLOCK_ENTITIES.register(modEventBus);
 
-        FightAndFlameEntityRegistry.DEF_REG.register(modEventBus);
+        FaFEntityRegistry.DEF_REG.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
-        MinecraftForge.EVENT_BUS.register(new ClientEvents());
+        MinecraftForge.EVENT_BUS.register(new FaFClientEvents());
 
         modEventBus.addListener(this::addCreative);
-        ModEvents.register();
+        FaFEvents.register();
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -90,7 +90,7 @@ public class FightAndFlame {
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            Sheets.addWoodType(ModWoodTypes.HORRIBLE);
+            Sheets.addWoodType(FaFWoodTypes.HORRIBLE);
 
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());

@@ -1,6 +1,6 @@
 package com.linnett.fight_and_flame.block.custom_block;
 
-import com.linnett.fight_and_flame.particles.ModParticlesRegistry;
+import com.linnett.fight_and_flame.particles.FaFParticlesRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -44,7 +44,7 @@ public class FireBlock extends Block {
             double x = pos.getX() + 0.5 + (random.nextDouble() - 0.5);
             double y = pos.getY() + 0.5 + (random.nextDouble() - 0.5);
             double z = pos.getZ() + 0.5 + (random.nextDouble() - 0.5);
-            level.addParticle(ModParticlesRegistry.FIRE_SPARK.get(), x, y, z, 0.0, 0.05, 0.0);
+            level.addParticle(FaFParticlesRegistry.FIRE_SPARK.get(), x, y, z, 0.0, 0.05, 0.0);
         }
 
         if (random.nextInt(6) == 0) {
@@ -70,7 +70,7 @@ public class FireBlock extends Block {
                     double x = neighborPos.getX() + 0.5 + (random.nextDouble() - 0.5);
                     double y = neighborPos.getY() + 0.5 + (random.nextDouble() * 0.5);
                     double z = neighborPos.getZ() + 0.5 + (random.nextDouble() - 0.5);
-                    level.addParticle(ModParticlesRegistry.CLOUD_SPLASH.get(), x, y, z, 0.0, 0.1, 0.0);
+                    level.addParticle(FaFParticlesRegistry.CLOUD_SPLASH.get(), x, y, z, 0.0, 0.1, 0.0);
                 }
             }
         }
