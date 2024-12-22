@@ -43,8 +43,11 @@ public class FightAndFlame {
         FaFCreativeTabs.register(modEventBus);
         FaFItems.register(modEventBus);
         FaFBlocks.register(modEventBus);
+
         FaFParticlesRegistry.register(modEventBus);
+
         FaFSounds.SOUND_EVENT.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
         BlockEntities.BLOCK_ENTITIES.register(modEventBus);
 

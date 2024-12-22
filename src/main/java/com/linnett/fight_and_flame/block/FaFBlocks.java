@@ -116,7 +116,7 @@ public class FaFBlocks {
 
 
     public static final RegistryObject<Block> CAULDRON = registerBlock("cauldron",
-            () -> new CustomCauldron(BlockBehaviour.Properties.copy(Blocks.CAULDRON)));
+            () -> new ScaryCauldron(BlockBehaviour.Properties.copy(Blocks.CAULDRON)));
 
 
 

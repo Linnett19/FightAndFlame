@@ -111,7 +111,7 @@ public class MagicStick extends Item {
         }
 
         level.playSound(player, player.getX(), player.getY(), player.getZ(),
-                SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.PLAYERS, 1.0F, 1.0F + RANDOM.nextFloat() * 0.2F);
+                SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.PLAYERS, 100F, 1.0F + RANDOM.nextFloat() * 0.5F);
     }
 
     @Override

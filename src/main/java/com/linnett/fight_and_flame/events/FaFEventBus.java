@@ -24,6 +24,7 @@ public class FaFEventBus {
         event.registerSpriteSet(FaFParticlesRegistry.SAND_PARTICLES.get(), SandParticles.Provider::new);
         event.registerSpriteSet(FaFParticlesRegistry.COLORED_DUST.get(), ColoredDust.Provider::new);
         event.registerSpriteSet(FaFParticlesRegistry.SCARY_DUST.get(), ScaryDust.Provider::new);
+        event.registerSpriteSet(FaFParticlesRegistry.SCARY_BUBBLE.get(), BubbleParticle.Provider::new);
 
     }
 }
