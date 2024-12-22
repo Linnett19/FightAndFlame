@@ -22,7 +22,8 @@ public class FaFEventBus {
         event.registerSpriteSet(FaFParticlesRegistry.FIRE_SPARK.get(), FireSparkParticle.Provider::new);
         event.registerSpriteSet(FaFParticlesRegistry.ASH_FLAKE.get(), AshFlake.Provider::new);
         event.registerSpriteSet(FaFParticlesRegistry.SAND_PARTICLES.get(), SandParticles.Provider::new);
-        event.registerSpriteSet(FaFParticlesRegistry.MAGIC_SONAR.get(), MagicSonar.Provider::new);
+        event.registerSpriteSet(FaFParticlesRegistry.COLORED_DUST.get(), ColoredDust.Provider::new);
+        event.registerSpriteSet(FaFParticlesRegistry.SCARY_DUST.get(), ScaryDust.Provider::new);
 
     }
 }

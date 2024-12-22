@@ -120,14 +120,14 @@ public class FaFCreativeTabs {
                         poutput.accept(FaFItems.IRON_RAPIER.get());
                         poutput.accept(FaFItems.IRON_SICKLE.get());
 
-                        poutput.accept(Items.DIAMOND);
+                        poutput.accept(Items.GOLD_INGOT);
                         poutput.accept(FaFItems.GOLDEN_BROADSWORD.get());
                         poutput.accept(FaFItems.GOLDEN_SPEAR.get());
                         poutput.accept(FaFItems.GOLDEN_SCYTHE.get());
                         poutput.accept(FaFItems.GOLDEN_RAPIER.get());
                         poutput.accept(FaFItems.GOLDEN_SICKLE.get());
 
-                        poutput.accept(Items.GOLD_INGOT);
+                        poutput.accept(Items.DIAMOND);
                         poutput.accept(FaFItems.DIAMOND_BROADSWORD.get());
                         poutput.accept(FaFItems.DIAMOND_SPEAR.get());
                         poutput.accept(FaFItems.DIAMOND_SCYTHE.get());
@@ -152,7 +152,7 @@ public class FaFCreativeTabs {
                         poutput.accept(FaFItems.TRIANGULAR_GLASS.get());
                         poutput.accept(FaFItems.DISTORTED_GLASS.get());
 
-
+                        poutput.accept(FaFItems.MAGIC_STICK.get());
 
                     })
                     .build());

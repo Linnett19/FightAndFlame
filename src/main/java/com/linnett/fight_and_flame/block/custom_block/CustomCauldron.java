@@ -73,28 +73,32 @@ public class CustomCauldron extends AbstractCauldronBlock {
         double zOffset = 0.1;
 
         if (isCustomItem(itemStack.getItem())) {
-            itemStack.shrink(1);
             if (itemStack.getItem() == FaFItems.CANDI_CORN.get()) {
-                level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BREWING_STAND_BREW, SoundSource.BLOCKS, 1.0F, 1.0F);
                 ((ServerLevel) level).sendParticles(FaFParticlesRegistry.CANDY_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, xOffset, yOffset, zOffset, .1);
+                ((ServerLevel) level).sendParticles(FaFParticlesRegistry.SCARY_DUST.get(), pos.getX(), pos.getY() + 1.5, pos.getZ(), particleCount, xOffset, yOffset, zOffset, .1);
                 updateCauldronLevel(level, pos, state);
             }
 
             if (itemStack.getItem() == FaFItems.SLIME_LOLIPOP.get()) {
-                level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BREWING_STAND_BREW, SoundSource.BLOCKS, 1.0F, 1.0F);
                 ((ServerLevel) level).sendParticles(FaFParticlesRegistry.SLIME_LOLIPOP_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, xOffset, yOffset, zOffset, .1);
+                ((ServerLevel) level).sendParticles(FaFParticlesRegistry.SCARY_DUST.get(), pos.getX(), pos.getY() + 1.5, pos.getZ(), particleCount, xOffset, yOffset, zOffset, .1);
                 updateCauldronLevel(level, pos, state);
             }
             if (itemStack.getItem() == FaFItems.SOUR_BONE.get()) {
-                level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BREWING_STAND_BREW, SoundSource.BLOCKS, 1.0F, 1.0F);
                 ((ServerLevel) level).sendParticles(FaFParticlesRegistry.SOUL_BONE_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, xOffset, yOffset, zOffset, .1);
+                ((ServerLevel) level).sendParticles(FaFParticlesRegistry.SCARY_DUST.get(), pos.getX(), pos.getY() + 1.5, pos.getZ(), particleCount, xOffset, yOffset, zOffset, .1);
                 updateCauldronLevel(level, pos, state);
             }
             if (itemStack.getItem() == FaFItems.JELLY_BALLS.get()) {
-                level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                level.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BREWING_STAND_BREW, SoundSource.BLOCKS, 1.0F, 1.0F);
                 ((ServerLevel) level).sendParticles(FaFParticlesRegistry.JELLY_BALLS_SPLASH.get(), pos.getX() + .5, pos.getY() + 1.5, pos.getZ() + .5, particleCount, xOffset, yOffset, zOffset, .1);
+                ((ServerLevel) level).sendParticles(FaFParticlesRegistry.SCARY_DUST.get(), pos.getX(), pos.getY() + 1.5, pos.getZ(), particleCount, xOffset, yOffset, zOffset, .1);
                 updateCauldronLevel(level, pos, state);
             }
+            itemStack.shrink(1);
             return InteractionResult.SUCCESS;
         }
         return InteractionResult.PASS;
@@ -127,7 +131,7 @@ public class CustomCauldron extends AbstractCauldronBlock {
         candyNumber += 1;
 
         if (candyNumber >= MaxCandy) {
-            ItemEntity itemEntity = new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(FaFItems.BLANK_BLUEPRINT.get()));
+            ItemEntity itemEntity = new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(FaFItems.SANGUINITE.get()));
             level.addFreshEntity(itemEntity);
             breakCauldron((ServerLevel) level, pos);
             return;
@@ -151,13 +155,12 @@ public class CustomCauldron extends AbstractCauldronBlock {
             state = state.setValue(STAGE, state.getValue(STAGE) + 1);
         }
 
-        if (candyNumber == 80 ) {
-            spawnMob(level, pos, 6, EntityType.SLIME);
+        if (candyNumber == 90 ) {
+            spawnMob(level, pos, 1, EntityType.WITCH);
             state = state.setValue(STAGE, state.getValue(STAGE) + 1);
         }
 
         if (candyNumber == 100 ) {
-            spawnMob(level, pos, 7, EntityType.SLIME);
             state = state.setValue(STAGE, state.getValue(STAGE) + 1);
         }
 
@@ -178,7 +181,8 @@ public class CustomCauldron extends AbstractCauldronBlock {
             if (entity != null) {
                 entity.setPos(x, y, z);
                 level.addFreshEntity(entity);
-            }
+
+                ((ServerLevel) level).sendParticles(FaFParticlesRegistry.SCARY_DUST.get(), x, y, z, 10, 0.3, 0.3, 0.3, 0.1);            }
         }
     }
 }

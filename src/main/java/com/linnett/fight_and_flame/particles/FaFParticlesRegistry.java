@@ -21,7 +21,8 @@ public class FaFParticlesRegistry {
     public static final RegistryObject<SimpleParticleType> CLOUD_SPLASH = PARTICLE_TYPES.register("cloud_splash", () -> new SimpleParticleType(true));
     public static final RegistryObject<SimpleParticleType> FIRE_SPARK  = PARTICLE_TYPES.register("fire_spark", () -> new SimpleParticleType(true));
     public static final RegistryObject<SimpleParticleType> ASH_FLAKE  = PARTICLE_TYPES.register("ash_flake", () -> new SimpleParticleType(true));
-    public static final RegistryObject<SimpleParticleType> MAGIC_SONAR  = PARTICLE_TYPES.register("magic_sonar", () -> new SimpleParticleType(true));
+    public static final RegistryObject<SimpleParticleType> COLORED_DUST  = PARTICLE_TYPES.register("colored_dust", () -> new SimpleParticleType(true));
+    public static final RegistryObject<SimpleParticleType> SCARY_DUST  = PARTICLE_TYPES.register("scary_dust", () -> new SimpleParticleType(true));
 
 
 
