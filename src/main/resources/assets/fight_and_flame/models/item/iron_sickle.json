@@ -1,5 +1,5 @@
 {
-	"parent": "minecraft:item/generated",
+	"parent": "minecraft:item/handheld",
 	"textures": {
 		"layer0": "fight_and_flame:item/weapons/iron_sickle"
 	}

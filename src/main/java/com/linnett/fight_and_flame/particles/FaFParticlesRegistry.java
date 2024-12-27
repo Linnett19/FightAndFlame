@@ -24,6 +24,7 @@ public class FaFParticlesRegistry {
     public static final RegistryObject<SimpleParticleType> COLORED_DUST  = PARTICLE_TYPES.register("colored_dust", () -> new SimpleParticleType(true));
     public static final RegistryObject<SimpleParticleType> SCARY_DUST  = PARTICLE_TYPES.register("scary_dust", () -> new SimpleParticleType(true));
     public static final RegistryObject<SimpleParticleType> SCARY_BUBBLE  = PARTICLE_TYPES.register("scary_bubble", () -> new SimpleParticleType(true));
+    public static final RegistryObject<SimpleParticleType> SCARY_SONAR  = PARTICLE_TYPES.register("scary_sonar", () -> new SimpleParticleType(true));
 
 
 

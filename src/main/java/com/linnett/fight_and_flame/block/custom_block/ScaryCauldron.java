@@ -5,7 +5,6 @@ import com.linnett.fight_and_flame.particles.FaFParticlesRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.cauldron.CauldronInteraction;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -22,7 +21,6 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.AbstractCauldronBlock;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -144,6 +142,7 @@ public class ScaryCauldron extends AbstractCauldronBlock {
         if (candyNumber == 20) {
             spawnMob(level, pos, 4, EntityType.SLIME);
             state = state.setValue(STAGE, state.getValue(STAGE) + 1);
+
         }
 
         if (candyNumber == 40) {
@@ -235,6 +234,8 @@ public class ScaryCauldron extends AbstractCauldronBlock {
                 level.addFreshEntity(entity);
 
                 ((ServerLevel) level).sendParticles(FaFParticlesRegistry.SCARY_DUST.get(), x + 0.5, y + 0.5, z + 0.5, 10, 0.3, 0.3, 0.3, 0.1);
+                ((ServerLevel) level).sendParticles(FaFParticlesRegistry.SCARY_SONAR.get(), x + 0.5, y + 0.5, z + 0.5, 1, 0.3, 0.3, 0.3, 0.1);
+
             }
         }
     }

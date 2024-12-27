@@ -31,7 +31,6 @@ public class MagicStick extends Item {
     private int particleCooldown = 0;
 
     private static final List<MobEffect> RANDOM_EFFECTS = Arrays.asList(
-            MobEffects.MOVEMENT_SLOWDOWN,
             MobEffects.LEVITATION
     );
 
@@ -118,8 +117,6 @@ public class MagicStick extends Item {
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
         tooltip.add(Component.translatable("effect.fight_and_flame.hocus_pocus")
                 .append("").withStyle(ChatFormatting.DARK_PURPLE));
-        tooltip.add(Component.translatable("effect.minecraft.slowness")
-                .append(" 0:10").withStyle(ChatFormatting.RED));
         tooltip.add(Component.translatable("effect.minecraft.levitation")
                 .append(" 0:10").withStyle(ChatFormatting.BLUE));
     }

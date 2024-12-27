@@ -47,7 +47,7 @@ public class BurstInfusion extends PotionItem {
         tooltip.add(Component.translatable("effect.minecraft.nausea")
                 .append(" (1:00)").withStyle(ChatFormatting.RED));
         tooltip.add(Component.translatable("effect.minecraft.explosion")
-                .append(" (instantly)").withStyle(ChatFormatting.DARK_PURPLE));
+                .append("").withStyle(ChatFormatting.DARK_PURPLE));
     }
 }
 
