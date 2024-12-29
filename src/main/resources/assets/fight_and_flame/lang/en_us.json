@@ -85,18 +85,21 @@
   "block.fight_and_flame.stripped_horrible_behold_wood": "Stripped Horrible Behold Wood",
   "block.fight_and_flame.stripped_horrible_log": "Stripped Horrible Log",
   "block.fight_and_flame.stripped_horrible_behold_log": "Stripped Horrible Behold Log",
-
+  "block.fight_and_flame.horrible_fence": "Horrible Fence",
+  "block.fight_and_flame.horrible_fence_gate": "Horrible Fence Gate",
+  "block.fight_and_flame.horrible_trapdoor": "Horrible Trapdoor",
+  "block.fight_and_flame.horrible_pressure_plate": "Horrible Pressure Plate",
   "block.fight_and_flame.horrible_planks": "Horrible Planks",
   "block.fight_and_flame.horrible_stairs": "Horrible Stairs",
   "block.fight_and_flame.horrible_slab": "Horrible Slab",
   "block.fight_and_flame.horrible_leaves": "Horrible Leaves",
-
   "block.fight_and_flame.horrible_sign": "Horrible Sign",
   "block.fight_and_flame.horrible_wall_sign": "Horrible Wall Sign",
   "block.fight_and_flame.horrible_hanging_sign": "Horrible Hanging Sign",
   "block.fight_and_flame.horrible_wall_hanging_sign": "Horrible Wall Hanging Sign",
-
   "block.fight_and_flame.horrible_door": "Horrible Door",
+
+
   "itemGroup.fight_and_flame_stuff": "Fight and Flame: Stuff",
   "itemGroup.fight_and_flame_weapons": "Fight and Flame: Weapons",
   "effect.minecraft.explosion": "Boom",

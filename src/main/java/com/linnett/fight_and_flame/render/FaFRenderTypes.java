@@ -18,5 +18,14 @@ public class FaFRenderTypes extends RenderType {
         return create("particle_trail", DefaultVertexFormat.NEW_ENTITY, VertexFormat.Mode.QUADS, 256, true, true, CompositeState.builder().setShaderState(RenderStateShard.RENDERTYPE_ENERGY_SWIRL_SHADER).setTextureState(new TextureStateShard(resourceLocation, true, true)).setLightmapState(LIGHTMAP).setCullState(RenderStateShard.NO_CULL).setTransparencyState(RenderStateShard.TRANSLUCENT_TRANSPARENCY).setOverlayState(OVERLAY).setDepthTestState(LEQUAL_DEPTH_TEST).createCompositeState(true));
     }
 
+    public static RenderType getAmbersolShine() {
+        return create("ambersol_shine", DefaultVertexFormat.POSITION_COLOR, VertexFormat.Mode.QUADS, 256, true, true, RenderType.CompositeState.builder()
+                .setShaderState(RenderType.RENDERTYPE_LIGHTNING_SHADER)
+                .setCullState(CULL)
+                .setLightmapState(NO_LIGHTMAP)
+                .setLayeringState(RenderStateShard.VIEW_OFFSET_Z_LAYERING)
+                .setOutputState(RenderStateShard.PARTICLES_TARGET)
+                .createCompositeState(true));
+    }
 
 }

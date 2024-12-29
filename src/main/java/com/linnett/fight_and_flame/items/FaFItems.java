@@ -225,8 +225,24 @@ public class FaFItems {
     public static final RegistryObject<Item> HORRIBLE_HANGING_SIGN = ITEM.register("horrible_hanging_sign",
             () -> new HangingSignItem(FaFBlocks.HORRIBLE_HANGING_SIGN.get(), FaFBlocks.HORRIBLE_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
 
+    public static final RegistryObject<Item> HORRIBLE_FENCE_ITEM = ITEM.register("horrible_fence",
+            () -> new BlockItem(FaFBlocks.HORRIBLE_FENCE.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> HORRIBLE_FENCE_GATE_ITEM = ITEM.register("horrible_fence_gate",
+            () -> new BlockItem(FaFBlocks.HORRIBLE_FENCE_GATE.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> HORRIBLE_TRAPDOOR_ITEM = ITEM.register("horrible_trapdoor",
+            () -> new BlockItem(FaFBlocks.HORRIBLE_TRAPDOOR.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> HORRIBLE_PRESSURE_PLATE_ITEM = ITEM.register("horrible_pressure_plate",
+            () -> new BlockItem(FaFBlocks.HORRIBLE_PRESSURE_PLATE.get(), new Item.Properties()));
+
+
     public static final RegistryObject<Item> CAULDRON_ITEM = ITEM.register("cauldron_item",
             () -> new ItemNameBlockItem(FaFBlocks.CAULDRON.get(), new Item.Properties().rarity(RARITY_SCARY)));
+
+    public static final RegistryObject<Item> LAWN_CARPET_ITEM = ITEM.register("lawn_carpet",
+            () -> new ItemNameBlockItem(FaFBlocks.LAWN_CARPET.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> CANDI_CORN = ITEM.register("candi_corn",
             () -> new Item(new Item.Properties()));

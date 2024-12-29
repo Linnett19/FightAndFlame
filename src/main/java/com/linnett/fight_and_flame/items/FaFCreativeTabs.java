@@ -36,8 +36,6 @@ public class FaFCreativeTabs {
 
                         poutput.accept(FaFBlocks.STELLARITE_OBELISK.get());
 
-
-
                         poutput.accept(FaFBlocks.VOLCANIC_STONES.get());
                         poutput.accept(FaFBlocks.GEYSER.get());
                         poutput.accept(FaFBlocks.VOLCANO_STONE.get());
@@ -67,6 +65,7 @@ public class FaFCreativeTabs {
 
                         poutput.accept(FaFBlocks.MOSSY_SCARY_STONE_BRICKS.get());
                         poutput.accept(FaFBlocks.LAWN.get());
+                        poutput.accept(FaFItems.LAWN_CARPET_ITEM.get());
 
                         poutput.accept(FaFItems.CANDI_CORN.get());
                         poutput.accept(FaFItems.SLIME_LOLIPOP.get());
@@ -80,16 +79,22 @@ public class FaFCreativeTabs {
                         poutput.accept(FaFBlocks.HORRIBLE_WOOD.get());
                         poutput.accept(FaFBlocks.HORRIBLE_BEHOLD_LOG.get());
                         poutput.accept(FaFBlocks.HORRIBLE_BEHOLD_WOOD.get());
-                        poutput.accept(FaFBlocks.STRIPPED_HORRIBLE_BEHOLD_LOG.get());
-                        poutput.accept(FaFBlocks.STRIPPED_HORRIBLE_BEHOLD_WOOD.get());
+
                         poutput.accept(FaFBlocks.STRIPPED_HORRIBLE_LOG.get());
                         poutput.accept(FaFBlocks.STRIPPED_HORRIBLE_WOOD.get());
+                        poutput.accept(FaFBlocks.STRIPPED_HORRIBLE_BEHOLD_LOG.get());
+                        poutput.accept(FaFBlocks.STRIPPED_HORRIBLE_BEHOLD_WOOD.get());
+
                         poutput.accept(FaFBlocks.HORRIBLE_PLANKS.get());
                         poutput.accept(FaFBlocks.HORRIBLE_STAIRS.get());
                         poutput.accept(FaFBlocks.HORRIBLE_SLAB.get());
                         poutput.accept(FaFBlocks.HORRIBLE_DOOR  .get());
                         poutput.accept(FaFItems.HORRIBLE_SIGN.get());
                         poutput.accept(FaFItems.HORRIBLE_HANGING_SIGN.get());
+                        poutput.accept(FaFBlocks.HORRIBLE_FENCE.get());
+                        poutput.accept(FaFBlocks.HORRIBLE_FENCE_GATE.get());
+                        poutput.accept(FaFBlocks.HORRIBLE_TRAPDOOR.get());
+                        poutput.accept(FaFBlocks.HORRIBLE_PRESSURE_PLATE.get());
 
 
                         

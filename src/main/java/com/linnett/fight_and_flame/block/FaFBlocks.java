@@ -5,6 +5,7 @@ import com.linnett.fight_and_flame.block.custom_block.*;
 import com.linnett.fight_and_flame.block.custom_block.FireBlock;
 import com.linnett.fight_and_flame.items.FaFItems;
 import com.linnett.fight_and_flame.worldgen.wood.FaFWoodTypes;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -16,6 +17,12 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
+
 
 
 import java.util.function.Supplier;
@@ -24,7 +31,6 @@ import java.util.function.Supplier;
 public class FaFBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, FightAndFlame.MOD_ID);
-
 
 
     public static final RegistryObject<Block> VOLCANO_STONE = registerBlock("volcano_stone",
@@ -113,6 +119,9 @@ public class FaFBlocks {
     public static final RegistryObject<Block> LAWN = registerBlock("lawn",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK)));
 
+    public static final RegistryObject<Block> LAWN_CARPET = BLOCKS.register("lawn_carpet", LawnCarpet::new);
+
+
 
 
     public static final RegistryObject<Block> CAULDRON = registerBlock("cauldron",
@@ -168,8 +177,23 @@ public class FaFBlocks {
     public static final RegistryObject<Block> HORRIBLE_WALL_HANGING_SIGN = BLOCKS.register("horrible_wall_hanging_sign",
             () -> new FaFWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), FaFWoodTypes.HORRIBLE));
 
-    public static final RegistryObject<Block> HORRIBLE_DOOR = registerBlock("horrible_door", () -> new DoorBlock(BlockBehaviour.Properties.copy(HORRIBLE_PLANKS.get()).strength(3.0F).sound(SoundType.CHERRY_WOOD).noOcclusion(), BlockSetType.CHERRY));
+    public static final RegistryObject<Block> HORRIBLE_DOOR = registerBlock("horrible_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(HORRIBLE_PLANKS.get()).strength(3.0F).sound(SoundType.CHERRY_WOOD).noOcclusion(), BlockSetType.CHERRY));
 
+    public static final RegistryObject<Block> HORRIBLE_FENCE = BLOCKS.register("horrible_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
+
+    public static final RegistryObject<Block> HORRIBLE_FENCE_GATE = BLOCKS.register("horrible_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(HORRIBLE_PLANKS.get()).strength(2.0F, 3.0F).sound(SoundType.CHERRY_WOOD).forceSolidOn(), SoundEvents.CHERRY_WOOD_FENCE_GATE_CLOSE, SoundEvents.CHERRY_WOOD_FENCE_GATE_CLOSE));
+
+    public static final RegistryObject<Block> HORRIBLE_TRAPDOOR = BLOCKS.register("horrible_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(3.0F).sound(SoundType.CHERRY_WOOD).noOcclusion(), BlockSetType.CHERRY));
+
+    public static final RegistryObject<Block> HORRIBLE_PRESSURE_PLATE = BLOCKS.register("horrible_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(HORRIBLE_PLANKS.get()).noCollission().strength(0.5F).sound(SoundType.CHERRY_WOOD), BlockSetType.CHERRY));
+
+    public static final RegistryObject<Block> HORRIBLE_BUTTON = BLOCKS.register("horrible_button.json",
+            () -> new ButtonBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).noCollission().strength(0.5F).sound(SoundType.CHERRY_WOOD), BlockSetType.CHERRY, 30, true));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

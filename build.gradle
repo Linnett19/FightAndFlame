@@ -89,7 +89,6 @@ dependencies {
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
 }
-
 repositories {
     maven {
         url "https://cursemaven.com"

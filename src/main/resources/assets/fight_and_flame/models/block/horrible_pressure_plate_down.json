@@ -1,0 +1,6 @@
+{
+  "parent": "fight_and_flame:block/pressure_plate_down",
+  "textures": {
+    "texture": "fight_and_flame:block/horrible_planks"
+  }
+}
