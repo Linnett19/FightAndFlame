@@ -5,7 +5,9 @@ import com.linnett.fight_and_flame.block.custom_block.*;
 import com.linnett.fight_and_flame.block.custom_block.FireBlock;
 import com.linnett.fight_and_flame.items.FaFItems;
 import com.linnett.fight_and_flame.worldgen.wood.FaFWoodTypes;
+import net.minecraft.client.resources.model.Material;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -32,9 +34,22 @@ public class FaFBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, FightAndFlame.MOD_ID);
 
-
     public static final RegistryObject<Block> VOLCANO_STONE = registerBlock("volcano_stone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.TUFF)));
+
+
+
+    public static final RegistryObject<Block> VOLCANO_STONE_WALL = registerBlock("volcano_stone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.TUFF)));
+
+    public static final RegistryObject<Block> POLISHED_VOLCANO_STONE_WALL = registerBlock("polished_volcano_stone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.TUFF)));
+
+    public static final RegistryObject<Block> VOLCANO_STONE_BRICKS_WALL = registerBlock("volcano_stone_bricks_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.TUFF)));
+
+
+
 
     public static final RegistryObject<Block> VOLCANIC_STONES = registerBlock("volcanic_stones",
             () -> new VolcanicStonesBlock(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.TUFF)));
@@ -76,14 +91,13 @@ public class FaFBlocks {
             () -> new Geyser(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.TUFF)));
 
 
-
-
-
-
-
-
-
-
+    public static final RegistryObject<Block> BLOOD_LILY = registerBlock("blood_lily",
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 10,
+                    BlockBehaviour.Properties.copy(Blocks.POPPY).noOcclusion().noCollission()));
+    
+    public static final RegistryObject<Block> POTTED_BLOOD_LILY = BLOCKS.register("potted_blood_lily",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), FaFBlocks.BLOOD_LILY,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_POPPY).noOcclusion()));
 
 
     public static final RegistryObject<Block> STELLARITE_OBELISK = registerBlock("stellarite_obelisk",
@@ -112,7 +126,6 @@ public class FaFBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
 
-
     public static final RegistryObject<Block> MOSSY_SCARY_STONE_BRICKS = registerBlock("mossy_scary_stone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.MOSSY_STONE_BRICKS)));
 
@@ -122,11 +135,8 @@ public class FaFBlocks {
     public static final RegistryObject<Block> LAWN_CARPET = BLOCKS.register("lawn_carpet", LawnCarpet::new);
 
 
-
-
     public static final RegistryObject<Block> CAULDRON = registerBlock("cauldron",
             () -> new ScaryCauldron(BlockBehaviour.Properties.copy(Blocks.CAULDRON)));
-
 
 
     public static final RegistryObject<Block> HORRIBLE_BEHOLD_LOG = registerBlock("horrible_behold_log",
@@ -163,10 +173,11 @@ public class FaFBlocks {
             () -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F, 3.0F).sound(SoundType.CHERRY_WOOD).instrument(NoteBlockInstrument.BASS)));
 
     public static final RegistryObject<Block> HORRIBLE_LEAVES = registerBlock("horrible_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isSuffocating((blockState, getter, pos) -> false)));
+            () -> new HorribleLeaf(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isSuffocating((blockState, getter, pos) -> false)));
 
     public static final RegistryObject<Block> HORRIBLE_SIGN = BLOCKS.register("horrible_sign",
             () -> new FaFStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), FaFWoodTypes.HORRIBLE));
+
 
     public static final RegistryObject<Block> HORRIBLE_WALL_SIGN = BLOCKS.register("horrible_wall_sign",
             () -> new FaFWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), FaFWoodTypes.HORRIBLE));
@@ -199,7 +210,6 @@ public class FaFBlocks {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
-
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {

@@ -9,6 +9,7 @@ import com.linnett.fight_and_flame.items.FaFCreativeTabs;
 import com.linnett.fight_and_flame.items.FaFItems;
 import com.linnett.fight_and_flame.particles.FaFParticlesRegistry;
 import com.linnett.fight_and_flame.sounds.FaFSounds;
+import com.linnett.fight_and_flame.worldgen.biome.ModTerrablender;
 import com.linnett.fight_and_flame.worldgen.wood.FaFWoodTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -57,7 +58,7 @@ public class FightAndFlame {
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new FaFClientEvents());
-
+        ModTerrablender.registerBiomes();
         modEventBus.addListener(this::addCreative);
         FaFEvents.register();
 

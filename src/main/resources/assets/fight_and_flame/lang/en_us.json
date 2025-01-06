@@ -1,4 +1,6 @@
 {
+  "item.fight_and_flame.blank_blueprint": "Blank Blue-print",
+
   "item.fight_and_flame.pyroclastite": "Pyroclastite",
   "item.fight_and_flame.harmonite": "Harmonite",
   "item.fight_and_flame.floramber": "Floramber",
@@ -75,6 +77,9 @@
 
   "block.fight_and_flame.mossy_scary_stone_bricks": "Mossy Scary Stone Bricks",
   "block.fight_and_flame.lawn": "Lawn",
+  "block.fight_and_flame.blood_lily": "Blood Lily",
+  "item.fight_and_flame.lawn_carpet": "Lawn Carpet",
+
   "block.fight_and_flame.cauldron": "Custom Cauldron",
 
   "block.fight_and_flame.horrible_behold_log": "Horrible Behold Log",
@@ -99,6 +104,8 @@
   "block.fight_and_flame.horrible_wall_hanging_sign": "Horrible Wall Hanging Sign",
   "block.fight_and_flame.horrible_door": "Horrible Door",
 
+  "biomes.fight_and_flame.tangle_forest": "Tangle Forest",
+  "biomes.fight_and_flame.eruption_volcanoes": "Eruption Volcanoes",
 
   "itemGroup.fight_and_flame_stuff": "Fight and Flame: Stuff",
   "itemGroup.fight_and_flame_weapons": "Fight and Flame: Weapons",

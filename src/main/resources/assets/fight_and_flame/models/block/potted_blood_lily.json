@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "plant": "fight_and_flame:block/blood_lily"
+  }
+}
+
+
+

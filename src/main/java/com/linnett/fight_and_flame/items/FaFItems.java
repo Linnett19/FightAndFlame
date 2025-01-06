@@ -151,6 +151,8 @@ public class FaFItems {
     public static final RegistryObject<Item> TRIANGULAR_GLASS = ITEM.register("triangular_glass",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> PHOENIX_FEATHER = ITEM.register("phoenix_feather",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> IRON_BROADSWORD = ITEM.register("iron_broadsword",
             () -> new Broadsword(Tiers.IRON, 6, -3.5F, new Item.Properties()));
