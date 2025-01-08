@@ -25,16 +25,16 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class MagicStick extends Item {
+public class LightningStick extends Item {
     private static final Random RANDOM = new Random();
     private static final int PARTICLE_INTERVAL = 10;
     private int particleCooldown = 0;
 
     private static final List<MobEffect> RANDOM_EFFECTS = Arrays.asList(
-            MobEffects.LEVITATION
+            MobEffects.MOVEMENT_SLOWDOWN
     );
 
-    public MagicStick(Properties pProperties) {
+    public LightningStick(Properties pProperties) {
         super(pProperties);
     }
 
@@ -49,12 +49,11 @@ public class MagicStick extends Item {
 
     private void applyRandomEffect(LivingEntity target) {
         MobEffect randomEffect = RANDOM_EFFECTS.get(RANDOM.nextInt(RANDOM_EFFECTS.size()));
-        int duration = 100;
+        int duration = RANDOM.nextInt(100) + 100;
         int amplifier = RANDOM.nextInt(2);
 
-        target.addEffect(new MobEffectInstance(randomEffect, duration, amplifier, true, false));
+        target.addEffect(new MobEffectInstance(randomEffect, duration, amplifier));
     }
-
 
     private void spawnCustomParticlesAroundEntity(Level level, LivingEntity entity) {
         if (!level.isClientSide) return;
@@ -62,19 +61,18 @@ public class MagicStick extends Item {
         Vec3 entityPos = entity.position();
         double radius = 0.5;
 
-        for (int i = 0; i < 10; i++) {
-            double angle = RANDOM.nextDouble() * 2 * Math.PI;
-            double offsetX = radius * Math.cos(angle);
-            double offsetZ = radius * Math.sin(angle);
-            double offsetY = RANDOM.nextDouble() * entity.getBbHeight();
+        double angle = RANDOM.nextDouble() * 2 * Math.PI;
+        double offsetX = radius * Math.cos(angle);
+        double offsetZ = radius * Math.sin(angle);
+        double offsetY = RANDOM.nextDouble() * entity.getBbHeight();
 
-            level.addParticle(FaFParticlesRegistry.COLORED_DUST.get(),
-                    entityPos.x + offsetX,
-                    entityPos.y + offsetY,
-                    entityPos.z + offsetZ,
-                    0.0, 0.0, 0.0);
-        }
+        level.addParticle(FaFParticlesRegistry.LIGHT.get(),
+                entityPos.x + offsetX,
+                entityPos.y + offsetY,
+                entityPos.z + offsetZ,
+                0.0, 0.0, 0.0);
     }
+
 
     @Override
     public UseAnim getUseAnimation(ItemStack stack) {
@@ -91,6 +89,7 @@ public class MagicStick extends Item {
 
         return InteractionResultHolder.consume(itemStack);
     }
+
 
     @Override
     public int getUseDuration(ItemStack stack) {
@@ -125,7 +124,7 @@ public class MagicStick extends Item {
             double speedY = lookVec.y * 0.3 + offsetY;
             double speedZ = lookVec.z * 0.3 + offsetZ;
 
-            level.addParticle(FaFParticlesRegistry.COLORED_DUST.get(),
+            level.addParticle(FaFParticlesRegistry.LIGHT.get(),
                     particleX, particleY, particleZ,
                     speedX, speedY, speedZ);
         }
@@ -141,9 +140,9 @@ public class MagicStick extends Item {
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(Component.translatable("effect.minecraft.levitation")
-                .append(" 0:05").withStyle(ChatFormatting.BLUE));
-        tooltip.add(Component.translatable("effect.fight_and_flame.hocus_pocus")
+        tooltip.add(Component.translatable("effect.minecraft.slowness")
+                .append(" 0:05").withStyle(ChatFormatting.RED));
+        tooltip.add(Component.translatable("effect.fight_and_flame.electronic")
                 .append("").withStyle(ChatFormatting.DARK_PURPLE));
     }
 }

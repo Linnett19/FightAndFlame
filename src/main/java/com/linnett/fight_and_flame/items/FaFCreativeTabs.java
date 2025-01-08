@@ -185,6 +185,9 @@ public class FaFCreativeTabs {
                         poutput.accept(FaFItems.DISTORTED_GLASS.get());
 
                         poutput.accept(FaFItems.MAGIC_STICK.get());
+                        poutput.accept(FaFItems.ERUPTING_STICK.get());
+                        poutput.accept(FaFItems.ICE_STICK.get());
+                        poutput.accept(FaFItems.LIGHTNING_STICK.get());
 
                     })
                     .build());

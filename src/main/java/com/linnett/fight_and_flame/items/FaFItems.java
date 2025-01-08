@@ -123,8 +123,22 @@ public class FaFItems {
     public static final RegistryObject<Item> STELLARITE = ITEM.register("stellarite",
             () -> new Item(new Item.Properties().rarity(RARITY_STAR)));
 
+
+
     public static final RegistryObject<Item> MAGIC_STICK = ITEM.register("magic_stick",
             () -> new MagicStick(new Item.Properties().rarity(RARITY_RAINBOW)));
+
+    public static final RegistryObject<Item> ERUPTING_STICK = ITEM.register("erupting_stick",
+            () -> new EruptingStick(new Item.Properties().rarity(RARITY_FIRE)));
+
+    public static final RegistryObject<Item> ICE_STICK = ITEM.register("ice_stick",
+            () -> new MagicStick(new Item.Properties().rarity(RARITY_WATER)));
+
+    public static final RegistryObject<Item> LIGHTNING_STICK = ITEM.register("lightning_stick",
+            () -> new LightningStick(new Item.Properties().rarity(RARITY_ELECTRIC)));
+
+
+
 
     public static final RegistryObject<Item> FORCE_MOKTEL = ITEM.register("force_moktel",
             () -> new ForceInfusion(new Item.Properties()));

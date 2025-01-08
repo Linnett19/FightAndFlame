@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "fight_and_flame:scary_stone_bricks_wall"
+    "fight_and_flame:scary_stone_bricks_wall",
+    "fight_and_flame:volcano_stone_bricks_wall",
+    "fight_and_flame:volcano_stone_wall",
+    "fight_and_flame:polished_volcano_stone_wall"
   ]
 }

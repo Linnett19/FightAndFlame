@@ -27,6 +27,7 @@ public class FaFEventBus {
         event.registerSpriteSet(FaFParticlesRegistry.SCARY_BUBBLE.get(), BubbleParticle.Provider::new);
         event.registerSpriteSet(FaFParticlesRegistry.SCARY_SONAR.get(), SonarParticle.Provider::new);
         event.registerSpriteSet(FaFParticlesRegistry.HORRIBLE_LEAF.get(), LeafParticle.Provider::new);
+        event.registerSpriteSet(FaFParticlesRegistry.LIGHT.get(), Light.Provider::new);
 
     }
 }

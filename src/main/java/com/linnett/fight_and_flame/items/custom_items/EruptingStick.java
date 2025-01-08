@@ -1,14 +1,13 @@
 package com.linnett.fight_and_flame.items.custom_items;
 
-import com.linnett.fight_and_flame.particles.FaFParticlesRegistry;
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -25,16 +24,16 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class MagicStick extends Item {
+public class EruptingStick extends Item {
     private static final Random RANDOM = new Random();
     private static final int PARTICLE_INTERVAL = 10;
     private int particleCooldown = 0;
 
     private static final List<MobEffect> RANDOM_EFFECTS = Arrays.asList(
-            MobEffects.LEVITATION
+            MobEffects.FIRE_RESISTANCE
     );
 
-    public MagicStick(Properties pProperties) {
+    public EruptingStick(Properties pProperties) {
         super(pProperties);
     }
 
@@ -49,12 +48,11 @@ public class MagicStick extends Item {
 
     private void applyRandomEffect(LivingEntity target) {
         MobEffect randomEffect = RANDOM_EFFECTS.get(RANDOM.nextInt(RANDOM_EFFECTS.size()));
-        int duration = 100;
+        int duration = RANDOM.nextInt(100) + 100;
         int amplifier = RANDOM.nextInt(2);
 
-        target.addEffect(new MobEffectInstance(randomEffect, duration, amplifier, true, false));
+        target.setSecondsOnFire(5);
     }
-
 
     private void spawnCustomParticlesAroundEntity(Level level, LivingEntity entity) {
         if (!level.isClientSide) return;
@@ -68,7 +66,7 @@ public class MagicStick extends Item {
             double offsetZ = radius * Math.sin(angle);
             double offsetY = RANDOM.nextDouble() * entity.getBbHeight();
 
-            level.addParticle(FaFParticlesRegistry.COLORED_DUST.get(),
+            level.addParticle(ParticleTypes.LAVA,
                     entityPos.x + offsetX,
                     entityPos.y + offsetY,
                     entityPos.z + offsetZ,
@@ -125,7 +123,7 @@ public class MagicStick extends Item {
             double speedY = lookVec.y * 0.3 + offsetY;
             double speedZ = lookVec.z * 0.3 + offsetZ;
 
-            level.addParticle(FaFParticlesRegistry.COLORED_DUST.get(),
+            level.addParticle(ParticleTypes.LAVA,
                     particleX, particleY, particleZ,
                     speedX, speedY, speedZ);
         }
@@ -141,12 +139,13 @@ public class MagicStick extends Item {
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(Component.translatable("effect.minecraft.levitation")
-                .append(" 0:05").withStyle(ChatFormatting.BLUE));
-        tooltip.add(Component.translatable("effect.fight_and_flame.hocus_pocus")
+        tooltip.add(Component.translatable("effect.fight_and_flame.fire")
+                .append(" 0:05").withStyle(ChatFormatting.RED));
+        tooltip.add(Component.translatable("effect.fight_and_flame.fire_magic")
                 .append("").withStyle(ChatFormatting.DARK_PURPLE));
     }
 }
+
 
 
 
