@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:stick"
+  },
+  "addition": {
+    "item": "fight_and_flame:omnigem"
+  },
+  "result": {
+    "item": "fight_and_flame:magic_stick"
+  }
+}
